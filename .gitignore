@@ -1,0 +1,29 @@
+# OHOS build output
+out/
+
+# Repo tool
+.repo/
+
+# Large binaries
+*.tar.gz
+*.zip
+*.img
+
+# Kernel build artifacts
+*.o
+*.ko
+*.mod.c
+*.cmd
+*.order
+Module.symvers
+
+# Editor
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
