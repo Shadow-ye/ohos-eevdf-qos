@@ -255,7 +255,7 @@ struct sched_entity {
 ```
 QoS 等级       nice    slice    deadline 效果
 ─────────────────────────────────────────────
-KEY_BACKGROUND   0     14ms     最晚,最低优先级
+KEY_BACKGROUND   0      4ms     同 DEFAULT
 BACKGROUND      10     14ms     最晚
 UTILITY          5     10ms     晚
 DEFAULT          0      4ms     基线
@@ -268,6 +268,7 @@ USER_INTERACT  -10      1ms     最早,最高优先级
 - 高 QoS 等级(如 USER_INTERACTIVE)需要快速响应 → slice 短 → deadline 早
 - 低 QoS 等级(如 BACKGROUND)允许更长延迟 → slice 长 → deadline 晚
 - nice 值和 slice 叠加作用:高 QoS = 权重高 + deadline 早 = 双重优势
+- KEY_BACKGROUND(6)在 `qos_manager` 的每套策略里都是 nice 0、不走 RT,和 DEFAULT 相同,所以 slice 也取 DEFAULT 的 4ms。最初的 14ms 和当天改过的 0.5ms 都已撤回,理由见 `09-EEVDF审查交接.md` 第 10 节
 
 ---
 
@@ -276,8 +277,8 @@ USER_INTERACT  -10      1ms     最早,最高优先级
 ### 4.1 改动1:添加 qos_to_slice() 映射函数
 
 **文件:**`kernel/sched/fair.c`
-**位置:**第 572-612 行(在 EEVDF helpers 之前)
-**行数:**~45 行
+**位置:**第 572-613 行(在 EEVDF helpers 之前)
+**行数:**~42 行
 
 ```c
 #ifdef CONFIG_QOS_CTRL
@@ -293,27 +294,29 @@ USER_INTERACT  -10      1ms     最早,最高优先级
  * This allows QoS levels to express urgency through deadline placement,
  * complementing the weight-based priority from nice values.
  *
- * NO_QOS = -1, NR_QOS = 7 (from qos_ctrl.h)
+ * NR_QOS = 7 (from qos_ctrl.h)
  */
-#define QOS_NO_QOS   (-1)
 #define QOS_NR_LEVELS 7
 
 static inline u64 qos_to_slice(int in_qos)
 {
     /*
-     * Slice values in nanoseconds.
-     * QOS_DEFAULT(2) = 4ms is the baseline.
-     * Higher QoS levels get shorter slices for earlier deadlines.
-     * Lower QoS levels get longer slices for later deadlines.
+     * Slice values in nanoseconds. Levels 0-5 get shorter slices as the
+     * level rises. Tasks without a QoS level keep
+     * sysctl_sched_min_granularity.
+     *
+     * QOS_KEY_BACKGROUND is not above QOS_USER_INTERACTIVE: every
+     * qos_manager policy gives it nice 0 and no RT, the same as
+     * QOS_DEFAULT, so it shares QOS_DEFAULT's slice.
      */
     static const u64 qos_slice_map[QOS_NR_LEVELS] = {
         14000000ULL,   /* [0] QOS_BACKGROUND:       14ms */
         10000000ULL,   /* [1] QOS_UTILITY:          10ms */
-         4000000ULL,   /* [2] QOS_DEFAULT:            4ms (baseline) */
+         4000000ULL,   /* [2] QOS_DEFAULT:            4ms */
          2000000ULL,   /* [3] QOS_USER_INITIATED:     2ms */
          1500000ULL,   /* [4] QOS_DEADLINE_REQUEST: 1.5ms */
          1000000ULL,   /* [5] QOS_USER_INTERACTIVE:   1ms */
-        14000000ULL,   /* [6] QOS_KEY_BACKGROUND:    14ms */
+         4000000ULL,   /* [6] QOS_KEY_BACKGROUND:     4ms */
     };
 
     if (in_qos >= 0 && in_qos < QOS_NR_LEVELS)

@@ -1,15 +1,16 @@
 # EEVDF 移植审查交接
 
 > 审查日期：2026-09-28
-> 修复日期：2026-09-28。第 3–7 节已改入 `repo/kernel/linux/linux-5.10/kernel/sched/fair.c`，并同步到本地 `OHOS501` 的同名文件。第 8 节的 `min_vruntime` 残留未动。`CONFIG_RTG_LATENCY_FUSION` 已从本地 `OHOS501` 的 `rtg.c` / `Kconfig` 删掉；远程仓库本来就没有这份 RTG 改动。
+> 修复日期：2026-09-28。第 3–8 节都已改完，改法和第二轮复查补的修复见第 10、11 节。代码在 `repo/kernel/linux/linux-5.10`，与本地 `OHOS501` 同名文件一致。`CONFIG_RTG_LATENCY_FUSION` 已从本地 `OHOS501` 的 `rtg.c` / `Kconfig` 删掉；远程仓库本来就没有这份 RTG 改动。
 > 对照源：`OHOS501/kernel/linux/linux-6.6/kernel/sched/fair.c`（本树里的 6.6，不是更后面的主线修复）
 > 审查对象：`OHOS501/kernel/linux/linux-5.10`
-> 已提交快照：`repo/kernel/linux/linux-5.10`，commit `d3263fb`（`feat: EEVDF scheduler migration`）
-> 本次只审查，没有改内核代码
+> 审查时的快照：`repo/kernel/linux/linux-5.10`，commit `d3263fb`（`feat: EEVDF scheduler migration`）
 >
-> 同日后续：`hrtick_start_fair()` 和 `check_preempt_tick()` 已在 `sched_qos_slice=1` 时改用 `se->slice`。QEMU 单 vCPU 对照已跑通，见 `09-QEMU对照结果.md`。下面第 4 节保留审查当时的问题描述。
+> 第 1–9 节是审查当时的描述，行号和“5.10 还是 CFS 写法”这类说法都指 `d3263fb`，不是现在的代码。
 
-120 秒 QEMU 启动通过，不能说明下面的问题不存在。QEMU 的 `qemu-arm-linux_standard_defconfig` 没有打开 `CONFIG_CGROUP_SCHED` / `CONFIG_SCHED_HRTICK`。RK3568 的 `rk3568_standard_defconfig` 两项目前都是 `y`。启动路径几乎不改权重、不调用 `sched_yield()`，也测不到 QoS 切片是否真的决定抢占点。
+120 秒 QEMU 启动通过，不能说明下面的问题不存在。启动路径几乎不改权重、不调用 `sched_yield()`，也测不到 QoS 切片是否真的决定抢占点。
+
+配置更正：审查时写的“QEMU defconfig 没有打开 `CONFIG_CGROUP_SCHED` / `CONFIG_SCHED_HRTICK`”不对。`qemu-arm-linux_standard_defconfig` 打开了 `CONFIG_SCHED_AUTOGROUP`，它选中 `CGROUP_SCHED` 和 `FAIR_GROUP_SCHED`；`SCHED_HRTICK` 在打开高精度定时器时默认是 `y`。实际编出的 `.config` 三项都是 `y`。但 QEMU 最小系统的用户态不建 CPU cgroup，也不开 autogroup 之外的任务组，所以启动路径仍碰不到组实体改权重。另外 `features.h` 的 `HRTICK` 默认 `false`，两个平台上 hrtick 默认都不开火，换出时机默认由周期 tick 里的 `update_deadline()` 决定。第 4.1 节“RK3568 主要走 4.2”的判断据此也不成立。
 
 ---
 
@@ -20,6 +21,8 @@
 | `repo/`（已提交） | EEVDF 主体 + `qos_to_slice()`，`place_entity` / `update_deadline` 直接调用它 |
 | `OHOS501/`（工作区） | 同上，另加运行时开关 `sysctl_sched_qos_slice` 和 `sched_entity_slice()` |
 | 只在 `OHOS501/` | `kernel/sched/qos_slice_bench.c`，`kernel/sched/rtg/rtg.c` 的 `CONFIG_RTG_LATENCY_FUSION`，`kernel/sched/rtg/Kconfig` |
+
+（审查时的状态。现在两份树一致，`qos_slice_bench.c` 也进了 `repo/`，RTG 那段已删。）
 
 `OHOS501` 的 `fair.c` 相对 `repo` 只多了这个开关。下面第 2–4 节两边都有。第 5 节只在 `OHOS501`。
 
@@ -198,6 +201,23 @@ se->deadline += calc_delta_fair(se->slice, se);
 | 第 4 节 | 删除 `check_preempt_tick()`。`hrtick_start_fair()` 用 `se->slice`，不再用 `sched_slice()` |
 | 第 5 节 | `yield_task_fair()` 把 `deadline` 往后推一个 `calc_delta_fair(se->slice)`。删掉已无调用者的 `set_skip_buddy()` |
 | 第 6 节 | 本地 `OHOS501` 去掉 `CONFIG_RTG_LATENCY_FUSION`。远程快照里没有这段代码 |
-| 第 7 节 | `QOS_KEY_BACKGROUND` 改为 0.5ms，短于 `QOS_USER_INTERACTIVE` 的 1ms，与“`in_qos` 越大越优先”一致 |
+| 第 7 节 | `QOS_KEY_BACKGROUND` 定为 4ms，和 `QOS_DEFAULT` 相同，理由见下 |
+| 第 8 节 | 按 6.6 删掉 `task_fork_fair()`、`migrate_task_rq_fair()`、`detach/attach_task_cfs_rq()` 里的 `min_vruntime` 加减。`task_fork_fair()` 改为 `place_entity(cfs_rq, se, ENQUEUE_INITIAL)`，不再处理 `sysctl_sched_child_runs_first` 的交换 |
 
-第 8 节未改。不要在入队路径补回 `vruntime += min_vruntime`。
+第 7 节：当天先改成过 0.5ms，复查时撤回。`qos_manager` 的每一套策略都给 `QOS_KEY_BACKGROUND` nice 0、不走 RT，与 `QOS_DEFAULT` 完全相同，没有任何地方把它当作比交互更急的等级。给它全表最短的 slice 会让它比前台交互线程更频繁地抢占，产品语义里找不到依据。表里的注释已写明这一点。
+
+不要在入队路径补回 `vruntime += min_vruntime`。
+
+## 11. 第二轮复查补的修复
+
+第 10 节落地后又对照 6.6 查了一遍，找到两处会放错任务的问题，以及一批死代码。
+
+| 问题 | 原因 | 改法 |
+|---|---|---|
+| fork 出的子任务落后 V 很多 | `set_next_entity()` 为 `RUN_TO_PARITY` 把 `deadline` 暂存进 `vlag`。`dup_task_struct()` 把正在运行的父任务整个拷过去，子任务的 `vlag` 就是这个暂存值。`wake_up_new_task()` 里的 `place_entity()` 把它当作 lag，子任务一出生就落后 V 大约一个 `deadline` 的量 | `__sched_fork()` 清零 `se.vlag`，并把 `se.slice` 初始化为 `sysctl_sched_min_granularity`，与 6.6 相同 |
+| 在树上改权重时 V 被挪动 | 第 10 节的 `reweight_entity()` 先 `__dequeue_entity()`，再在 `reweight_eevdf()` 里算 `avg_vruntime()`，这时的 V 不含该实体。6.6 推论 2 “保持 lag 则 V 不变”要求 V 包含它 | 在摘下之前算 V，传给 `reweight_eevdf(se, avruntime, weight)`。`update_min_vruntime()` 放到实体挂回之后 |
+| `-Wunused-function` | EEVDF 之后 `__pick_next_entity`、`__sched_period`、`sched_slice`、`sched_vslice`、`set_last_buddy`、`vruntime_normalized` 已无调用者；`wakeup_gran`、`wakeup_preempt_entity` 只剩 `CONFIG_SCHED_LATENCY_NICE` 下的调用 | 删除前六个，后两个收进 `CONFIG_SCHED_LATENCY_NICE` |
+| `hrtick_start_fair()` / `yield_task_fair()` 的兜底 | `se->slice` 在 fork 时已经初始化，不会为 0 | 去掉兜底，与 6.6 相同 |
+| `get_rr_interval_fair()` | 仍用 `sched_slice()` | 改为 `NS_TO_JIFFIES(se->slice)` |
+
+两处放错任务的问题都在 QEMU 上验证过：修复后的内核通过，只回退这两处的反证内核失败，数据见 `09-QEMU对照结果.md` 第 3、4 节。

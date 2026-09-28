@@ -82,6 +82,8 @@ RTG 入组 --> latency_nice / latency_weight --> 仅唤醒抢占阈值
 
 ## 6. QEMU 上仍然存在的正确性缺口
 
+> 2026-09-28 状态：下面三条都已修复。迁移和 fork 路径的 `min_vruntime` 加减已删，`reweight_entity()` 已接上 `reweight_eevdf()`，fork 时子任务不再继承父任务暂存的 deadline。见 `09-EEVDF审查交接.md` 第 10、11 节，QEMU 验证见 `09-QEMU对照结果.md`。下文保留当时的分析。
+
 `-smp 4` 仍会做负载均衡，所以只在 QEMU 上跑并不能躲开 SMP 问题。和本仓库 6.6 对照：
 
 - **迁移仍是 CFS 的 vruntime 归一化。** `fair.c` 约 7481、11772、11901 行还有 `se->vruntime -= min_vruntime`。6.6 已改为用 lag 携带跨 CPU 状态。4 个 vCPU 互相迁移时，virtual time 会被打乱。

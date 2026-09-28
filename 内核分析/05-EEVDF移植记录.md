@@ -171,6 +171,8 @@ samgr ready:1
 watchdog_service:正常重启循环(每10秒)
 ```
 
+这次只证明能启动。移植当时的 `reweight_entity()`、fork 和迁移路径还有会放错任务的问题,启动路径碰不到。修复见 `09-EEVDF审查交接.md` 第 10、11 节,修复后的 QEMU 检查见 `09-QEMU对照结果.md`。
+
 ---
 
 ## 五、关键设计决策
