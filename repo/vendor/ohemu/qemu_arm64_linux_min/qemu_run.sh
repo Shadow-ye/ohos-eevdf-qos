@@ -23,6 +23,10 @@ kernel_bootargs="console=ttyAMA0 init=/bin/init hardware=qemu.arm.linux root=/de
 if [ -n "${EEVDF_QOS_BENCH}" ]; then
 	kernel_bootargs="${kernel_bootargs} eevdf_qos_bench=1"
 fi
+# SCHED_CMP_BENCH=1 runs the CFS/EEVDF comparison on an isolated CPU 3.
+if [ -n "${SCHED_CMP_BENCH}" ]; then
+	kernel_bootargs="${kernel_bootargs} sched_cmp_bench=1 isolcpus=3"
+fi
 
 elf_file="out/qemu-arm-linux/packages/phone/images"
 if [ -f "${PWD}/ramdisk.img" ]; then
