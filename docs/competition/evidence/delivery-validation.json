@@ -1,0 +1,53 @@
+{
+  "date": "2026-10-30",
+  "evidence_runs_verified": [
+    "docs/competition/evidence/2026-10-30-boot/eevdf-boot.json",
+    "docs/competition/evidence/2026-10-30-qos/eevdf-qos.json",
+    "docs/competition/evidence/2026-10-30-run1-cfs/cfs-compare.json",
+    "docs/competition/evidence/2026-10-30-run1-eevdf/eevdf-compare.json",
+    "docs/competition/evidence/2026-10-30-run2-cfs/cfs-compare.json",
+    "docs/competition/evidence/2026-10-30-run2-eevdf/eevdf-compare.json",
+    "docs/competition/evidence/2026-10-30-run3-cfs/cfs-compare.json",
+    "docs/competition/evidence/2026-10-30-run3-eevdf/eevdf-compare.json"
+  ],
+  "log_hashes_verified": true,
+  "snapshot_dry_run": {
+    "files": 14,
+    "changes_required": 0
+  },
+  "linux_patch_reconstruction": {
+    "files": 9,
+    "baseline": "8d8762e824a04bd99b37e5cd635919ea926c8357",
+    "applied_and_byte_compared": true
+  },
+  "document_review": {
+    "pages": 9,
+    "renderer": "packaged render_docx.py with system LibreOffice and Poppler compatibility override",
+    "all_page_images_inspected": true
+  },
+  "presentation_review": {
+    "slides": 13,
+    "all_slide_images_inspected": true,
+    "package_and_layout_checks_passed": true,
+    "native_tables": [
+      5,
+      7,
+      8
+    ],
+    "native_chart": [
+      9
+    ],
+    "native_powerpoint_open_verified": false
+  },
+  "artifacts": {
+    "docs/competition/materials/答辩演示.pptx": "e7739d768b96b078690c9cfd1e023896f25f3ec724cff7643cc15ce4c986c133",
+    "docs/competition/materials/开发设计文档.docx": "797c8e3610a55539a408bd43c6e8f15550776cd4d44110068b04883c09210d42"
+  },
+  "full_rebuild_performed": false,
+  "official_template_fields_verified": true,
+  "competition_final_submission_verified": false,
+  "official_templates": {
+    "design_docx_sha256": "b47c221c1baf60f62c51ca4ef01bbe6e3c4b2cf75add3448382f925a2a98a8e6",
+    "defense_pptx_sha256": "1b0e9ce464e4885b2ba3a0b1d4725cccd46a00c85bf54dc968c8c1a815f12f97"
+  }
+}

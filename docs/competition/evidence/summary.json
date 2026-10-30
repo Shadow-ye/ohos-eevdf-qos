@@ -1,0 +1,141 @@
+{
+  "date": "2026-10-30",
+  "runs_per_kernel": 3,
+  "aggregation": "median of per-boot statistics, not pooled-sample quantiles",
+  "latency_ms": {
+    "cfs": {
+      "lat_h0": {
+        "mean": 0.203714,
+        "p90": 0.283376,
+        "p99": 0.539312
+      },
+      "lat_h1": {
+        "mean": 0.137965,
+        "p90": 0.212208,
+        "p99": 1.01104
+      },
+      "lat_h4": {
+        "mean": 0.131098,
+        "p90": 0.192848,
+        "p99": 0.794656
+      },
+      "lat_h1_qos": {
+        "mean": 0.128221,
+        "p90": 0.182352,
+        "p99": 0.707376
+      },
+      "lat_h4_qos": {
+        "mean": 0.1302,
+        "p90": 0.207008,
+        "p99": 1.043968
+      }
+    },
+    "eevdf": {
+      "lat_h0": {
+        "mean": 0.18876,
+        "p90": 0.294,
+        "p99": 0.55464
+      },
+      "lat_h1": {
+        "mean": 0.651991,
+        "p90": 2.122864,
+        "p99": 4.128048
+      },
+      "lat_h4": {
+        "mean": 2.257842,
+        "p90": 8.01144,
+        "p99": 8.496864
+      },
+      "lat_h1_qos": {
+        "mean": 0.797278,
+        "p90": 1.415024,
+        "p99": 13.616528
+      },
+      "lat_h4_qos": {
+        "mean": 4.040745,
+        "p90": 13.514128,
+        "p99": 15.627952
+      }
+    }
+  },
+  "fairness_error_permille": {
+    "cfs": {
+      "fair_n0_n5": [
+        4,
+        4,
+        1
+      ],
+      "fair_n0_n10": [
+        9,
+        2,
+        8
+      ]
+    },
+    "eevdf": {
+      "fair_n0_n5": [
+        3,
+        1,
+        4
+      ],
+      "fair_n0_n10": [
+        4,
+        2,
+        0
+      ]
+    }
+  },
+  "pingpong_median_round_us": {
+    "cfs": 14.127,
+    "eevdf": 12.778
+  },
+  "inputs": {
+    "cfs-1": {
+      "Image-cfs": "42cf27cd049a4f25e2468fe2b104544704b56a90197bf0b0025ae1e18628ccfb",
+      "ramdisk.img": "398e60e93555afbe11a8fe7efcb6f6289e948ca1369e42de5cfa4b29748f19eb",
+      "userdata.img": "8828df758036755f88ff59a3448ea8dd59883db22a6d20cd5bfe9670f0400f67",
+      "vendor.img": "00f0135c117a70dc5d00093a332e9fc7d95619f3434b617f90738ed72d85f950",
+      "system.img": "9e088b13f5dfc73cc186c2492fbccc1099f7cea28786e66ec360525bf5fcfe6e",
+      "updater.img": "6272e91c705cc136859b8659f9da4636901524a58c4411fb630d24fe28afaad1"
+    },
+    "cfs-2": {
+      "Image-cfs": "42cf27cd049a4f25e2468fe2b104544704b56a90197bf0b0025ae1e18628ccfb",
+      "ramdisk.img": "398e60e93555afbe11a8fe7efcb6f6289e948ca1369e42de5cfa4b29748f19eb",
+      "userdata.img": "8828df758036755f88ff59a3448ea8dd59883db22a6d20cd5bfe9670f0400f67",
+      "vendor.img": "00f0135c117a70dc5d00093a332e9fc7d95619f3434b617f90738ed72d85f950",
+      "system.img": "9e088b13f5dfc73cc186c2492fbccc1099f7cea28786e66ec360525bf5fcfe6e",
+      "updater.img": "6272e91c705cc136859b8659f9da4636901524a58c4411fb630d24fe28afaad1"
+    },
+    "cfs-3": {
+      "Image-cfs": "42cf27cd049a4f25e2468fe2b104544704b56a90197bf0b0025ae1e18628ccfb",
+      "ramdisk.img": "398e60e93555afbe11a8fe7efcb6f6289e948ca1369e42de5cfa4b29748f19eb",
+      "userdata.img": "8828df758036755f88ff59a3448ea8dd59883db22a6d20cd5bfe9670f0400f67",
+      "vendor.img": "00f0135c117a70dc5d00093a332e9fc7d95619f3434b617f90738ed72d85f950",
+      "system.img": "9e088b13f5dfc73cc186c2492fbccc1099f7cea28786e66ec360525bf5fcfe6e",
+      "updater.img": "6272e91c705cc136859b8659f9da4636901524a58c4411fb630d24fe28afaad1"
+    },
+    "eevdf-1": {
+      "Image-eevdf": "fc15293e37b231c8f0144945581b91620332ac8469092560ad24358855660b37",
+      "ramdisk.img": "398e60e93555afbe11a8fe7efcb6f6289e948ca1369e42de5cfa4b29748f19eb",
+      "userdata.img": "8828df758036755f88ff59a3448ea8dd59883db22a6d20cd5bfe9670f0400f67",
+      "vendor.img": "00f0135c117a70dc5d00093a332e9fc7d95619f3434b617f90738ed72d85f950",
+      "system.img": "9e088b13f5dfc73cc186c2492fbccc1099f7cea28786e66ec360525bf5fcfe6e",
+      "updater.img": "6272e91c705cc136859b8659f9da4636901524a58c4411fb630d24fe28afaad1"
+    },
+    "eevdf-2": {
+      "Image-eevdf": "fc15293e37b231c8f0144945581b91620332ac8469092560ad24358855660b37",
+      "ramdisk.img": "398e60e93555afbe11a8fe7efcb6f6289e948ca1369e42de5cfa4b29748f19eb",
+      "userdata.img": "8828df758036755f88ff59a3448ea8dd59883db22a6d20cd5bfe9670f0400f67",
+      "vendor.img": "00f0135c117a70dc5d00093a332e9fc7d95619f3434b617f90738ed72d85f950",
+      "system.img": "9e088b13f5dfc73cc186c2492fbccc1099f7cea28786e66ec360525bf5fcfe6e",
+      "updater.img": "6272e91c705cc136859b8659f9da4636901524a58c4411fb630d24fe28afaad1"
+    },
+    "eevdf-3": {
+      "Image-eevdf": "fc15293e37b231c8f0144945581b91620332ac8469092560ad24358855660b37",
+      "ramdisk.img": "398e60e93555afbe11a8fe7efcb6f6289e948ca1369e42de5cfa4b29748f19eb",
+      "userdata.img": "8828df758036755f88ff59a3448ea8dd59883db22a6d20cd5bfe9670f0400f67",
+      "vendor.img": "00f0135c117a70dc5d00093a332e9fc7d95619f3434b617f90738ed72d85f950",
+      "system.img": "9e088b13f5dfc73cc186c2492fbccc1099f7cea28786e66ec360525bf5fcfe6e",
+      "updater.img": "6272e91c705cc136859b8659f9da4636901524a58c4411fb630d24fe28afaad1"
+    }
+  }
+}

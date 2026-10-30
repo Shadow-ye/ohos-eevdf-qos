@@ -1,0 +1,17 @@
+{
+  "note": "Existing September images, rerun on October 30. Source snapshots match current build tree; not a bit-for-bit rebuild attestation.",
+  "images": [
+    {
+      "file": "Image-eevdf",
+      "size": 31609344,
+      "sha256": "fc15293e37b231c8f0144945581b91620332ac8469092560ad24358855660b37",
+      "version": "Linux version 5.10.208 (dark@Tethys) (OHOS (dev) clang version 15.0.4 (llvm-project ef33c3575763937746833063de4d2e1fd184bbf7), GNU ld (Linaro_Binutils-2019.12) 2.28.2.20170706) #15 SMP PREEMPT Mon Sep 28 12:27:09 CST 2026"
+    },
+    {
+      "file": "Image-cfs",
+      "size": 31609344,
+      "sha256": "42cf27cd049a4f25e2468fe2b104544704b56a90197bf0b0025ae1e18628ccfb",
+      "version": "Linux version 5.10.208 (dark@Tethys) (OHOS (dev) clang version 15.0.4 (llvm-project ef33c3575763937746833063de4d2e1fd184bbf7), GNU ld (Linaro_Binutils-2019.12) 2.28.2.20170706) #12 SMP PREEMPT Mon Sep 28 12:16:22 CST 2026"
+    }
+  ]
+}
