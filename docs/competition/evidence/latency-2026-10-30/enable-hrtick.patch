@@ -1,0 +1,11 @@
+--- a/kernel/sched/features.h
++++ b/kernel/sched/features.h
+@@ -45,7 +45,7 @@
+  */
+ SCHED_FEAT(WAKEUP_PREEMPTION, true)
+ 
+-SCHED_FEAT(HRTICK, false)
++SCHED_FEAT(HRTICK, true)
+ SCHED_FEAT(DOUBLE_TICK, false)
+ 
+ /*

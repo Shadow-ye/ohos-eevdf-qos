@@ -1,0 +1,1350 @@
+[    0.000000] Booting Linux on physical CPU 0x0000000000 [0x411fd070]
+[    0.000000] Linux version 5.10.208 (dark@Tethys) (OHOS (dev) clang version 15.0.4 (llvm-project ef33c3575763937746833063de4d2e1fd184bbf7), GNU ld (Linaro_Binutils-2019.12) 2.28.2.20170706) #17 SMP PREEMPT Fri Oct 30 19:02:17 CST 2026
+[    0.000000] Machine model: linux,dummy-virt
+[    0.000000] efi: UEFI not found.
+[    0.000000] NUMA: No NUMA configuration found
+[    0.000000] NUMA: Faking a node at [mem 0x0000000040000000-0x000000007fffffff]
+[    0.000000] NUMA: NODE_DATA [mem 0x7fdf3b00-0x7fdf5fff]
+[    0.000000] Zone ranges:
+[    0.000000]   DMA      [mem 0x0000000040000000-0x000000007fffffff]
+[    0.000000]   DMA32    empty
+[    0.000000]   Normal   empty
+[    0.000000] Movable zone start for each node
+[    0.000000] Early memory node ranges
+[    0.000000]   node   0: [mem 0x0000000040000000-0x000000007fffffff]
+[    0.000000] Initmem setup node 0 [mem 0x0000000040000000-0x000000007fffffff]
+[    0.000000] cma: Reserved 32 MiB at 0x000000007c000000
+[    0.000000] psci: probing for conduit method from DT.
+[    0.000000] psci: PSCIv0.2 detected in firmware.
+[    0.000000] psci: Using standard PSCI v0.2 function IDs
+[    0.000000] psci: Trusted OS migration not required
+[    0.000000] percpu: Embedded 23 pages/cpu s56664 r8192 d29352 u94208
+[    0.000000] Detected PIPT I-cache on CPU0
+[    0.000000] CPU features: detected: ARM erratum 832075
+[    0.000000] CPU features: detected: ARM erratum 834220
+[    0.000000] CPU features: detected: EL2 vector hardening
+[    0.000000] CPU features: kernel page table isolation forced ON by KASLR
+[    0.000000] CPU features: detected: Kernel page table isolation (KPTI)
+[    0.000000] CPU features: detected: Spectre-v2
+[    0.000000] CPU features: detected: Spectre-v4
+[    0.000000] CPU features: detected: ARM errata 1165522, 1319367, or 1530923
+[    0.000000] CPU features: detected: Spectre-BHB
+[    0.000000] CPU features: detected: ARM erratum 1742098
+[    0.000000] Built 1 zonelists, mobility grouping on.  Total pages: 258048
+[    0.000000] Policy zone: DMA
+[    0.000000] Kernel command line: console=ttyAMA0 init=/bin/init hardware=qemu.arm.linux root=/dev/ram0 rw ohos.required_mount.system=/dev/block/vdb@/usr@ext4@ro,barrier=1@wait,required ohos.required_mount.vendor=/dev/block/vdc@/vendor@ext4@ro,barrier=1@wait,required eevdf_qos_bench=1 sched_qos_slice_cap_us=4000
+[    0.000000] Dentry cache hash table entries: 131072 (order: 8, 1048576 bytes, linear)
+[    0.000000] Inode-cache hash table entries: 65536 (order: 7, 524288 bytes, linear)
+[    0.000000] mem auto-init: stack:all(zero), heap alloc:off, heap free:off
+[    0.000000] Memory: 960628K/1048576K available (14336K kernel code, 2836K rwdata, 7548K rodata, 6016K init, 537K bss, 55180K reserved, 32768K cma-reserved)
+[    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
+[    0.000000] rcu: Preemptible hierarchical RCU implementation.
+[    0.000000] rcu: 	RCU event tracing is enabled.
+[    0.000000] rcu: 	RCU restricting CPUs from NR_CPUS=256 to nr_cpu_ids=4.
+[    0.000000] 	Trampoline variant of Tasks RCU enabled.
+[    0.000000] rcu: RCU calculated value of scheduler-enlistment delay is 25 jiffies.
+[    0.000000] rcu: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=4
+[    0.000000] NR_IRQS: 64, nr_irqs: 64, preallocated irqs: 0
+[    0.000000] GICv2m: range[mem 0x08020000-0x08020fff], SPI[80:143]
+[    0.000000] arch_timer: cp15 timer(s) running at 62.50MHz (virt).
+[    0.000000] clocksource: arch_sys_counter: mask: 0xffffffffffffff max_cycles: 0x1cd42e208c, max_idle_ns: 881590405314 ns
+[    0.000084] sched_clock: 56 bits at 62MHz, resolution 16ns, wraps every 4398046511096ns
+[    0.004899] Console: colour dummy device 80x25
+[    0.006109] Calibrating delay loop (skipped), value calculated using timer frequency.. 125.00 BogoMIPS (lpj=250000)
+[    0.006193] pid_max: default: 32768 minimum: 301
+[    0.006740] LSM: Security Framework initializing
+[    0.007479] Mount-cache hash table entries: 2048 (order: 2, 16384 bytes, linear)
+[    0.007502] Mountpoint-cache hash table entries: 2048 (order: 2, 16384 bytes, linear)
+[    0.022867] /cpus/cpu-map: empty cluster
+[    0.027660] rcu: Hierarchical SRCU implementation.
+[    0.030645] EFI services will not be available.
+[    0.031354] smp: Bringing up secondary CPUs ...
+[    0.033774] Detected PIPT I-cache on CPU1
+[    0.034308] CPU1: Booted secondary processor 0x0000000001 [0x411fd070]
+[    0.037535] Detected PIPT I-cache on CPU2
+[    0.037988] CPU2: Booted secondary processor 0x0000000002 [0x411fd070]
+[    0.040687] Detected PIPT I-cache on CPU3
+[    0.041150] CPU3: Booted secondary processor 0x0000000003 [0x411fd070]
+[    0.041667] smp: Brought up 1 node, 4 CPUs
+[    0.041708] SMP: Total of 4 processors activated.
+[    0.041757] CPU features: detected: 32-bit EL0 Support
+[    0.041796] CPU features: detected: CRC32 instructions
+[    0.041802] CPU features: detected: 32-bit EL1 Support
+[    0.087930] CPU: All CPU(s) started at EL1
+[    0.088279] alternatives: patching kernel code
+[    0.103295] devtmpfs: initialized
+[    0.108816] KASLR enabled
+[    0.109759] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645041785100000 ns
+[    0.109846] futex hash table entries: 1024 (order: 4, 65536 bytes, linear)
+[    0.112646] pinctrl core: initialized pinctrl subsystem
+[    0.119082] DMI not present or invalid.
+[    0.124250] NET: Registered protocol family 16
+[    0.131607] DMA: preallocated 128 KiB GFP_KERNEL pool for atomic allocations
+[    0.131987] DMA: preallocated 128 KiB GFP_KERNEL|GFP_DMA pool for atomic allocations
+[    0.132116] DMA: preallocated 128 KiB GFP_KERNEL|GFP_DMA32 pool for atomic allocations
+[    0.132268] audit: initializing netlink subsys (disabled)
+[    0.133548] audit: type=2000 audit(0.124:1): state=initialized audit_enabled=0 res=1
+[    0.135692] thermal_sys: Registered thermal governor 'step_wise'
+[    0.135738] thermal_sys: Registered thermal governor 'power_allocator'
+[    0.136116] cpuidle: using governor menu
+[    0.136688] hw-breakpoint: found 6 breakpoint and 4 watchpoint registers.
+[    0.137265] ASID allocator initialised with 32768 entries
+[    0.139323] Serial: AMBA PL011 UART driver
+[    0.158397] 9000000.pl011: ttyAMA0 at MMIO 0x9000000 (irq = 47, base_baud = 0) is a PL011 rev1
+[    0.165890] printk: console [ttyAMA0] enabled
+[    0.182203] HugeTLB registered 1.00 GiB page size, pre-allocated 0 pages
+[    0.182322] HugeTLB registered 32.0 MiB page size, pre-allocated 0 pages
+[    0.182400] HugeTLB registered 2.00 MiB page size, pre-allocated 0 pages
+[    0.182482] HugeTLB registered 64.0 KiB page size, pre-allocated 0 pages
+[    0.189246] cryptd: max_cpu_qlen set to 1000
+[    0.196321] ACPI: Interpreter disabled.
+[    0.198793] iommu: Default domain type: Translated 
+[    0.199594] vgaarb: loaded
+[    0.200493] SCSI subsystem initialized
+[    0.201823] usbcore: registered new interface driver usbfs
+[    0.202052] usbcore: registered new interface driver hub
+[    0.202197] usbcore: registered new device driver usb
+[    0.203089] pps_core: LinuxPPS API ver. 1 registered
+[    0.203164] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+[    0.203315] PTP clock support registered
+[    0.203678] EDAC MC: Ver: 3.0.0
+[    0.206185] FPGA manager framework
+[    0.206617] Advanced Linux Sound Architecture Driver Initialized.
+[    0.213067] clocksource: Switched to clocksource arch_sys_counter
+[    0.213834] VFS: Disk quotas dquot_6.6.0
+[    0.214009] VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+[    0.214858] pnp: PnP ACPI: disabled
+[    0.229410] NET: Registered protocol family 2
+[    0.230123] IP idents hash table entries: 16384 (order: 5, 131072 bytes, linear)
+[    0.232521] tcp_listen_portaddr_hash hash table entries: 512 (order: 1, 8192 bytes, linear)
+[    0.232857] TCP established hash table entries: 8192 (order: 4, 65536 bytes, linear)
+[    0.233337] TCP bind hash table entries: 8192 (order: 5, 131072 bytes, linear)
+[    0.233925] TCP: Hash tables configured (established 8192 bind 8192)
+[    0.234601] UDP hash table entries: 512 (order: 2, 16384 bytes, linear)
+[    0.234797] UDP-Lite hash table entries: 512 (order: 2, 16384 bytes, linear)
+[    0.235498] NET: Registered protocol family 1
+[    0.237943] RPC: Registered named UNIX socket transport module.
+[    0.238050] RPC: Registered udp transport module.
+[    0.238108] RPC: Registered tcp transport module.
+[    0.238165] RPC: Registered tcp NFSv4.1 backchannel transport module.
+[    0.238293] PCI: CLS 0 bytes, default 64
+[    0.240171] Unpacking initramfs...
+[    0.301370] Freeing initrd memory: 2276K
+[    0.305639] hw perfevents: enabled with armv8_pmuv3 PMU driver, 5 counters available
+[    0.306028] kvm [1]: HYP mode not available
+[    0.317554] Initialise system trusted keyrings
+[    0.318609] workingset: timestamp_bits=42 max_order=18 bucket_order=0
+[    0.325568] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    0.327296] NFS: Registering the id_resolver key type
+[    0.327574] Key type id_resolver registered
+[    0.327658] Key type id_legacy registered
+[    0.327955] nfs4filelayout_init: NFSv4 File Layout Driver Registering...
+[    0.328078] nfs4flexfilelayout_init: NFSv4 Flexfile Layout Driver Registering...
+[    0.328733] 9p: Installing v9fs 9p2000 file system support
+[    0.348681] Key type asymmetric registered
+[    0.348865] Asymmetric key parser 'x509' registered
+[    0.349352] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 245)
+[    0.349518] io scheduler mq-deadline registered
+[    0.349615] io scheduler kyber registered
+[    0.359870] pl061_gpio 9030000.pl061: PL061 GPIO chip registered
+[    0.362809] pci-host-generic 4010000000.pcie: host bridge /pcie@10000000 ranges:
+[    0.363322] pci-host-generic 4010000000.pcie:       IO 0x003eff0000..0x003effffff -> 0x0000000000
+[    0.363682] pci-host-generic 4010000000.pcie:      MEM 0x0010000000..0x003efeffff -> 0x0010000000
+[    0.363809] pci-host-generic 4010000000.pcie:      MEM 0x8000000000..0xffffffffff -> 0x8000000000
+[    0.364415] pci-host-generic 4010000000.pcie: ECAM at [mem 0x4010000000-0x401fffffff] for [bus 00-ff]
+[    0.365169] pci-host-generic 4010000000.pcie: PCI host bridge to bus 0000:00
+[    0.365352] pci_bus 0000:00: root bus resource [bus 00-ff]
+[    0.365472] pci_bus 0000:00: root bus resource [io  0x0000-0xffff]
+[    0.365556] pci_bus 0000:00: root bus resource [mem 0x10000000-0x3efeffff]
+[    0.365647] pci_bus 0000:00: root bus resource [mem 0x8000000000-0xffffffffff]
+[    0.366444] pci 0000:00:00.0: [1b36:0008] type 00 class 0x060000
+[    0.372088] EINJ: ACPI disabled.
+[    0.391454] Serial: 8250/16550 driver, 4 ports, IRQ sharing enabled
+[    0.394513] SuperH (H)SCI(F) driver initialized
+[    0.395097] msm_serial: driver initialized
+[    0.397537] cacheinfo: Unable to detect cache hierarchy for CPU 0
+[    0.409731] loop: module loaded
+[    0.416674] virtio_blk virtio0: [vda] 16734 512-byte logical blocks (8.57 MB/8.17 MiB)
+[    0.416849] vda: detected capacity change from 0 to 8567808
+[    0.434132] virtio_blk virtio1: [vdb] 204800 512-byte logical blocks (105 MB/100 MiB)
+[    0.434287] vdb: detected capacity change from 0 to 104857600
+[    0.442640] virtio_blk virtio2: [vdc] 204800 512-byte logical blocks (105 MB/100 MiB)
+[    0.442786] vdc: detected capacity change from 0 to 104857600
+[    0.450207] virtio_blk virtio3: [vdd] 204800 512-byte logical blocks (105 MB/100 MiB)
+[    0.450355] vdd: detected capacity change from 0 to 104857600
+[    0.454354] megasas: 07.714.04.00-rc1
+[    0.457922] physmap-flash 0.flash: physmap platform flash device: [mem 0x00000000-0x03ffffff]
+[    0.459078] 0.flash: Found 2 x16 devices at 0x0 in 32-bit bank. Manufacturer ID 0x000000 Chip ID 0x000000
+[    0.459460] Intel/Sharp Extended Query Table at 0x0031
+[    0.460044] Using buffer write method
+[    0.460448] physmap-flash 0.flash: physmap platform flash device: [mem 0x04000000-0x07ffffff]
+[    0.460994] 0.flash: Found 2 x16 devices at 0x0 in 32-bit bank. Manufacturer ID 0x000000 Chip ID 0x000000
+[    0.461291] Intel/Sharp Extended Query Table at 0x0031
+[    0.461781] Using buffer write method
+[    0.461908] Concatenating MTD devices:
+[    0.461986] (0): "0.flash"
+[    0.462037] (1): "0.flash"
+[    0.462078] into device "0.flash"
+[    0.479359] tun: Universal TUN/TAP device driver, 1.6
+[    0.480647] thunder_xcv, ver 1.0
+[    0.480760] thunder_bgx, ver 1.0
+[    0.480852] nicpf, ver 1.0
+[    0.482363] hclge is initializing
+[    0.482541] hns3: Hisilicon Ethernet Network Driver for Hip08 Family - version
+[    0.482640] hns3: Copyright (c) 2017 Huawei Corporation.
+[    0.482824] e1000: Intel(R) PRO/1000 Network Driver
+[    0.482893] e1000: Copyright (c) 1999-2006 Intel Corporation.
+[    0.483042] e1000e: Intel(R) PRO/1000 Network Driver
+[    0.483109] e1000e: Copyright(c) 1999 - 2015 Intel Corporation.
+[    0.483230] igb: Intel(R) Gigabit Ethernet Network Driver
+[    0.483302] igb: Copyright (c) 2007-2014 Intel Corporation.
+[    0.483411] igbvf: Intel(R) Gigabit Virtual Function Network Driver
+[    0.483495] igbvf: Copyright (c) 2009 - 2012 Intel Corporation.
+[    0.483899] sky2: driver version 1.30
+[    0.485357] VFIO - User Level meta-driver version: 0.3
+[    0.487974] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    0.488116] ehci-pci: EHCI PCI platform driver
+[    0.488299] ehci-platform: EHCI generic platform driver
+[    0.488478] ehci-orion: EHCI orion driver
+[    0.488616] ehci-exynos: EHCI Exynos driver
+[    0.488752] ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+[    0.488890] ohci-pci: OHCI PCI platform driver
+[    0.489384] ohci-platform: OHCI generic platform driver
+[    0.489579] ohci-exynos: OHCI Exynos driver
+[    0.490276] usbcore: registered new interface driver usb-storage
+[    0.495287] rtc-pl031 9010000.pl031: registered as rtc0
+[    0.496015] rtc-pl031 9010000.pl031: setting system clock to 2026-10-30T11:16:57 UTC (1793359017)
+[    0.496834] i2c /dev entries driver
+[    0.503310] sdhci: Secure Digital Host Controller Interface driver
+[    0.503408] sdhci: Copyright(c) Pierre Ossman
+[    0.503897] Synopsys Designware Multimedia Card Interface Driver
+[    0.504750] sdhci-pltfm: SDHCI platform and OF driver helper
+[    0.507040] ledtrig-cpu: registered to indicate activity on CPUs
+[    0.508795] usbcore: registered new interface driver usbhid
+[    0.508887] usbhid: USB HID core driver
+[    0.514470] auth_ctrl init success
+[    0.514560] [QOS_CTRL] lock in qos policy initialized
+[    0.515291] access_token_id: access_tokenid init success
+[    0.517730] NET: Registered protocol family 17
+[    0.518559] 9pnet: Installing 9P2000 support
+[    0.518825] Key type dns_resolver registered
+[    0.520731] EEVDF_QOS_BENCH start window_ms=400 cpu=0
+[    0.521522] registered taskstats version 1
+[    0.521660] Loading compiled-in X.509 certificates
+[    0.530277] input: gpio-keys as /devices/platform/gpio-keys/input/input0
+[    0.535258] clk: Disabling unused clocks
+[    0.535806] ALSA device list:
+[    0.536091]   No soundcards found.
+[    0.538512] uart-pl011 9000000.pl011: no DMA platform data
+[    0.570574] Freeing unused kernel memory: 6016K
+[    0.571771] Run /init as init process
+HiLogAdapter_init: Can't connect to server. Errno: 2
+[    0.624574] [pid=1][Init][INFO][init_firststage.c:166]Start init first stage.
+[    0.625449] [pid=1][Init][INFO][device.c:33]mount dev tmpfs
+[    0.631276] [pid=1][Init][ERROR][device.c:74]Mount selinuxfs failed. No such file or directory
+[    0.638941] [pid=1][ueventd][ERROR][ueventd.c:380]Failed get default_boot_device value from cmdline
+[    0.692853] [pid=1][ueventd][WARNING][ueventd.c:197]Not found device for partitionName (null) 
+[    0.708001] [pid=1][ueventd][INFO][ueventd.c:180]/dev/block/vdc match with required partition vdc success, now handle it
+[    0.712350] [pid=1][ueventd][INFO][ueventd_device_handler.c:85]symlink /dev/block/vdc->/dev/block/platform/a003c00.virtio_mmio/vdc
+[    0.720252] [pid=1][ueventd][WARNING][ueventd.c:197]Not found device for partitionName (null) 
+[    0.735818] [pid=1][ueventd][INFO][ueventd.c:180]/dev/block/vdb match with required partition vdb success, now handle it
+[    0.738397] [pid=1][ueventd][INFO][ueventd_device_handler.c:85]symlink /dev/block/vdb->/dev/block/platform/a003a00.virtio_mmio/vdb
+[    0.806440] [pid=1][ueventd][WARNING][ueventd.c:197]Not found device for partitionName (null) 
+[    0.937448] EEVDF_QOS_BENCH sample qos=5 in_qos=5 se_slice_ns=2250000
+[    0.940497] EEVDF_QOS_BENCH sample qos=0 in_qos=0 se_slice_ns=2250000
+[    0.940694] EEVDF_QOS_BENCH phase=slice_off task=hi qos=5 switches=82 exec_ns=201009840 max_gap_ns=16067248 avg_gap_ns=5024342
+[    0.940894] EEVDF_QOS_BENCH phase=slice_off task=lo qos=0 switches=84 exec_ns=203326272 max_gap_ns=16120688 avg_gap_ns=5045889
+[    0.941339] EEVDF_QOS_BENCH phase=slice_off picks hi=93 lo=90
+[    0.941446] EEVDF_QOS_BENCH phase=slice_off slice=0 pick_ratio_x100=103 exec_ratio_x100=98
+[    0.977654] [pid=1][ueventd][WARNING][ueventd.c:197]Not found device for partitionName (null) 
+[    0.982269] [pid=1][ueventd][WARNING][ueventd.c:197]Not found device for partitionName (null) 
+[    0.987057] [pid=1][ueventd][WARNING][ueventd.c:197]Not found device for partitionName (null) 
+[    0.993493] [pid=1][ueventd][WARNING][ueventd.c:197]Not found device for partitionName (null) 
+[    0.998483] [pid=1][ueventd][WARNING][ueventd.c:197]Not found device for partitionName (null) 
+[    1.002903] [pid=1][ueventd][WARNING][ueventd.c:197]Not found device for partitionName (null) 
+[    1.007506] [pid=1][ueventd][WARNING][ueventd.c:197]Not found device for partitionName (null) 
+[    1.012456] [pid=1][ueventd][WARNING][ueventd.c:197]Not found device for partitionName (null) 
+[    1.031856] [pid=1][Init][INFO][init_mount.c:29]Mount required partitions
+[    1.032724] [pid=1][BEGET][INFO][fstab_mount.c:412]Failed to get bootslots value from cmdline
+[    1.033969] [pid=1][BEGET][INFO][fstab_mount.c:453]Mount device /dev/block/vdb to /usr
+[    1.045981] EXT4-fs (vdb): mounted filesystem without journal. Opts: barrier=1
+[    1.055126] [pid=1][Init][ERROR][switch_root.c:121]Failed to mount moving /mnt/data to /usr/mnt/data, err = 2
+[    1.079520] [pid=1][Init][INFO][switch_root.c:191]SwitchRoot to /usr finish
+[    1.080083] [pid=1][BEGET][INFO][fstab_mount.c:566]Mount /dev/block/vdb to /usr successful
+[    1.081332] [pid=1][BEGET][INFO][fstab_mount.c:412]Failed to get bootslots value from cmdline
+[    1.081978] [pid=1][BEGET][INFO][fstab_mount.c:453]Mount device /dev/block/vdc to /vendor
+[    1.086843] EXT4-fs (vdc): mounted filesystem without journal. Opts: barrier=1
+[    1.087631] [pid=1][BEGET][INFO][fstab_mount.c:566]Mount /dev/block/vdc to /vendor successful
+[    1.087731] [pid=1][Init][INFO][init_firststage.c:130]Start init second stage.
+[    1.139558] random: init: uninitialized urandom read (8 bytes read)
+[    1.163661] [pid=1][Init][INFO][init.c:86]Init fd holder socket done
+[    1.171187] [pid=1][BEGET][ERROR][fstab.c:320]Failed to get fstab item from mount point " /misc "
+[    1.171834] [pid=1][BEGET][INFO][fstab.c:501]Mount point not found, try to get path by device name.
+[    1.173661] [pid=1][BEGET][ERROR][reboot_misc.c:77]Failed to get misc path
+[    1.174134] [pid=1][Init][INFO][init_group_manager.c:235]boot start device.boot.group
+[    1.175726] [pid=1][PARAM][ERROR][param_include.h:76]Invalid current param const.cust.config_dir_layer
+[    1.176351] [pid=1][PARAM][ERROR][param_include.h:76]Invalid current param const.cust.follow_x_rules
+[    1.178965] [pid=1][Init][INFO][init.c:195]Executing hook [0:0] cost [3535]us, result 0.
+[    1.179397] [pid=1][PARAM][ERROR][param_include.h:76]Invalid current param const.cust.config_dir_layer
+[    1.179894] [pid=1][PARAM][ERROR][param_include.h:76]Invalid current param const.cust.follow_x_rules
+[    1.182052] [pid=1][Init][INFO][init.c:195]Executing hook [0:0] cost [2678]us, result 0.
+[    1.183797] [pid=1][Init][INFO][init.c:195]Executing hook [0:0] cost [790]us, result 0.
+[    1.185207] [pid=1][Init][INFO][init.c:195]Executing hook [0:0] cost [39]us, result 0.
+[    1.186054] [pid=1][PARAM][INFO][param_service.c:398]InitParamService pipe: /dev/unix/socket/paramservice.
+[    1.187251] [pid=1][PARAM][INFO][param_base.c:230]CloseParamWorkSpace 1
+[    1.190514] [pid=1][PARAM][INFO][param_base.c:204]Max selinux label 1 1
+[    1.192855] [pid=1][Init][INFO][init_group_manager.c:102]Parse group config /system/etc/device.boot.group.cfg
+[    1.196938] [pid=1][Init][INFO][init.c:296]boot stage: init finish.
+[    1.198954] [pid=1][LoopEvent][INFO][le_signal.c:103]LE_AddSignal 17 0
+[    1.199914] [pid=1][LoopEvent][INFO][le_signal.c:103]LE_AddSignal 15 1
+[    1.202678] [pid=1][PARAM][WARNING][param_server.c:393]Failed to open file '/sys_prod/etc/param/ohos.para.size' error:2 
+[    1.208280] [pid=1][PARAM][ERROR][param_server.c:255]Generate default sn now ...
+[    1.209972] [pid=1][Init][ERROR][init_utils.c:189]Failed to read file /sys/block/mmcblk0/device/cid errno:2
+[    1.210930] [pid=1][PARAM][ERROR][param_server.c:74]Read sn from /sys/block/mmcblk0/device/cid file failed!
+[    1.211786] [pid=1][Init][ERROR][init_utils.c:189]Failed to read file /proc/bootdevice/cid errno:2
+[    1.212482] [pid=1][PARAM][ERROR][param_server.c:74]Read sn from /proc/bootdevice/cid file failed!
+[    1.214083] [pid=1][PARAM][INFO][param_server.c:457]load parameters from build 
+[    1.215259] [pid=1][PARAM][INFO][param_server.c:440]Load default parameters from /proc/dsmm/developer.
+[    1.216175] [pid=1][Init][ERROR][init_utils.c:532]Read dir :/proc/dsmm/developer failed.2
+[    1.217372] [pid=1][Init][ERROR][init_utils.c:532]Read dir :/proc/dsmm/developer failed.2
+[    1.218597] [pid=1][PARAM][ERROR][param_dac.c:238]Read dir :/proc/dsmm/developer failed.2
+[    1.219508] [pid=1][PARAM][INFO][param_server.c:440]Load default parameters from /system/etc/param/ohos_const.
+[    1.230190] [pid=1][PARAM][INFO][param_server.c:440]Load default parameters from /chipset/etc/param.
+[    1.236531] [pid=1][PARAM][INFO][param_server.c:440]Load default parameters from /system/etc/param.
+[    1.268399] [pid=1][PARAM][INFO][param_dac.c:207]Load parameter label total 14 success /system/etc/param/hichecker.para.dac
+[    1.274237] [pid=1][PARAM][INFO][param_dac.c:207]Load parameter label total 15 success /system/etc/param/hitrace.para.dac
+[    1.278495] [pid=1][PARAM][INFO][param_dac.c:207]Load parameter label total 15 success /system/etc/param/faultloggerd.para.dac
+[    1.281862] [pid=1][PARAM][INFO][param_dac.c:207]Load parameter label total 14 success /system/etc/param/musl.para.dac
+[    1.286212] [pid=1][PARAM][INFO][param_dac.c:207]Load parameter label total 14 success /system/etc/param/devicemanager.para.dac
+[    1.353628] EEVDF_QOS_BENCH sample qos=5 in_qos=5 se_slice_ns=1000000
+[    1.354247] EEVDF_QOS_BENCH sample qos=0 in_qos=0 se_slice_ns=4000000
+[    1.354454] EEVDF_QOS_BENCH phase=slice_on task=hi qos=5 switches=51 exec_ns=197372112 max_gap_ns=11751552 avg_gap_ns=8120508
+[    1.354682] EEVDF_QOS_BENCH phase=slice_on task=lo qos=0 switches=52 exec_ns=200499152 max_gap_ns=12163520 avg_gap_ns=7918009
+[    1.354855] EEVDF_QOS_BENCH phase=slice_on picks hi=106 lo=51
+[    1.354944] EEVDF_QOS_BENCH phase=slice_on slice=1 pick_ratio_x100=207 exec_ratio_x100=98
+[    1.355140] EEVDF_QOS_BENCH verdict=pass err=0
+[    1.368499] [pid=1][PARAM][INFO][param_dac.c:207]Load parameter label total 29 success /system/etc/param/ohos.para.dac
+[    1.403623] [pid=1][PARAM][INFO][param_dac.c:207]Load parameter label total 46 success /system/etc/param/hdc.para.dac
+[    1.409394] EEVDF_FORK_CHECK trials=16 ran=16 parent_vlag_is_deadline=16 min_parent_vlag_ns=591298129 max_child_lag_ns=1154890 limit_ns=20000000 verdict=pass
+[    1.411050] [pid=1][PARAM][INFO][param_dac.c:207]Load parameter label total 20 success /system/etc/param/samgr.para.dac
+[    1.416141] [pid=1][PARAM][INFO][param_dac.c:207]Load parameter label total 16 success /system/etc/param/hilog.para.dac
+[    1.420109] [pid=1][PARAM][INFO][param_dac.c:207]Load parameter label total 15 success /system/etc/param/access_token.para.dac
+[    1.421928] [pid=1][Init][INFO][init.c:195]Executing hook [30:0] cost [33]us, result 0.
+[    1.422604] [pid=1][PLUGIN][INFO][udid_static.c:21]Begin install udidmodule.
+[    1.432281] random: init: uninitialized urandom read (8 bytes read)
+[    1.435465] random: init: uninitialized urandom read (8 bytes read)
+[    1.439423] [pid=1][BEGET][INFO][udid_adp.c:75]Begin set udid param
+[    1.439597] [pid=1][PARAM][ERROR][param_manager.c:749]SystemReadParam failed! name is:const.product.udid, errNum is:106!
+[    1.440048] [pid=1][PARAM][ERROR][param_manager.c:749]SystemReadParam failed! name is:const.product.devUdid, errNum is:106!
+[    1.440562] [pid=1][BEGET][INFO][udid_adp.c:80]Get udid from param failed, calculate udid from other param
+[    1.441355] [pid=1][PARAM][ERROR][param_manager.c:749]SystemReadParam failed! name is:ohos.boot.sn, errNum is:106!
+[    1.441852] [pid=1][BEGET][ERROR][udid_adp.c:65]Read param serial failed!
+[    1.442221] [pid=1][BEGET][ERROR][udid_adp.c:82]calculate udid is failed!
+[    1.442593] [pid=1][PLUGIN][INFO][udid_static.c:24]Begin uninstall udidmodule.
+[    1.448158] [pid=1][PLUGIN][INFO][udid_static.c:27]Uninstall udidmodule finished.
+[    1.449145] [pid=1][Init][INFO][init.c:195]Executing hook [30:0] cost [26574]us, result 0.
+[    1.450192] [pid=1][Init][INFO][init_config.c:108]ohos.boot.mode 
+[    1.455632] [pid=1][PARAM][ERROR][trigger_processor.c:257]Command array size must positive fs
+[    1.456621] [pid=1][Init][INFO][init_config.c:95]Import /etc/init.usb.cfg  ...
+[    1.458885] [pid=1][Init][INFO][init_config.c:95]Import /vendor/etc/init.qemu.arm.linux.usb.cfg  ...
+[    1.463395] [pid=1][Init][INFO][init_config.c:95]Import /etc/init.usb.configfs.cfg  ...
+[    1.463834] [pid=1][Init][ERROR][init_config.c:56]Cfg error, /etc/init.usb.configfs.cfg not found
+[    1.466459] [pid=1][Init][INFO][init_config.c:95]Import /vendor/etc/init.qemu.arm.linux.cfg  ...
+[    1.468693] [pid=1][PARAM][ERROR][trigger_processor.c:257]Command array size must positive fs
+[    1.469807] [pid=1][Init][INFO][init_config.c:95]Import init.qemu.arm.linux.usb.cfg  ...
+[    1.470247] [pid=1][Init][ERROR][init_config.c:56]Cfg error, init.qemu.arm.linux.usb.cfg not found
+[    1.487774] [pid=1][PARAM][ERROR][trigger_processor.c:285]Trigger array size must positive
+[    1.555637] [pid=1][Init][WARNING][init_service_manager.c:320]Service warning faultloggerd, failed to get gid.
+[    1.571278] [pid=1][Init][INFO][init_service_socket.c:144]CreateSocket ueventd success
+[    1.572263] [pid=1][Init][INFO][init_service_socket.c:152]CreateSocket restoreContentRecurse /dev/unix/socket/ueventd success
+[    1.576052] [pid=1][Init][INFO][init.c:327]boot stage: parse config file finish.cfg count 15
+[    1.579976] [pid=1][Init][INFO][init.c:148]boot job pre-init start.
+[    1.583261] [pid=1][Init][INFO][init_common_service.c:630]ServiceStart starting:ueventd
+[    1.585932] [pid=1][Init][INFO][init_common_service.c:664]ServiceStart started info ueventd(pid 141 uid 1004)
+[    1.586603] [pid=1][Init][INFO][init_common_service.c:667]starttime:1793359018-587742080, prefork:1793359018-588125568, startedtime:1793359018-590396816
+[    1.589355] [pid=141][Init][WARNING][init_common_service.c:420]Service warning -2 ueventd, failed to set access token.
+[    1.590719] [pid=1][Init][INFO][init_common_service.c:630]ServiceStart starting:watchdog_service
+[    1.592538] [pid=1][Init][INFO][init_common_service.c:664]ServiceStart started info watchdog_service(pid 142 uid 1100)
+[    1.593404] [pid=1][Init][INFO][init_common_service.c:667]starttime:1793359018-595148240, prefork:1793359018-595912848, startedtime:1793359018-597024112
+[    1.594169] [pid=141][Init][INFO][init_service.c:118]ServiceExec ueventd
+[    1.595696] [pid=1][Init][INFO][init_cmds.c:304]Mount partitions from fstab file " /vendor/etc/fstab.qemu.arm.linux "
+[    1.596156] [pid=142][Init][WARNING][init_common_service.c:420]Service warning -2 watchdog_service, failed to set access token.
+[    1.598762] [pid=142][Init][INFO][init_service.c:118]ServiceExec watchdog_service
+[    1.665453] [pid=141][ueventd][INFO][ueventd_main.c:114]Ueventd started, trigger uevent
+[    1.666664] [pid=141][ueventd][ERROR][ueventd.c:380]Failed get default_boot_device value from cmdline
+[    1.716245] [pid=141][ueventd][INFO][ueventd_device_handler.c:85]symlink /dev/block/vdd->/dev/block/platform/a003e00.virtio_mmio/vdd
+[    1.726266] [pid=1][BEGET][INFO][fstab_mount.c:170]Execute /system/bin/resize2fs begin
+[    1.734270] [pid=141][ueventd][INFO][ueventd_device_handler.c:85]symlink /dev/block/vdc->/dev/block/platform/a003c00.virtio_mmio/vdc
+[    1.744064] [pid=141][ueventd][INFO][ueventd_device_handler.c:85]symlink /dev/block/vda->/dev/block/platform/a003800.virtio_mmio/vda
+[    1.756992] [pid=1][BEGET][INFO][fstab_mount.c:136]HiLogAdapter_init: Can't connect to server. Errno: 2
+[    1.762616] [pid=141][ueventd][INFO][ueventd_device_handler.c:85]symlink /dev/block/vdb->/dev/block/platform/a003a00.virtio_mmio/vdb
+[    1.814348] [pid=1][BEGET][INFO][fstab_mount.c:136]HiLogAdapter_init: Can't connect to server. Errno: 2
+[    1.815132] [pid=1][BEGET][INFO][fstab_mount.c:136]HiLogAdapter_init: Can't connect to server. Errno: 2
+[    1.815895] [pid=1][BEGET][INFO][fstab_mount.c:136]HiLogAdapter_init: Can't connect to server. Errno: 2
+[    1.817379] [pid=1][BEGET][INFO][fstab_mount.c:136]resize2fs 1.46.4 (18-Aug-2021)
+[    1.834666] [pid=1][BEGET][INFO][fstab_mount.c:136]The filesystem is already 25600 (4k) blocks long.  Nothing to do!
+[    1.835404] [pid=1][BEGET][INFO][fstab_mount.c:136]
+[    1.850178] [pid=1][BEGET][INFO][fstab_mount.c:189]Execute success, status: 0, command: /system/bin/resize2fs
+[    1.850741] [pid=1][BEGET][INFO][fstab_mount.c:170]Execute /system/bin/e2fsck begin
+[    1.866690] [pid=1][BEGET][INFO][fstab_mount.c:136]HiLogAdapter_init: Can't connect to server. Errno: 2
+[    1.878956] EEVDF_REWEIGHT_CHECK rounds=200 grouped=1 reweight_queued=195 over_bound=0 max_dv_ns=8 scans=200 group_entities=200 bad_avg=0 bad_load=0 bad_min_deadline=0 err=0 verdict=pass
+[    1.898996] [pid=1][BEGET][INFO][fstab_mount.c:136]HiLogAdapter_init: Can't connect to server. Errno: 2
+[    1.899278] [pid=1][BEGET][INFO][fstab_mount.c:136]HiLogAdapter_init: Can't connect to server. Errno: 2
+[    1.899721] [pid=1][BEGET][INFO][fstab_mount.c:136]HiLogAdapter_init: Can't connect to server. Errno: 2
+[    1.908219] [pid=1][BEGET][INFO][fstab_mount.c:136]e2fsck 1.46.4 (18-Aug-2021)
+[    1.918525] [pid=1][BEGET][INFO][fstab_mount.c:136]/data: recovering journal
+[    1.978186] [pid=1][BEGET][INFO][fstab_mount.c:136]/data: clean, 94/25600 files, 2729/25600 blocks
+[    1.981384] [pid=1][BEGET][INFO][fstab_mount.c:189]Execute success, status: 0, command: /system/bin/e2fsck
+[    1.981666] [pid=1][BEGET][INFO][fstab_mount.c:453]Mount device /dev/block/vdd to /data
+[    1.989772] EXT4-fs (vdd): mounted filesystem with ordered data mode. Opts: barrier=1,data=ordered,noauto_da_alloc
+[    1.990367] [pid=1][BEGET][INFO][fstab_mount.c:566]Mount /dev/block/vdd to /data successful
+[    1.990485] [pid=1][BEGET][INFO][fstab_mount.c:453]Mount device /dev/block/vda to /misc
+[    1.990830] [pid=1][BEGET][ERROR][fstab_mount.c:399]Failed to create dir " /misc ", err = 30
+[    1.991041] [pid=1][BEGET][ERROR][fstab_mount.c:480]Mount device /dev/block/vda to /misc failed, err = 30, retry
+[    1.991296] [pid=1][BEGET][ERROR][fstab_mount.c:399]Failed to create dir " /misc ", err = 30
+[    1.991497] [pid=1][BEGET][ERROR][fstab_mount.c:480]Mount device /dev/block/vda to /misc failed, err = 30, retry
+[    1.991693] [pid=1][BEGET][ERROR][fstab_mount.c:399]Failed to create dir " /misc ", err = 30
+[    1.991896] [pid=1][BEGET][ERROR][fstab_mount.c:480]Mount device /dev/block/vda to /misc failed, err = 30, retry
+[    1.992101] [pid=1][BEGET][WARNING][fstab_mount.c:562]Mount /dev/block/vda to /misc failed, err = 30. Ignore failure
+[    1.992516] [pid=1][Init][INFO][init_cmds.c:306]Mount partitions from fstab file " /vendor/etc/fstab.qemu.arm.linux " finish ret 0
+[    1.993224] [pid=1][Init][INFO][init_common_cmds.c:773]Execute command "mount_fstab  /vendor/etc/fstab.${ohos.boot.hardware}" took 397 ms
+[    1.998011] [pid=1][Init][INFO][fscrypt_control.c:484]Fscrypt have not enabled
+[    1.999268] [pid=1][Init][INFO][fscrypt_control.c:484]Fscrypt have not enabled
+[    2.000342] [pid=1][Init][INFO][fscrypt_control.c:484]Fscrypt have not enabled
+[    2.001567] [pid=1][Init][INFO][fscrypt_control.c:484]Fscrypt have not enabled
+[    2.002769] [pid=1][Init][INFO][fscrypt_control.c:484]Fscrypt have not enabled
+[    2.007250] [pid=1][PARAM][INFO][param_persistadp.c:137]LoadPersistParam from file /data/service/el1/startup/parameters/public_persist_parameters paramNum 1
+[    2.007557] [pid=1][PARAM][WARNING][param_persistadp.c:123]No valid persist parameter file /data/service/el1/startup/parameters/tmp_public_persist_parameters
+[    2.010486] [pid=1][Init][ERROR][init_common_cmds.c:471]Failed to mount for /sys/kernel/tracing, err 2.
+[    2.011536] [pid=1][Init][INFO][fscrypt_control.c:484]Fscrypt have not enabled
+[    2.017777] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/buffer_size_kb " to 0666, err=2
+[    2.018103] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/current_tracer " to 0666, err=2
+[    2.018483] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/saved_cmdlines_size " to 0666, err=2
+[    2.018836] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/trace " to 0666, err=2
+[    2.019222] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/snapshot " to 0666, err=2
+[    2.019533] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/trace_clock " to 0666, err=2
+[    2.019920] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/trace_marker " to 0222, err=2
+[    2.020295] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/tracing_on " to 0666, err=2
+[    2.020732] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events " to 0755, err=2
+[    2.021436] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/binder/ " to 0755, err=2
+[    2.021828] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/binder/binder_lock/ " to 0755, err=2
+[    2.022274] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/binder/binder_locked/ " to 0755, err=2
+[    2.022661] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/binder/binder_unlock/ " to 0755, err=2
+[    2.023053] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/binder/binder_transaction/ " to 0755, err=2
+[    2.023522] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/binder/binder_transaction_received/ " to 0755
+[    2.024239] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/binder/binder_transaction_alloc_buf/ " to 075
+[    2.024611] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/binder/binder_lock/enable " to 0666, err=2
+[    2.024764] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/binder/binder_locked/enable " to 0666, err=2
+[    2.025362] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/binder/binder_unlock/enable " to 0666, err=2
+[    2.025716] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/binder/binder_transaction/enable " to 0666, e
+[    2.026334] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/binder/binder_transaction_received/enable " t
+[    2.026719] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/binder/binder_transaction_alloc_buf/enable " 
+[    2.027115] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/cgroup/ " to 0755, err=2
+[    2.027288] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/cgroup/enable " to 0666, err=2
+[    2.027745] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/cpufreq_interactive/ " to 0755, err=2
+[    2.028138] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/cpufreq_interactive/enable " to 0666, err=2
+[    2.028487] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/dma_fence/ " to 0755, err=2
+[    2.028849] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/dma_fence/enable " to 0666, err=2
+[    2.029638] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/fence/ " to 0755, err=2
+[    2.030087] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/fence/enable " to 0666, err=2
+[    2.030464] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/i2c/ " to 0755, err=2
+[    2.030806] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/i2c/enable " to 0666, err=2
+[    2.031141] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/i2c/i2c_read/ " to 0755, err=2
+[    2.031470] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/i2c/i2c_write/ " to 0755, err=2
+[    2.031786] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/i2c/i2c_result/ " to 0755, err=2
+[    2.032193] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/i2c/i2c_reply/ " to 0755, err=2
+[    2.032542] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/i2c/smbus_read/ " to 0755, err=2
+[    2.033173] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/i2c/smbus_write/ " to 0755, err=2
+[    2.033667] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/i2c/smbus_result/ " to 0755, err=2
+[    2.033994] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/i2c/smbus_reply/ " to 0755, err=2
+[    2.034403] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/i2c/i2c_read/enable " to 0666, err=2
+[    2.034777] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/i2c/i2c_write/enable " to 0666, err=2
+[    2.035137] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/i2c/i2c_result/enable " to 0666, err=2
+[    2.035465] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/i2c/i2c_reply/enable " to 0666, err=2
+[    2.035791] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/i2c/smbus_read/enable " to 0666, err=2
+[    2.036139] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/i2c/smbus_write/enable " to 0666, err=2
+[    2.036514] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/i2c/smbus_result/enable " to 0666, err=2
+[    2.036893] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/i2c/smbus_reply/enable " to 0666, err=2
+[    2.037537] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/kmem/ " to 0755, err=2
+[    2.038028] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/kmem/rss_stat/ " to 0755, err=2
+[    2.038390] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/kmem/ion_heap_grow/ " to 0755, err=2
+[    2.038761] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/kmem/ion_heap_shrink/ " to 0755, err=2
+[    2.039176] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/kmem/rss_stat/enable " to 0666, err=2
+[    2.039554] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/kmem/ion_heap_grow/enable " to 0666, err=2
+[    2.039934] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/kmem/ion_heap_shrink/enable " to 0666, err=2
+[    2.040329] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/lowmemorykiller/ " to 0755, err=2
+[    2.040697] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/lowmemorykiller/lowmemory_kill/ " to 0755, er
+[    2.042397] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/lowmemorykiller/enable " to 0666, err=2
+[    2.042717] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/lowmemorykiller/lowmemory_kill/enable " to 06
+[    2.043308] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/mm_event/ " to 0755, err=2
+[    2.043444] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/mm_event/mm_event_record/ " to 0755, err=2
+[    2.043860] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/mm_event/mm_event_record/enable " to 0666, er
+[    2.044446] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/oom/ " to 0755, err=2
+[    2.044593] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/oom/oom_score_adj_update/ " to 0755, err=2
+[    2.045114] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/oom/oom_score_adj_update/enable " to 0666, er
+[    2.045767] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/power/ " to 0755, err=2
+[    2.045894] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/power/cpu_frequency/ " to 0755, err=2
+[    2.046220] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/power/cpu_idle/ " to 0755, err=2
+[    2.046641] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/power/clock_set_rate/ " to 0755, err=2
+[    2.046981] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/power/cpu_frequency_limits/ " to 0755, err=2
+[    2.047336] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/power/gpu_frequency/ " to 0755, err=2
+[    2.047685] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/power/cpu_frequency/enable " to 0666, err=2
+[    2.048061] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/power/cpu_idle/enable " to 0666, err=2
+[    2.048395] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/power/clock_set_rate/enable " to 0666, err=2
+[    2.048746] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/power/cpu_frequency_limits/enable " to 0666, 
+[    2.049637] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/power/gpu_frequency/enable " to 0666, err=2
+[    2.049777] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/sched/ " to 0755, err=2
+[    2.050125] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/sched/sched_switch/ " to 0755, err=2
+[    2.050526] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/sched/sched_wakeup/ " to 0755, err=2
+[    2.050902] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/sched/sched_blocked_reason/ " to 0755, err=2
+[    2.051238] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/sched/sched_cpu_hotplug/ " to 0755, err=2
+[    2.051652] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/sched/sched_pi_setprio/ " to 0755, err=2
+[    2.052008] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/sched/sched_process_exit/ " to 0755, err=2
+[    2.052360] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/sched/sched_waking/ " to 0755, err=2
+[    2.052768] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/sched/sched_switch/enable " to 0666, err=2
+[    2.053339] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/sched/sched_wakeup/enable " to 0666, err=2
+[    2.053661] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/sched/sched_blocked_reason/enable " to 0666, 
+[    2.054285] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/sched/sched_cpu_hotplug/enable " to 0666, err
+[    2.054670] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/sched/sched_pi_setprio/enable " to 0666, err=2
+[    2.054804] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/sched/sched_process_exit/enable " to 0666, er
+[    2.055379] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/sched/sched_waking/enable " to 0666, err=2
+[    2.055553] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/signal/ " to 0755, err=2
+[    2.055899] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/signal/signal_generate/ " to 0755, err=2
+[    2.056212] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/signal/signal_deliver/ " to 0755, err=2
+[    2.056558] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/signal/signal_generate/enable " to 0666, err=2
+[    2.056923] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/signal/signal_deliver/enable " to 0666, err=2
+[    2.057582] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/sync/ " to 0755, err=2
+[    2.057895] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/sync/enable " to 0666, err=2
+[    2.058213] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/task/ " to 0755, err=2
+[    2.058491] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/task/task_rename/ " to 0755, err=2
+[    2.058765] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/task/task_newtask/ " to 0755, err=2
+[    2.059068] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/task/task_rename/enable " to 0666, err=2
+[    2.059369] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/task/task_newtask/enable " to 0666, err=2
+[    2.059658] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/vmscan/ " to 0755, err=2
+[    2.060004] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/vmscan/mm_vmscan_direct_reclaim_begin/ " to 0
+[    2.060467] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/vmscan/mm_vmscan_direct_reclaim_end/ " to 075
+[    2.060775] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/vmscan/mm_vmscan_kswapd_wake/ " to 0755, err=2
+[    2.060900] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/vmscan/mm_vmscan_kswapd_sleep/ " to 0755, err
+[    2.061689] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/vmscan/mm_vmscan_direct_reclaim_begin/enable 
+[    2.061998] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/vmscan/mm_vmscan_direct_reclaim_end/enable " 
+[    2.062308] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/vmscan/mm_vmscan_kswapd_wake/enable " to 0666
+[    2.062602] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/vmscan/mm_vmscan_kswapd_sleep/enable " to 066
+[    2.062894] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/block/ " to 0755, err=2
+[    2.063028] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/block/block_rq_issue/ " to 0755, err=2
+[    2.063332] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/block/block_rq_complete/ " to 0755, err=2
+[    2.063611] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/block/block_rq_issue/enable " to 0666, err=2
+[    2.063899] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/block/block_rq_complete/enable " to 0666, err
+[    2.064389] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/block/block_bio_remap/enable " to 0666, err=2
+[    2.064510] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/block/block_rq_insert/enable " to 0666, err=2
+[    2.064800] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/ext4/ " to 0755, err=2
+[    2.065317] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/ext4/ext4_da_write_begin/ " to 0755, err=2
+[    2.065588] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/ext4/ext4_da_write_end/ " to 0755, err=2
+[    2.065879] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/ext4/ext4_es_lookup_extent_enter/ " to 0755, 
+[    2.066353] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/ext4/ext4_es_lookup_extent_exit/ " to 0755, e
+[    2.066644] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/ext4/ext4_load_inode/ " to 0755, err=2
+[    2.066767] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/ext4/ext4_sync_file_enter/ " to 0755, err=2
+[    2.067050] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/ext4/ext4_sync_file_exit/ " to 0755, err=2
+[    2.067350] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/ext4/ext4_da_write_begin/enable " to 0666, er
+[    2.067804] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/ext4/ext4_da_write_end/enable " to 0666, err=2
+[    2.067935] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/ext4/ext4_es_lookup_extent_enter/enable " to 
+[    2.068395] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/ext4/ext4_es_lookup_extent_exit/enable " to 0
+[    2.068684] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/ext4/ext4_load_inode/enable " to 0666, err=2
+[    2.068804] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/ext4/ext4_sync_file_enter/enable " to 0666, e
+[    2.069660] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/ext4/ext4_sync_file_exit/enable " to 0666, er
+[    2.069963] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/f2fs/ " to 0755, err=2
+[    2.070097] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/f2fs/f2fs_get_data_block/ " to 0755, err=2
+[    2.070407] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/f2fs/f2fs_iget/ " to 0755, err=2
+[    2.070709] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/f2fs/f2fs_sync_file_enter/ " to 0755, err=2
+[    2.070997] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/f2fs/f2fs_sync_file_exit/ " to 0755, err=2
+[    2.071292] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/f2fs/f2fs_write_begin/ " to 0755, err=2
+[    2.071579] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/f2fs/f2fs_write_end/ " to 0755, err=2
+[    2.071854] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/f2fs/f2fs_get_data_block/enable " to 0666, er
+[    2.072318] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/f2fs/f2fs_iget/enable " to 0666, err=2
+[    2.072446] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/f2fs/f2fs_sync_file_enter/enable " to 0666, e
+[    2.072902] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/f2fs/f2fs_sync_file_exit/enable " to 0666, er
+[    2.073603] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/f2fs/f2fs_readpage/enable " to 0666, err=2
+[    2.073728] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/f2fs/f2fs_readpages/enable " to 0666, err=2
+[    2.074056] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/f2fs/f2fs_sync_fs/enable " to 0666, err=2
+[    2.074356] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/hmdfs/hmdfs_syncfs_enter/enable " to 0666, er
+[    2.074806] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/hmdfs/hmdfs_syncfs_exit/enable " to 0666, err
+[    2.075127] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/erofs/erofs_readpage/enable " to 0666, err=2
+[    2.075250] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/erofs/erofs_readpages/enable " to 0666, err=2
+[    2.075547] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/ext4/ext4_da_write_begin/enable " to 0666, er
+[    2.076016] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/ext4/ext4_da_write_end/enable " to 0666, err=2
+[    2.076137] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/ext4/ext4_sync_file_enter/enable " to 0666, err=2
+[    2.076424] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/ext4/ext4_sync_file_exit/enable " to 0666, err=2
+[    2.076700] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/f2fs/f2fs_write_begin/enable " to 0666, err=2
+[    2.077137] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/f2fs/f2fs_write_end/enable " to 0666, err=2
+[    2.077443] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/filemap/ " to 0755, err=2
+[    2.077733] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/filemap/enable " to 0666, err=2
+[    2.078016] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/filemap/mm_filemap_add_to_page_cache/enable "
+[    2.078451] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/filemap/mm_filemap_delete_from_page_cache/ena
+[    2.078743] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/filemap/mm_filemap_add_to_page_cache/enable "
+[    2.079206] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/filemap/mm_filemap_delete_from_page_cache/ena
+[    2.079839] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/options/ " to 0755, err=2
+[    2.079988] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/options/overwrite " to 0666, err=2
+[    2.080275] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/options/print-tgid " to 0666, err=2
+[    2.080563] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/options/record-tgid " to 0666, err=2
+[    2.080840] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/per_cpu/ " to 0755, err=2
+[    2.081388] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/per_cpu/cpu0/ " to 0755, err=2
+[    2.081662] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/per_cpu/cpu1/ " to 0755, err=2
+[    2.081932] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/per_cpu/cpu2/ " to 0755, err=2
+[    2.082234] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/per_cpu/cpu3/ " to 0755, err=2
+[    2.082507] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/per_cpu/cpu4/ " to 0755, err=2
+[    2.082763] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/per_cpu/cpu5/ " to 0755, err=2
+[    2.083039] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/per_cpu/cpu6/ " to 0755, err=2
+[    2.083308] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/per_cpu/cpu7/ " to 0755, err=2
+[    2.083576] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/per_cpu/cpu8/ " to 0755, err=2
+[    2.083843] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/per_cpu/cpu9/ " to 0755, err=2
+[    2.084127] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/per_cpu/cpu10/ " to 0755, err=2
+[    2.084409] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/per_cpu/cpu11/ " to 0755, err=2
+[    2.084678] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/per_cpu/cpu12/ " to 0755, err=2
+[    2.085075] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/per_cpu/cpu13/ " to 0755, err=2
+[    2.085377] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/per_cpu/cpu14/ " to 0755, err=2
+[    2.085647] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/per_cpu/cpu15/ " to 0755, err=2
+[    2.085913] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/per_cpu/cpu0/trace " to 0666, err=2
+[    2.086217] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/per_cpu/cpu1/trace " to 0666, err=2
+[    2.086493] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/per_cpu/cpu2/trace " to 0666, err=2
+[    2.086764] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/per_cpu/cpu3/trace " to 0666, err=2
+[    2.087047] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/per_cpu/cpu4/trace " to 0666, err=2
+[    2.087323] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/per_cpu/cpu5/trace " to 0666, err=2
+[    2.087596] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/per_cpu/cpu6/trace " to 0666, err=2
+[    2.087869] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/per_cpu/cpu7/trace " to 0666, err=2
+[    2.088158] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/per_cpu/cpu8/trace " to 0666, err=2
+[    2.088441] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/per_cpu/cpu9/trace " to 0666, err=2
+[    2.088715] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/per_cpu/cpu10/trace " to 0666, err=2
+[    2.089194] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/per_cpu/cpu11/trace " to 0666, err=2
+[    2.089489] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/per_cpu/cpu12/trace " to 0666, err=2
+[    2.089766] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/per_cpu/cpu13/trace " to 0666, err=2
+[    2.090060] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/per_cpu/cpu14/trace " to 0666, err=2
+[    2.090353] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/per_cpu/cpu15/trace " to 0666, err=2
+[    2.090628] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/per_cpu/cpu0/buffer_size_kb " to 0666, err=2
+[    2.090905] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/per_cpu/cpu1/buffer_size_kb " to 0666, err=2
+[    2.091209] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/per_cpu/cpu2/buffer_size_kb " to 0666, err=2
+[    2.091494] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/per_cpu/cpu3/buffer_size_kb " to 0666, err=2
+[    2.091776] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/per_cpu/cpu4/buffer_size_kb " to 0666, err=2
+[    2.092063] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/per_cpu/cpu5/buffer_size_kb " to 0666, err=2
+[    2.092354] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/per_cpu/cpu6/buffer_size_kb " to 0666, err=2
+[    2.092634] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/per_cpu/cpu7/buffer_size_kb " to 0666, err=2
+[    2.093047] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/per_cpu/cpu8/buffer_size_kb " to 0666, err=2
+[    2.093391] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/per_cpu/cpu9/buffer_size_kb " to 0666, err=2
+[    2.093687] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/per_cpu/cpu10/buffer_size_kb " to 0666, err=2
+[    2.093977] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/per_cpu/cpu11/buffer_size_kb " to 0666, err=2
+[    2.094265] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/per_cpu/cpu12/buffer_size_kb " to 0666, err=2
+[    2.094569] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/per_cpu/cpu13/buffer_size_kb " to 0666, err=2
+[    2.094861] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/per_cpu/cpu14/buffer_size_kb " to 0666, err=2
+[    2.095164] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/per_cpu/cpu15/buffer_size_kb " to 0666, err=2
+[    2.095447] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/per_cpu/cpu0/snapshot " to 0666, err=2
+[    2.095729] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/per_cpu/cpu1/snapshot " to 0666, err=2
+[    2.096018] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/per_cpu/cpu2/snapshot " to 0666, err=2
+[    2.096298] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/per_cpu/cpu3/snapshot " to 0666, err=2
+[    2.096571] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/per_cpu/cpu4/snapshot " to 0666, err=2
+[    2.096846] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/per_cpu/cpu5/snapshot " to 0666, err=2
+[    2.097467] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/per_cpu/cpu6/snapshot " to 0666, err=2
+[    2.097751] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/per_cpu/cpu7/snapshot " to 0666, err=2
+[    2.098041] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/per_cpu/cpu8/snapshot " to 0666, err=2
+[    2.098321] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/per_cpu/cpu9/snapshot " to 0666, err=2
+[    2.098596] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/per_cpu/cpu10/snapshot " to 0666, err=2
+[    2.098872] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/per_cpu/cpu11/snapshot " to 0666, err=2
+[    2.099165] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/per_cpu/cpu12/snapshot " to 0666, err=2
+[    2.099442] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/per_cpu/cpu13/snapshot " to 0666, err=2
+[    2.099717] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/per_cpu/cpu14/snapshot " to 0666, err=2
+[    2.100007] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/per_cpu/cpu15/snapshot " to 0666, err=2
+[    2.100286] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/per_cpu/cpu0/snapshot_raw " to 0444, err=2
+[    2.100568] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/per_cpu/cpu1/snapshot_raw " to 0444, err=2
+[    2.100846] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/per_cpu/cpu2/snapshot_raw " to 0444, err=2
+[    2.101244] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/per_cpu/cpu3/snapshot_raw " to 0444, err=2
+[    2.101516] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/per_cpu/cpu4/snapshot_raw " to 0444, err=2
+[    2.101800] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/per_cpu/cpu5/snapshot_raw " to 0444, err=2
+[    2.102107] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/per_cpu/cpu6/snapshot_raw " to 0444, err=2
+[    2.102391] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/per_cpu/cpu7/snapshot_raw " to 0444, err=2
+[    2.102671] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/per_cpu/cpu8/snapshot_raw " to 0444, err=2
+[    2.102942] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/per_cpu/cpu9/snapshot_raw " to 0444, err=2
+[    2.103256] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/per_cpu/cpu10/snapshot_raw " to 0444, err=2
+[    2.103558] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/per_cpu/cpu11/snapshot_raw " to 0444, err=2
+[    2.103841] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/per_cpu/cpu12/snapshot_raw " to 0444, err=2
+[    2.104152] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/per_cpu/cpu13/snapshot_raw " to 0444, err=2
+[    2.104433] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/per_cpu/cpu14/snapshot_raw " to 0444, err=2
+[    2.104699] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/per_cpu/cpu15/snapshot_raw " to 0444, err=2
+[    2.105155] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/options/record-cmd " to 0666, err=2
+[    2.105464] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/power/suspend_resume/enable " to 0666, err=2
+[    2.105745] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/sched/sched_process_free/enable " to 0666, er
+[    2.106216] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/sched/sched_wakeup_new/enable " to 0666, err=2
+[    2.106337] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/writeback/enable " to 0666, err=2
+[    2.106627] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/workqueue/enable " to 0666, err=2
+[    2.106942] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/vmscan/enable " to 0666, err=2
+[    2.107230] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/v4l2/enable " to 0666, err=2
+[    2.107504] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/timer/enable " to 0666, err=2
+[    2.107775] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/sunrpc/enable " to 0666, err=2
+[    2.108064] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/signal/enable " to 0666, err=2
+[    2.108326] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/sched/enable " to 0666, err=2
+[    2.108606] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/regulator/enable " to 0666, err=2
+[    2.108879] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/rcu/enable " to 0666, err=2
+[    2.109292] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/raw_syscalls/enable " to 0666, err=2
+[    2.109570] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/printk/enable " to 0666, err=2
+[    2.109849] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/power/enable " to 0666, err=2
+[    2.110150] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/set_event " to 0666, err=2
+[    2.110435] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/pagemap/enable " to 0666, err=2
+[    2.110698] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/oom/enable " to 0666, err=2
+[    2.110982] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/net/enable " to 0666, err=2
+[    2.111267] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/binder/enable " to 0666, err=2
+[    2.111542] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/block/enable " to 0666, err=2
+[    2.111815] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/clk/enable " to 0666, err=2
+[    2.112116] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/clk/enable " to 0666, err=2
+[    2.112386] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/compaction/enable " to 0666, err=2
+[    2.112655] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/cpuhp/enable " to 0666, err=2
+[    2.113100] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/ext4/enable " to 0666, err=2
+[    2.113503] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/f2fs/enable " to 0666, err=2
+[    2.113778] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/filelock/enable " to 0666, err=2
+[    2.114062] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/filemap/enable " to 0666, err=2
+[    2.114341] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/ftrace/enable " to 0666, err=2
+[    2.114615] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/ftrace " to 0755, err=2
+[    2.114888] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/ftrace/print " to 0755, err=2
+[    2.115178] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/gpio/enable " to 0666, err=2
+[    2.115453] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/ipi/enable " to 0666, err=2
+[    2.115726] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/kmem/enable " to 0666, err=2
+[    2.116009] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/mmc/enable " to 0666, err=2
+[    2.116288] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/irq/enable " to 0666, err=2
+[    2.116560] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/task/enable " to 0666, err=2
+[    2.116838] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/clk/clk_disable/enable " to 0666, err=2
+[    2.117251] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/clk/clk_disable_complete/enable " to 0666, er
+[    2.117692] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/clk/clk_enable/enable " to 0666, err=2
+[    2.117812] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/clk/clk_enable_complete/enable " to 0666, err
+[    2.118286] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/clk/clk_set_rate/enable " to 0666, err=2
+[    2.118408] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/clk/clk_set_rate_complete/enable " to 0666, e
+[    2.118839] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/ftrace/print/enable " to 0666, err=2
+[    2.119010] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/irq/irq_handler_entry/enable " to 0666, err=2
+[    2.119369] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/irq/irq_handler_exit/enable " to 0666, err=2
+[    2.119693] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/irq/softirq_entry/enable " to 0666, err=2
+[    2.119991] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/irq/softirq_exit/enable " to 0666, err=2
+[    2.120279] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/irq/softirq_raise/enable " to 0666, err=2
+[    2.120562] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/power/clock_disable/enable " to 0666, err=2
+[    2.120849] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/power/clock_enable/enable " to 0666, err=2
+[    2.121418] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/workqueue/workqueue_execute_end/enable " to 0
+[    2.121875] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/workqueue/workqueue_execute_start/enable " to
+[    2.122196] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/thermal_power_allocator/enable " to 0666, err
+[    2.122483] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/preemptirq/irq_enable/ " to 0755, err=2
+[    2.122603] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/preemptirq/irq_enable/enable " to 0666, err=2
+[    2.122889] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/preemptirq/irq_disable/ " to 0755, err=2
+[    2.123206] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/preemptirq/irq_disable/enable " to 0666, err=2
+[    2.123492] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/preemptirq/preempt_enable/ " to 0755, err=2
+[    2.123788] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/preemptirq/preempt_enable/enable " to 0666, e
+[    2.124248] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/preemptirq/preempt_disable/ " to 0755, err=2
+[    2.124371] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/preemptirq/preempt_disable/enable " to 0666, 
+[    2.124817] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/memory_bus/ " to 0755, err=2
+[    2.125179] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/memory_bus/enable " to 0666, err=2
+[    2.125590] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/ufs/ " to 0755, err=2
+[    2.125871] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/ufs/enable " to 0666, err=2
+[    2.126156] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/zbinder/ " to 0755, err=2
+[    2.126427] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/zbinder/enable " to 0666, err=2
+[    2.126697] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/power_kernel/cpu_idle " to 0755, err=2
+[    2.126980] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing/events/power_kernel/cpu_idle/enable " to 0666, err=2
+[    2.127499] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/buffer_size_kb " to 0666, err=2
+[    2.127782] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/current_tracer " to 0666, err=2
+[    2.128052] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/saved_cmdlines_size " to 0666, err=2
+[    2.128323] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/trace " to 0666, err=2
+[    2.128587] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/snapshot " to 0666, err=2
+[    2.128837] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/trace_clock " to 0666, err=2
+[    2.129221] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/trace_marker " to 0222, err=2
+[    2.129482] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/tracing_on " to 0666, err=2
+[    2.129741] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events " to 0755, err=2
+[    2.130008] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/binder/ " to 0755, err=2
+[    2.130268] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/binder/binder_lock/ " to 0755, err=2
+[    2.130526] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/binder/binder_locked/ " to 0755, err=2
+[    2.130793] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/binder/binder_unlock/ " to 0755, err=2
+[    2.131076] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/binder/binder_transaction/ " to 0755, err=2
+[    2.131349] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/binder/binder_transaction_received/ " to 0755, err=2
+[    2.131623] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/binder/binder_transaction_alloc_buf/ " to 0755, err
+[    2.132080] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/binder/binder_lock/enable " to 0666, err=2
+[    2.132202] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/binder/binder_locked/enable " to 0666, err=2
+[    2.132484] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/binder/binder_unlock/enable " to 0666, err=2
+[    2.132760] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/binder/binder_transaction/enable " to 0666, err=2
+[    2.133224] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/binder/binder_transaction_received/enable " to 0666
+[    2.133678] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/binder/binder_transaction_alloc_buf/enable " to 066
+[    2.133971] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/cgroup/ " to 0755, err=2
+[    2.134092] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/cgroup/enable " to 0666, err=2
+[    2.134352] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/cpufreq_interactive/ " to 0755, err=2
+[    2.134612] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/cpufreq_interactive/enable " to 0666, err=2
+[    2.134877] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/dma_fence/ " to 0755, err=2
+[    2.135169] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/dma_fence/enable " to 0666, err=2
+[    2.135474] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/fence/ " to 0755, err=2
+[    2.135831] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/fence/enable " to 0666, err=2
+[    2.136138] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/i2c/ " to 0755, err=2
+[    2.136410] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/i2c/enable " to 0666, err=2
+[    2.136667] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/i2c/i2c_read/ " to 0755, err=2
+[    2.137039] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/i2c/i2c_write/ " to 0755, err=2
+[    2.137323] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/i2c/i2c_result/ " to 0755, err=2
+[    2.137587] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/i2c/i2c_reply/ " to 0755, err=2
+[    2.137973] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/i2c/smbus_read/ " to 0755, err=2
+[    2.138319] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/i2c/smbus_write/ " to 0755, err=2
+[    2.138607] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/i2c/smbus_result/ " to 0755, err=2
+[    2.138904] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/i2c/smbus_reply/ " to 0755, err=2
+[    2.139179] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/i2c/i2c_read/enable " to 0666, err=2
+[    2.139450] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/i2c/i2c_write/enable " to 0666, err=2
+[    2.139716] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/i2c/i2c_result/enable " to 0666, err=2
+[    2.139996] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/i2c/i2c_reply/enable " to 0666, err=2
+[    2.140286] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/i2c/smbus_read/enable " to 0666, err=2
+[    2.140553] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/i2c/smbus_write/enable " to 0666, err=2
+[    2.140819] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/i2c/smbus_result/enable " to 0666, err=2
+[    2.141455] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/i2c/smbus_reply/enable " to 0666, err=2
+[    2.141738] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/kmem/ " to 0755, err=2
+[    2.142037] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/kmem/rss_stat/ " to 0755, err=2
+[    2.142300] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/kmem/ion_heap_grow/ " to 0755, err=2
+[    2.142561] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/kmem/ion_heap_shrink/ " to 0755, err=2
+[    2.142824] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/kmem/rss_stat/enable " to 0666, err=2
+[    2.143108] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/kmem/ion_heap_grow/enable " to 0666, err=2
+[    2.143382] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/kmem/ion_heap_shrink/enable " to 0666, err=2
+[    2.143654] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/lowmemorykiller/ " to 0755, err=2
+[    2.143927] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/lowmemorykiller/lowmemory_kill/ " to 0755, err=2
+[    2.144227] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/lowmemorykiller/enable " to 0666, err=2
+[    2.144509] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/lowmemorykiller/lowmemory_kill/enable " to 0666, er
+[    2.145100] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/mm_event/ " to 0755, err=2
+[    2.145256] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/mm_event/mm_event_record/ " to 0755, err=2
+[    2.145523] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/mm_event/mm_event_record/enable " to 0666, err=2
+[    2.145795] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/oom/ " to 0755, err=2
+[    2.146086] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/oom/oom_score_adj_update/ " to 0755, err=2
+[    2.146343] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/oom/oom_score_adj_update/enable " to 0666, err=2
+[    2.146615] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/power/ " to 0755, err=2
+[    2.146890] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/power/cpu_frequency/ " to 0755, err=2
+[    2.147173] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/power/cpu_idle/ " to 0755, err=2
+[    2.147440] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/power/clock_set_rate/ " to 0755, err=2
+[    2.147703] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/power/cpu_frequency_limits/ " to 0755, err=2
+[    2.147978] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/power/gpu_frequency/ " to 0755, err=2
+[    2.148255] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/power/cpu_frequency/enable " to 0666, err=2
+[    2.148517] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/power/cpu_idle/enable " to 0666, err=2
+[    2.148790] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/power/clock_set_rate/enable " to 0666, err=2
+[    2.149327] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/power/cpu_frequency_limits/enable " to 0666, err=2
+[    2.149664] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/power/gpu_frequency/enable " to 0666, err=2
+[    2.149962] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/sched/ " to 0755, err=2
+[    2.150242] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/sched/sched_switch/ " to 0755, err=2
+[    2.150499] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/sched/sched_wakeup/ " to 0755, err=2
+[    2.150765] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/sched/sched_blocked_reason/ " to 0755, err=2
+[    2.151044] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/sched/sched_cpu_hotplug/ " to 0755, err=2
+[    2.151322] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/sched/sched_pi_setprio/ " to 0755, err=2
+[    2.151594] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/sched/sched_process_exit/ " to 0755, err=2
+[    2.151863] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/sched/sched_waking/ " to 0755, err=2
+[    2.152154] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/sched/sched_switch/enable " to 0666, err=2
+[    2.152431] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/sched/sched_wakeup/enable " to 0666, err=2
+[    2.152743] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/sched/sched_blocked_reason/enable " to 0666, err=2
+[    2.153339] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/sched/sched_cpu_hotplug/enable " to 0666, err=2
+[    2.153634] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/sched/sched_pi_setprio/enable " to 0666, err=2
+[    2.153911] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/sched/sched_process_exit/enable " to 0666, err=2
+[    2.154202] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/sched/sched_waking/enable " to 0666, err=2
+[    2.154489] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/signal/ " to 0755, err=2
+[    2.154759] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/signal/signal_generate/ " to 0755, err=2
+[    2.155024] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/signal/signal_deliver/ " to 0755, err=2
+[    2.155297] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/signal/signal_generate/enable " to 0666, err=2
+[    2.155560] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/signal/signal_deliver/enable " to 0666, err=2
+[    2.155825] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/sync/ " to 0755, err=2
+[    2.156107] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/sync/enable " to 0666, err=2
+[    2.156363] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/task/ " to 0755, err=2
+[    2.156620] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/task/task_rename/ " to 0755, err=2
+[    2.156867] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/task/task_newtask/ " to 0755, err=2
+[    2.157396] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/task/task_rename/enable " to 0666, err=2
+[    2.157658] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/task/task_newtask/enable " to 0666, err=2
+[    2.157935] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/vmscan/ " to 0755, err=2
+[    2.158228] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/vmscan/mm_vmscan_direct_reclaim_begin/ " to 0755, e
+[    2.158636] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/vmscan/mm_vmscan_direct_reclaim_end/ " to 0755, err
+[    2.158914] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/vmscan/mm_vmscan_kswapd_wake/ " to 0755, err=2
+[    2.159045] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/vmscan/mm_vmscan_kswapd_sleep/ " to 0755, err=2
+[    2.159323] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/vmscan/mm_vmscan_direct_reclaim_begin/enable " to 0
+[    2.159746] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/vmscan/mm_vmscan_direct_reclaim_end/enable " to 066
+[    2.160042] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/vmscan/mm_vmscan_kswapd_wake/enable " to 0666, err=2
+[    2.160157] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/vmscan/mm_vmscan_kswapd_sleep/enable " to 0666, err
+[    2.160586] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/block/ " to 0755, err=2
+[    2.160699] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/block/block_rq_issue/ " to 0755, err=2
+[    2.161070] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/block/block_rq_complete/ " to 0755, err=2
+[    2.161352] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/block/block_rq_issue/enable " to 0666, err=2
+[    2.161624] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/block/block_rq_complete/enable " to 0666, err=2
+[    2.161895] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/block/block_bio_remap/enable " to 0666, err=2
+[    2.162187] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/block/block_rq_insert/enable " to 0666, err=2
+[    2.162452] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/ext4/ " to 0755, err=2
+[    2.162719] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/ext4/ext4_da_write_begin/ " to 0755, err=2
+[    2.162978] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/ext4/ext4_da_write_end/ " to 0755, err=2
+[    2.163261] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/ext4/ext4_es_lookup_extent_enter/ " to 0755, err=2
+[    2.163530] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/ext4/ext4_es_lookup_extent_exit/ " to 0755, err=2
+[    2.163809] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/ext4/ext4_load_inode/ " to 0755, err=2
+[    2.164106] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/ext4/ext4_sync_file_enter/ " to 0755, err=2
+[    2.164373] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/ext4/ext4_sync_file_exit/ " to 0755, err=2
+[    2.164643] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/ext4/ext4_da_write_begin/enable " to 0666, err=2
+[    2.164903] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/ext4/ext4_da_write_end/enable " to 0666, err=2
+[    2.165428] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/ext4/ext4_es_lookup_extent_enter/enable " to 0666, 
+[    2.165862] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/ext4/ext4_es_lookup_extent_exit/enable " to 0666, e
+[    2.166161] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/ext4/ext4_load_inode/enable " to 0666, err=2
+[    2.166279] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/ext4/ext4_sync_file_enter/enable " to 0666, err=2
+[    2.166553] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/ext4/ext4_sync_file_exit/enable " to 0666, err=2
+[    2.166827] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/f2fs/ " to 0755, err=2
+[    2.167119] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/f2fs/f2fs_get_data_block/ " to 0755, err=2
+[    2.167371] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/f2fs/f2fs_iget/ " to 0755, err=2
+[    2.167642] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/f2fs/f2fs_sync_file_enter/ " to 0755, err=2
+[    2.167901] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/f2fs/f2fs_sync_file_exit/ " to 0755, err=2
+[    2.168189] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/f2fs/f2fs_write_begin/ " to 0755, err=2
+[    2.168459] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/f2fs/f2fs_write_end/ " to 0755, err=2
+[    2.168727] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/f2fs/f2fs_get_data_block/enable " to 0666, err=2
+[    2.169103] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/f2fs/f2fs_iget/enable " to 0666, err=2
+[    2.169443] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/f2fs/f2fs_sync_file_enter/enable " to 0666, err=2
+[    2.169714] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/f2fs/f2fs_sync_file_exit/enable " to 0666, err=2
+[    2.170000] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/f2fs/f2fs_readpage/enable " to 0666, err=2
+[    2.170281] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/f2fs/f2fs_readpages/enable " to 0666, err=2
+[    2.170539] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/f2fs/f2fs_sync_fs/enable " to 0666, err=2
+[    2.170831] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/hmdfs/hmdfs_syncfs_enter/enable " to 0666, err=2
+[    2.171112] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/hmdfs/hmdfs_syncfs_exit/enable " to 0666, err=2
+[    2.171385] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/erofs/erofs_readpage/enable " to 0666, err=2
+[    2.171658] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/erofs/erofs_readpages/enable " to 0666, err=2
+[    2.171934] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/ext4/ext4_da_write_begin/enable " to 0666, err=2
+[    2.172221] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/ext4/ext4_da_write_end/enable " to 0666, err=2
+[    2.172495] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/ext4/ext4_sync_file_enter/enable " to 0666, err=2
+[    2.172762] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/ext4/ext4_sync_file_exit/enable " to 0666, err=2
+[    2.173223] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/f2fs/f2fs_write_begin/enable " to 0666, err=2
+[    2.173534] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/f2fs/f2fs_write_end/enable " to 0666, err=2
+[    2.173848] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/filemap/ " to 0755, err=2
+[    2.174142] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/filemap/enable " to 0666, err=2
+[    2.174398] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/filemap/mm_filemap_add_to_page_cache/enable " to 07
+[    2.174809] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/filemap/mm_filemap_delete_from_page_cache/enable " 
+[    2.175103] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/filemap/mm_filemap_add_to_page_cache/enable " to 06
+[    2.175379] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/filemap/mm_filemap_delete_from_page_cache/enable " 
+[    2.175653] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/options/ " to 0755, err=2
+[    2.175767] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/options/overwrite " to 0666, err=2
+[    2.176035] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/options/print-tgid " to 0666, err=2
+[    2.176295] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/options/record-tgid " to 0666, err=2
+[    2.176549] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/per_cpu/ " to 0755, err=2
+[    2.176798] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/per_cpu/cpu0/ " to 0755, err=2
+[    2.177565] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/per_cpu/cpu1/ " to 0755, err=2
+[    2.178200] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/per_cpu/cpu2/ " to 0755, err=2
+[    2.178478] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/per_cpu/cpu3/ " to 0755, err=2
+[    2.178734] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/per_cpu/cpu4/ " to 0755, err=2
+[    2.179000] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/per_cpu/cpu5/ " to 0755, err=2
+[    2.179262] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/per_cpu/cpu6/ " to 0755, err=2
+[    2.179514] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/per_cpu/cpu7/ " to 0755, err=2
+[    2.179778] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/per_cpu/cpu8/ " to 0755, err=2
+[    2.180043] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/per_cpu/cpu9/ " to 0755, err=2
+[    2.180297] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/per_cpu/cpu10/ " to 0755, err=2
+[    2.180559] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/per_cpu/cpu11/ " to 0755, err=2
+[    2.180801] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/per_cpu/cpu12/ " to 0755, err=2
+[    2.181781] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/per_cpu/cpu13/ " to 0755, err=2
+[    2.182132] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/per_cpu/cpu14/ " to 0755, err=2
+[    2.182384] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/per_cpu/cpu15/ " to 0755, err=2
+[    2.182640] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/per_cpu/cpu0/trace " to 0666, err=2
+[    2.182891] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/per_cpu/cpu1/trace " to 0666, err=2
+[    2.183160] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/per_cpu/cpu2/trace " to 0666, err=2
+[    2.183416] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/per_cpu/cpu3/trace " to 0666, err=2
+[    2.183666] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/per_cpu/cpu4/trace " to 0666, err=2
+[    2.183917] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/per_cpu/cpu5/trace " to 0666, err=2
+[    2.184193] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/per_cpu/cpu6/trace " to 0666, err=2
+[    2.184446] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/per_cpu/cpu7/trace " to 0666, err=2
+[    2.184698] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/per_cpu/cpu8/trace " to 0666, err=2
+[    2.184976] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/per_cpu/cpu9/trace " to 0666, err=2
+[    2.185473] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/per_cpu/cpu10/trace " to 0666, err=2
+[    2.185753] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/per_cpu/cpu11/trace " to 0666, err=2
+[    2.186050] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/per_cpu/cpu12/trace " to 0666, err=2
+[    2.186319] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/per_cpu/cpu13/trace " to 0666, err=2
+[    2.186588] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/per_cpu/cpu14/trace " to 0666, err=2
+[    2.186841] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/per_cpu/cpu15/trace " to 0666, err=2
+[    2.187116] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/per_cpu/cpu0/buffer_size_kb " to 0666, err=2
+[    2.187374] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/per_cpu/cpu1/buffer_size_kb " to 0666, err=2
+[    2.187634] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/per_cpu/cpu2/buffer_size_kb " to 0666, err=2
+[    2.187883] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/per_cpu/cpu3/buffer_size_kb " to 0666, err=2
+[    2.188149] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/per_cpu/cpu4/buffer_size_kb " to 0666, err=2
+[    2.188420] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/per_cpu/cpu5/buffer_size_kb " to 0666, err=2
+[    2.188681] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/per_cpu/cpu6/buffer_size_kb " to 0666, err=2
+[    2.189061] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/per_cpu/cpu7/buffer_size_kb " to 0666, err=2
+[    2.189352] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/per_cpu/cpu8/buffer_size_kb " to 0666, err=2
+[    2.189629] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/per_cpu/cpu9/buffer_size_kb " to 0666, err=2
+[    2.189924] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/per_cpu/cpu10/buffer_size_kb " to 0666, err=2
+[    2.190201] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/per_cpu/cpu11/buffer_size_kb " to 0666, err=2
+[    2.190467] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/per_cpu/cpu12/buffer_size_kb " to 0666, err=2
+[    2.190736] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/per_cpu/cpu13/buffer_size_kb " to 0666, err=2
+[    2.191014] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/per_cpu/cpu14/buffer_size_kb " to 0666, err=2
+[    2.191297] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/per_cpu/cpu15/buffer_size_kb " to 0666, err=2
+[    2.191569] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/per_cpu/cpu0/snapshot " to 0666, err=2
+[    2.191856] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/per_cpu/cpu1/snapshot " to 0666, err=2
+[    2.192146] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/per_cpu/cpu2/snapshot " to 0666, err=2
+[    2.192425] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/per_cpu/cpu3/snapshot " to 0666, err=2
+[    2.192680] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/per_cpu/cpu4/snapshot " to 0666, err=2
+[    2.193105] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/per_cpu/cpu5/snapshot " to 0666, err=2
+[    2.193519] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/per_cpu/cpu6/snapshot " to 0666, err=2
+[    2.193794] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/per_cpu/cpu7/snapshot " to 0666, err=2
+[    2.194083] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/per_cpu/cpu8/snapshot " to 0666, err=2
+[    2.194360] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/per_cpu/cpu9/snapshot " to 0666, err=2
+[    2.194619] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/per_cpu/cpu10/snapshot " to 0666, err=2
+[    2.194887] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/per_cpu/cpu11/snapshot " to 0666, err=2
+[    2.195167] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/per_cpu/cpu12/snapshot " to 0666, err=2
+[    2.195431] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/per_cpu/cpu13/snapshot " to 0666, err=2
+[    2.195696] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/per_cpu/cpu14/snapshot " to 0666, err=2
+[    2.195987] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/per_cpu/cpu15/snapshot " to 0666, err=2
+[    2.196269] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/per_cpu/cpu0/snapshot_raw " to 0444, err=2
+[    2.196536] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/per_cpu/cpu1/snapshot_raw " to 0444, err=2
+[    2.196808] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/per_cpu/cpu2/snapshot_raw " to 0444, err=2
+[    2.197395] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/per_cpu/cpu3/snapshot_raw " to 0444, err=2
+[    2.197669] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/per_cpu/cpu4/snapshot_raw " to 0444, err=2
+[    2.197937] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/per_cpu/cpu5/snapshot_raw " to 0444, err=2
+[    2.198220] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/per_cpu/cpu6/snapshot_raw " to 0444, err=2
+[    2.198487] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/per_cpu/cpu7/snapshot_raw " to 0444, err=2
+[    2.198750] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/per_cpu/cpu8/snapshot_raw " to 0444, err=2
+[    2.199053] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/per_cpu/cpu9/snapshot_raw " to 0444, err=2
+[    2.199326] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/per_cpu/cpu10/snapshot_raw " to 0444, err=2
+[    2.199584] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/per_cpu/cpu11/snapshot_raw " to 0444, err=2
+[    2.199849] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/per_cpu/cpu12/snapshot_raw " to 0444, err=2
+[    2.200132] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/per_cpu/cpu13/snapshot_raw " to 0444, err=2
+[    2.200407] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/per_cpu/cpu14/snapshot_raw " to 0444, err=2
+[    2.200671] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/per_cpu/cpu15/snapshot_raw " to 0444, err=2
+[    2.201987] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/options/record-cmd " to 0666, err=2
+[    2.202990] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/power/suspend_resume/enable " to 0666, err=2
+[    2.203496] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/sched/sched_process_free/enable " to 0666, err=2
+[    2.203773] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/sched/sched_wakeup_new/enable " to 0666, err=2
+[    2.204059] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/writeback/enable " to 0666, err=2
+[    2.204334] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/workqueue/enable " to 0666, err=2
+[    2.204608] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/vmscan/enable " to 0666, err=2
+[    2.204864] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/v4l2/enable " to 0666, err=2
+[    2.205309] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/timer/enable " to 0666, err=2
+[    2.205565] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/sunrpc/enable " to 0666, err=2
+[    2.205813] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/signal/enable " to 0666, err=2
+[    2.206363] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/sched/enable " to 0666, err=2
+[    2.207023] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/regulator/enable " to 0666, err=2
+[    2.207319] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/rcu/enable " to 0666, err=2
+[    2.207585] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/raw_syscalls/enable " to 0666, err=2
+[    2.207843] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/printk/enable " to 0666, err=2
+[    2.208124] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/power/enable " to 0666, err=2
+[    2.208380] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/set_event " to 0666, err=2
+[    2.208627] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/pagemap/enable " to 0666, err=2
+[    2.208872] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/oom/enable " to 0666, err=2
+[    2.209569] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/net/enable " to 0666, err=2
+[    2.209845] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/binder/enable " to 0666, err=2
+[    2.210128] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/block/enable " to 0666, err=2
+[    2.210388] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/clk/enable " to 0666, err=2
+[    2.210643] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/clk/enable " to 0666, err=2
+[    2.210900] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/compaction/enable " to 0666, err=2
+[    2.211169] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/cpuhp/enable " to 0666, err=2
+[    2.211428] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/ext4/enable " to 0666, err=2
+[    2.211682] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/f2fs/enable " to 0666, err=2
+[    2.211934] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/filelock/enable " to 0666, err=2
+[    2.212199] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/filemap/enable " to 0666, err=2
+[    2.212455] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/ftrace/enable " to 0666, err=2
+[    2.212708] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/ftrace " to 0755, err=2
+[    2.213087] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/ftrace/print " to 0755, err=2
+[    2.213462] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/gpio/enable " to 0666, err=2
+[    2.213717] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/ipi/enable " to 0666, err=2
+[    2.213976] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/kmem/enable " to 0666, err=2
+[    2.214235] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/mmc/enable " to 0666, err=2
+[    2.214485] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/irq/enable " to 0666, err=2
+[    2.214735] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/task/enable " to 0666, err=2
+[    2.214996] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/clk/clk_disable/enable " to 0666, err=2
+[    2.215253] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/clk/clk_disable_complete/enable " to 0666, err=2
+[    2.215523] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/clk/clk_enable/enable " to 0666, err=2
+[    2.215789] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/clk/clk_enable_complete/enable " to 0666, err=2
+[    2.216073] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/clk/clk_set_rate/enable " to 0666, err=2
+[    2.216349] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/clk/clk_set_rate_complete/enable " to 0666, err=2
+[    2.216615] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/ftrace/print/enable " to 0666, err=2
+[    2.216905] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/irq/irq_handler_entry/enable " to 0666, err=2
+[    2.217300] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/irq/irq_handler_exit/enable " to 0666, err=2
+[    2.217596] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/irq/softirq_entry/enable " to 0666, err=2
+[    2.217867] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/irq/softirq_exit/enable " to 0666, err=2
+[    2.218150] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/irq/softirq_raise/enable " to 0666, err=2
+[    2.218414] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/power/clock_disable/enable " to 0666, err=2
+[    2.218679] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/power/clock_enable/enable " to 0666, err=2
+[    2.218976] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/workqueue/workqueue_execute_end/enable " to 0666, e
+[    2.219410] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/workqueue/workqueue_execute_start/enable " to 0666,
+[    2.219727] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/thermal_power_allocator/enable " to 0666, err=2
+[    2.219900] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/preemptirq/irq_enable/ " to 0755, err=2
+[    2.220194] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/preemptirq/irq_enable/enable " to 0666, err=2
+[    2.220466] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/preemptirq/irq_disable/ " to 0755, err=2
+[    2.220740] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/preemptirq/irq_disable/enable " to 0666, err=2
+[    2.221183] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/preemptirq/preempt_enable/ " to 0755, err=2
+[    2.221482] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/preemptirq/preempt_enable/enable " to 0666, err=2
+[    2.221753] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/preemptirq/preempt_disable/ " to 0755, err=2
+[    2.222040] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/preemptirq/preempt_disable/enable " to 0666, err=2
+[    2.222313] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/memory_bus/ " to 0755, err=2
+[    2.222580] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/memory_bus/enable " to 0666, err=2
+[    2.222838] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/ufs/ " to 0755, err=2
+[    2.223117] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/ufs/enable " to 0666, err=2
+[    2.223367] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/zbinder/ " to 0755, err=2
+[    2.223617] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/zbinder/enable " to 0666, err=2
+[    2.223862] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/power_kernel/cpu_idle " to 0755, err=2
+[    2.224137] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/tracing/events/power_kernel/cpu_idle/enable " to 0666, err=2
+[    2.224670] [pid=1][Init][INFO][init.c:153]boot job pre-init finish diff 644769 us.
+[    2.225649] [pid=1][Init][INFO][init.c:148]boot job init start.
+[    2.227697] [pid=1][BEGET][INFO][sandbox.c:376]Parse sandbox cfg file is /system/etc/sandbox/system-sandbox.json
+[    2.229129] [pid=1][BEGET][INFO][sandbox.c:228]Get src-path is null
+[    2.229955] [pid=1][BEGET][INFO][sandbox.c:417]Mount point ' /mnt/sandbox/system ' already exist, no need to mkdir
+[    2.231834] [pid=1][BEGET][WARNING][sandbox.c:452]Not configure mount rec, must configure mount rec flag.
+[    2.232139] [pid=1][BEGET][INFO][sandbox.c:417]Mount point ' /mnt/sandbox/system/sys/kernel/debug ' already exist, no need to mkdir
+[    2.232292] [pid=1][BEGET][WARNING][sandbox.c:452]Not configure mount rec, must configure mount rec flag.
+[    2.232810] [pid=1][Init][ERROR][init_utils.c:439]Create directory " /mnt/sandbox/system/sys/kernel/debug/tracing " failed, err = 1
+[    2.233254] [pid=1][BEGET][ERROR][sandbox.c:422]Failed MakeDirRecursive /mnt/sandbox/system/sys/kernel/debug/tracing, err=1
+[    2.233702] [pid=1][BEGET][ERROR][sandbox.c:441]Failed make /mnt/sandbox/system/sys/kernel/debug/tracing dir.
+[    2.234130] [pid=1][BEGET][WARNING][sandbox.c:488]Failed bind mount /sys/kernel/debug/tracing to /mnt/sandbox/system/sys/kernel/debug/tracing.
+[    2.234783] [pid=1][BEGET][ERROR][sandbox.c:456]Failed to bind mount ' /log ' to ' /mnt/sandbox/system/log ', err = 2
+[    2.234983] [pid=1][BEGET][WARNING][sandbox.c:488]Failed bind mount /log to /mnt/sandbox/system/log.
+[    2.235977] [pid=1][BEGET][ERROR][sandbox.c:456]Failed to bind mount ' /vendor/firmware ' to ' /mnt/sandbox/system/vendor/firmware ', err = 2
+[    2.236121] [pid=1][BEGET][WARNING][sandbox.c:488]Failed bind mount /vendor/firmware to /mnt/sandbox/system/vendor/firmware.
+[    2.236545] [pid=1][BEGET][ERROR][sandbox.c:456]Failed to bind mount ' /vendor/lib64/chipsetsdk ' to ' /mnt/sandbox/system/vendor/lib64/chipsetsdk ', err = 2
+[    2.236711] [pid=1][BEGET][WARNING][sandbox.c:488]Failed bind mount /vendor/lib64/chipsetsdk to /mnt/sandbox/system/vendor/lib64/chipsetsdk.
+[    2.237416] [pid=1][BEGET][ERROR][sandbox.c:456]Failed to bind mount ' /system/resource ' to ' /mnt/sandbox/system/system/resource ', err = 2
+[    2.237598] [pid=1][BEGET][WARNING][sandbox.c:488]Failed bind mount /system/resource to /mnt/sandbox/system/system/resource.
+[    2.238013] [pid=1][BEGET][ERROR][sandbox.c:456]Failed to bind mount ' /system/usr ' to ' /mnt/sandbox/system/system/usr ', err = 2
+[    2.238183] [pid=1][BEGET][WARNING][sandbox.c:488]Failed bind mount /system/usr to /mnt/sandbox/system/system/usr.
+[    2.238561] [pid=1][BEGET][ERROR][sandbox.c:456]Failed to bind mount ' /system/fonts ' to ' /mnt/sandbox/system/system/fonts ', err = 2
+[    2.238716] [pid=1][BEGET][WARNING][sandbox.c:488]Failed bind mount /system/fonts to /mnt/sandbox/system/system/fonts.
+[    2.239110] [pid=1][BEGET][ERROR][sandbox.c:456]Failed to bind mount ' /system/app ' to ' /mnt/sandbox/system/system/app ', err = 2
+[    2.239272] [pid=1][BEGET][WARNING][sandbox.c:488]Failed bind mount /system/app to /mnt/sandbox/system/system/app.
+[    2.243349] [pid=1][BEGET][INFO][sandbox.c:376]Parse sandbox cfg file is /system/etc/sandbox/chipset-sandbox.json
+[    2.244694] [pid=1][BEGET][INFO][sandbox.c:228]Get src-path is null
+[    2.245391] [pid=1][BEGET][INFO][sandbox.c:417]Mount point ' /mnt/sandbox/chipset ' already exist, no need to mkdir
+[    2.246730] [pid=1][BEGET][WARNING][sandbox.c:452]Not configure mount rec, must configure mount rec flag.
+[    2.247017] [pid=1][BEGET][INFO][sandbox.c:417]Mount point ' /mnt/sandbox/chipset/sys/kernel/debug ' already exist, no need to mkdir
+[    2.247172] [pid=1][BEGET][WARNING][sandbox.c:452]Not configure mount rec, must configure mount rec flag.
+[    2.247686] [pid=1][Init][ERROR][init_utils.c:439]Create directory " /mnt/sandbox/chipset/sys/kernel/debug/tracing " failed, err = 1
+[    2.247837] [pid=1][BEGET][ERROR][sandbox.c:422]Failed MakeDirRecursive /mnt/sandbox/chipset/sys/kernel/debug/tracing, err=1
+[    2.248024] [pid=1][BEGET][ERROR][sandbox.c:441]Failed make /mnt/sandbox/chipset/sys/kernel/debug/tracing dir.
+[    2.248187] [pid=1][BEGET][WARNING][sandbox.c:488]Failed bind mount /sys/kernel/debug/tracing to /mnt/sandbox/chipset/sys/kernel/debug/tracing.
+[    2.249518] [pid=1][BEGET][ERROR][sandbox.c:456]Failed to bind mount ' /system/usr ' to ' /mnt/sandbox/chipset/system/usr ', err = 2
+[    2.249719] [pid=1][BEGET][WARNING][sandbox.c:488]Failed bind mount /system/usr to /mnt/sandbox/chipset/system/usr.
+[    2.250102] [pid=1][BEGET][ERROR][sandbox.c:456]Failed to bind mount ' /system/fonts ' to ' /mnt/sandbox/chipset/system/fonts ', err = 2
+[    2.250263] [pid=1][BEGET][WARNING][sandbox.c:488]Failed bind mount /system/fonts to /mnt/sandbox/chipset/system/fonts.
+[    2.250634] [pid=1][BEGET][ERROR][sandbox.c:456]Failed to bind mount ' /system/app ' to ' /mnt/sandbox/chipset/system/app ', err = 2
+[    2.250794] [pid=1][BEGET][WARNING][sandbox.c:488]Failed bind mount /system/app to /mnt/sandbox/chipset/system/app.
+[    2.253711] [pid=1][Init][ERROR][init_common_cmds.c:269]Failed to get real path /system/etc/prop.default
+[    2.263583] [pid=1][Init][ERROR][init_common_cmds.c:330]Failed to change owner for /proc/pressure/memory, err 2.
+[    2.263875] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /proc/pressure/memory " to 0664, err=2
+[    2.264559] [pid=1][Init][INFO][fscrypt_control.c:484]Fscrypt have not enabled
+[    2.275526] [pid=1][Init][ERROR][init_common_cmds.c:471]Failed to mount for /sys/kernel/debug, err 16.
+[    2.276425] [pid=1][Init][INFO][fscrypt_control.c:484]Fscrypt have not enabled
+[    2.277738] [pid=1][Init][INFO][fscrypt_control.c:484]Fscrypt have not enabled
+[    2.277905] [pid=1][Init][INFO][init_common_service.c:630]ServiceStart starting:hilogd
+[    2.278753] [pid=1][Init][INFO][init_common_service.c:664]ServiceStart started info hilogd(pid 148 uid 1036)
+[    2.278911] [pid=1][Init][INFO][init_common_service.c:667]starttime:1793359019-282412784, prefork:1793359019-282668048, startedtime:1793359019-283250992
+[    2.280281] [pid=1][Init][ERROR][init_common_cmds.c:349]Create directory '/log/crash' failed, err=2.
+[    2.280711] [pid=1][Init][INFO][init_common_service.c:630]ServiceStart starting:faultloggerd
+[    2.281872] [pid=1][Init][INFO][init_common_service.c:664]ServiceStart started info faultloggerd(pid 149 uid 1202)
+[    2.282144] [pid=1][Init][INFO][init_common_service.c:667]starttime:1793359019-285212352, prefork:1793359019-285852288, startedtime:1793359019-286348560
+[    2.283674] [pid=148][Init][INFO][init_service_socket.c:144]CreateSocket hilogInput success
+[    2.283983] [pid=148][Init][INFO][init_service_socket.c:152]CreateSocket restoreContentRecurse /dev/unix/socket/hilogInput success
+[    2.284699] [pid=1][Init][INFO][init.c:153]boot job init finish diff 59048 us.
+[    2.285389] [pid=148][Init][INFO][init_service_socket.c:144]CreateSocket hilogControl success
+[    2.285744] [pid=148][Init][INFO][init_service_socket.c:152]CreateSocket restoreContentRecurse /dev/unix/socket/hilogControl success
+[    2.285893] [pid=1][Init][INFO][init.c:148]boot job boot-service:service-1-000 start.
+[    2.286380] [pid=1][Init][INFO][init_common_service.c:630]ServiceStart starting:samgr
+[    2.286671] [pid=148][Init][INFO][init_service_socket.c:144]CreateSocket hilogOutput success
+[    2.286898] [pid=148][Init][INFO][init_service_socket.c:152]CreateSocket restoreContentRecurse /dev/unix/socket/hilogOutput success
+[    2.287767] [pid=1][Init][INFO][init_common_service.c:664]ServiceStart started info samgr(pid 150 uid 5555)
+[    2.287845] [pid=149][Init][INFO][fscrypt_control.c:484]Fscrypt have not enabled
+[    2.288586] [pid=1][Init][INFO][init_common_service.c:667]starttime:1793359019-290882720, prefork:1793359019-291286384, startedtime:1793359019-292237392
+[    2.290287] [pid=149][Init][INFO][fscrypt_control.c:484]Fscrypt have not enabled
+[    2.290634] [pid=1][Init][INFO][init_common_service.c:630]ServiceStart starting:param_watcher
+[    2.290856] [pid=148][Init][INFO][init_service.c:118]ServiceExec hilogd
+[    2.291308] [pid=1][Init][ERROR][init_common_service.c:640]ServiceStart pathArgs invalid, please check param_watcher,/system/bin/sa_main
+[    2.291644] [pid=1][Init][ERROR][init_service_manager.c:1210]Service param_watcher start failed!
+[    2.292602] [pid=1][Init][INFO][init.c:153]boot job boot-service:service-1-000 finish diff 6730 us.
+[    2.293520] [pid=149][Init][INFO][fscrypt_control.c:484]Fscrypt have not enabled
+[    2.294504] [pid=1][Init][INFO][init.c:148]boot job post-init start.
+[    2.294514] [pid=150][Init][INFO][init_service.c:118]ServiceExec samgr
+[    2.294723] [pid=149][Init][INFO][fscrypt_control.c:484]Fscrypt have not enabled
+[    2.295464] [pid=149][Init][INFO][init_common_service.c:429]Deal service faultloggerd job end
+[    2.295927] [pid=1][PARAM][WARNING][trigger_processor.c:368]Can not find trigger firmware_mounts_complete
+[    2.296290] [pid=1][PARAM][WARNING][trigger_processor.c:368]Can not find trigger early-boot
+[    2.296587] [pid=149][Init][INFO][init_service_socket.c:144]CreateSocket faultloggerd.server success
+[    2.297235] [pid=149][Init][INFO][init_service_socket.c:152]CreateSocket restoreContentRecurse /dev/unix/socket/faultloggerd.server success
+[    2.298272] [pid=149][Init][INFO][init_service_socket.c:144]CreateSocket faultloggerd.sdkdump.server success
+[    2.298627] [pid=149][Init][INFO][init_service_socket.c:152]CreateSocket restoreContentRecurse /dev/unix/socket/faultloggerd.sdkdump.server success
+[    2.299327] [pid=149][Init][INFO][init_service_socket.c:144]CreateSocket faultloggerd.crash.server success
+[    2.299574] [pid=149][Init][INFO][init_service_socket.c:152]CreateSocket restoreContentRecurse /dev/unix/socket/faultloggerd.crash.server success
+[    2.299639] [pid=1][Init][INFO][fscrypt_control.c:484]Fscrypt have not enabled
+[    2.300423] [pid=1][Init][INFO][init.c:153]boot job post-init finish diff 5974 us.
+[    2.300467] [pid=149][Init][ERROR][init_common_service.c:308]Failed to open realPath: (null)  /dev/cpuset/system-background/tasks errno:2.
+[    2.300608] [pid=1][Init][INFO][init.c:148]boot job fs start.
+[    2.301514] [pid=1][Init][INFO][init.c:153]boot job fs finish diff 902 us.
+[    2.301539] [pid=149][Init][INFO][init_service.c:118]ServiceExec faultloggerd
+[    2.301767] [pid=1][Init][INFO][init.c:148]boot job post-fs start.
+[    2.304482] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/fs/selinux/policy " to 0444, err=2
+[    2.305361] [pid=1][BEGET][INFO][fstab.c:419]LoadFscryptPolicy start
+[    2.305673] [pid=1][BEGET][ERROR][fstab.c:421]LoadFscryptPolicy:buf or fscrypt policy is empty
+[    2.305940] [pid=1][Init][WARNING][init_cmds.c:497]Init fscrypt failed, not enable fscrypt
+[    2.307260] [pid=1][Init][INFO][fscrypt_control.c:484]Fscrypt have not enabled
+[    2.308750] [pid=1][Init][INFO][fscrypt_control.c:484]Fscrypt have not enabled
+[    2.310742] [pid=1][Init][INFO][fscrypt_control.c:484]Fscrypt have not enabled
+[    2.312446] [pid=1][Init][INFO][fscrypt_control.c:484]Fscrypt have not enabled
+[    2.313514] [pid=1][Init][INFO][fscrypt_control.c:484]Fscrypt have not enabled
+[    2.314278] [pid=1][Init][INFO][fscrypt_control.c:484]Fscrypt have not enabled
+[    2.315132] [pid=1][Init][INFO][fscrypt_control.c:484]Fscrypt have not enabled
+[    2.315974] [pid=1][Init][INFO][fscrypt_control.c:484]Fscrypt have not enabled
+[    2.316782] [pid=1][Init][INFO][fscrypt_control.c:484]Fscrypt have not enabled
+[    2.318187] [pid=1][Init][INFO][fscrypt_control.c:484]Fscrypt have not enabled
+[    2.318985] [pid=1][Init][INFO][fscrypt_control.c:484]Fscrypt have not enabled
+[    2.319883] [pid=1][Init][INFO][fscrypt_control.c:484]Fscrypt have not enabled
+[    2.321863] [pid=1][Init][INFO][fscrypt_control.c:484]Fscrypt have not enabled
+[    2.323150] [pid=1][Init][INFO][fscrypt_control.c:484]Fscrypt have not enabled
+[    2.324060] [pid=1][Init][INFO][fscrypt_control.c:484]Fscrypt have not enabled
+[    2.325662] [pid=1][Init][INFO][fscrypt_control.c:484]Fscrypt have not enabled
+[    2.326615] [pid=1][Init][INFO][fscrypt_control.c:484]Fscrypt have not enabled
+[    2.327854] [pid=1][Init][INFO][fscrypt_control.c:484]Fscrypt have not enabled
+[    2.328803] [pid=1][Init][INFO][fscrypt_control.c:484]Fscrypt have not enabled
+[    2.330343] [pid=1][Init][INFO][fscrypt_control.c:484]Fscrypt have not enabled
+[    2.332236] [pid=1][Init][INFO][fscrypt_control.c:484]Fscrypt have not enabled
+[    2.333659] [pid=1][Init][INFO][fscrypt_control.c:484]Fscrypt have not enabled
+[    2.334518] [pid=1][Init][INFO][fscrypt_control.c:484]Fscrypt have not enabled
+[    2.337553] [pid=1][PARAM][INFO][param_persistadp.c:137]LoadPersistParam from file /data/service/el1/public/startup/parameters/private_persist_parameters para
+[    2.338571] [pid=1][PARAM][WARNING][param_persistadp.c:123]No valid persist parameter file /data/service/el1/public/startup/parameters/tmp_private_persist_parame
+[    2.344518] random: hilogd: uninitialized urandom read (8 bytes read)
+[    2.346231] random: hilogd: uninitialized urandom read (8 bytes read)
+[    2.347877] random: hilogd: uninitialized urandom read (8 bytes read)
+[    2.405885] [pid=1][PLUGIN][INFO][bootchart_static.c:25]bootchart disabled.
+[    2.406091] [pid=1][Init][INFO][init_hook.c:172]Can not get log level from param, keep the original loglevel.
+[    2.407005] [pid=1][Init][INFO][init_cmds.c:110]Sync exec: /system/bin/sdc
+[    2.416540] [pid=151][Init][ERROR][init_cmds.c:114]execv /system/bin/sdc failed! err 2.
+[    2.427307] [pid=1][Init][INFO][init_cmds.c:123]Sync exec: /system/bin/sdc result 255 1
+[    2.430684] [pid=1][Init][INFO][fscrypt_control.c:484]Fscrypt have not enabled
+[    2.432050] [pid=1][Init][INFO][fscrypt_control.c:484]Fscrypt have not enabled
+[    2.433983] [pid=1][Init][INFO][fscrypt_control.c:484]Fscrypt have not enabled
+[    2.435288] [pid=1][Init][INFO][fscrypt_control.c:484]Fscrypt have not enabled
+[    2.436518] [pid=1][Init][INFO][fscrypt_control.c:484]Fscrypt have not enabled
+[    2.437618] [pid=1][Init][INFO][fscrypt_control.c:484]Fscrypt have not enabled
+[    2.439176] [pid=1][Init][INFO][fscrypt_control.c:484]Fscrypt have not enabled
+[    2.440505] [pid=1][Init][INFO][fscrypt_control.c:484]Fscrypt have not enabled
+[    2.441773] [pid=1][Init][INFO][fscrypt_control.c:484]Fscrypt have not enabled
+[    2.443342] [pid=1][Init][INFO][fscrypt_control.c:484]Fscrypt have not enabled
+[    2.445452] [pid=1][Init][INFO][fscrypt_control.c:484]Fscrypt have not enabled
+[    2.447014] [pid=1][Init][INFO][fscrypt_control.c:484]Fscrypt have not enabled
+[    2.448275] [pid=1][Init][INFO][fscrypt_control.c:484]Fscrypt have not enabled
+[    2.450429] [QOS_CTRL] 155 have no permission to change qos
+[    2.450771] [QOS_CTRL] QOS apply not permit
+[    2.450874] [QOS_CTRL] CMD_ID_QOS_MANIPULATE failed
+[    2.452292] [pid=1][Init][INFO][fscrypt_control.c:484]Fscrypt have not enabled
+[    2.454517] [QOS_CTRL] 157 have no permission to change qos
+[    2.455063] [QOS_CTRL] QOS apply not permit
+[    2.455218] [QOS_CTRL] CMD_ID_QOS_MANIPULATE failed
+[    2.456495] [pid=1][Init][INFO][init.c:153]boot job post-fs finish diff 151833 us.
+[    2.456864] [pid=1][Init][INFO][init.c:148]boot job late-fs start.
+[    2.457892] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/kernel/debug/tracing " to 0755, err=2
+[    2.459399] [QOS_CTRL] 159 have no permission to change qos
+[    2.459932] [QOS_CTRL] QOS apply not permit
+[    2.460106] [QOS_CTRL] CMD_ID_QOS_MANIPULATE failed
+[    2.461303] [pid=1][Init][INFO][init.c:153]boot job late-fs finish diff 2020 us.
+[    2.461417] [pid=1][Init][INFO][init.c:148]boot job post-fs-data start.
+[    2.463025] [pid=1][Init][INFO][fscrypt_control.c:484]Fscrypt have not enabled
+[    2.467711] [pid=1][Init][INFO][fscrypt_control.c:484]Fscrypt have not enabled
+[    2.470307] [pid=1][Init][INFO][fscrypt_control.c:484]Fscrypt have not enabled
+[    2.471765] [pid=1][Init][INFO][fscrypt_control.c:484]Fscrypt have not enabled
+[    2.472883] [pid=1][Init][INFO][fscrypt_control.c:484]Fscrypt have not enabled
+[    2.474878] [pid=1][Init][INFO][fscrypt_control.c:484]Fscrypt have not enabled
+[    2.475964] [pid=1][Init][INFO][fscrypt_control.c:484]Fscrypt have not enabled
+[    2.477945] [pid=1][Init][INFO][fscrypt_control.c:484]Fscrypt have not enabled
+[    2.479020] [pid=1][Init][INFO][fscrypt_control.c:484]Fscrypt have not enabled
+[    2.479858] [pid=1][Init][INFO][fscrypt_control.c:484]Fscrypt have not enabled
+[    2.481123] [pid=1][Init][INFO][fscrypt_control.c:484]Fscrypt have not enabled
+[    2.482382] [pid=1][Init][INFO][fscrypt_control.c:484]Fscrypt have not enabled
+[    2.483827] [pid=1][Init][INFO][fscrypt_control.c:484]Fscrypt have not enabled
+[    2.484961] [pid=1][Init][ERROR][init_common_cmds.c:330]Failed to change owner for /dev/fscklogs/log, err 2.
+[    2.485531] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /dev/fscklogs/log " to 0770, err=2
+[    2.485986] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /dev/fuse " to 0660, err=2
+[    2.487371] [pid=1][Init][INFO][fscrypt_control.c:484]Fscrypt have not enabled
+[    2.488532] [pid=1][Init][INFO][fscrypt_control.c:484]Fscrypt have not enabled
+[    2.490153] [pid=1][Init][INFO][fscrypt_control.c:484]Fscrypt have not enabled
+[    2.490963] [pid=1][Init][INFO][fscrypt_control.c:484]Fscrypt have not enabled
+[    2.492203] [pid=1][Init][INFO][fscrypt_control.c:484]Fscrypt have not enabled
+[    2.493694] [pid=1][Init][INFO][fscrypt_control.c:484]Fscrypt have not enabled
+[    2.495164] [pid=1][Init][INFO][init_common_service.c:630]ServiceStart starting:huks_service
+[    2.495654] [pid=1][Init][ERROR][init_common_service.c:640]ServiceStart pathArgs invalid, please check huks_service,/system/bin/sa_main
+[    2.495898] [pid=1][Init][ERROR][init_service_manager.c:1210]Service huks_service start failed!
+[    2.496173] [pid=160][Init][ERROR][init_cmds.c:234]DoExec: execute "/system/bin/hks_compatibility_bin" failed: 2.
+[    2.497624] [pid=1][Init][INFO][fscrypt_control.c:484]Fscrypt have not enabled
+[    2.498519] [pid=1][Init][INFO][fscrypt_control.c:484]Fscrypt have not enabled
+[    2.499825] [pid=1][Init][INFO][fscrypt_control.c:484]Fscrypt have not enabled
+[    2.501163] [pid=1][Init][INFO][fscrypt_control.c:484]Fscrypt have not enabled
+[    2.502491] [pid=1][Init][INFO][fscrypt_control.c:484]Fscrypt have not enabled
+[    2.503361] [pid=1][Init][INFO][fscrypt_control.c:484]Fscrypt have not enabled
+[    2.503531] [pid=1][Init][INFO][init_common_service.c:630]ServiceStart starting:deviceauth_service
+[    2.504344] [pid=1][Init][INFO][init_common_service.c:664]ServiceStart started info deviceauth_service(pid 161 uid 3333)
+[    2.504541] [pid=1][Init][INFO][init_common_service.c:667]starttime:1793359019-508036880, prefork:1793359019-508258896, startedtime:1793359019-508840656
+[    2.507620] [pid=1][Init][INFO][fscrypt_control.c:484]Fscrypt have not enabled
+[    2.507927] [pid=161][Init][INFO][init_service.c:118]ServiceExec deviceauth_service
+[    2.508567] [pid=1][Init][INFO][fscrypt_control.c:484]Fscrypt have not enabled
+[    2.511406] [pid=1][Init][INFO][fscrypt_control.c:484]Fscrypt have not enabled
+[    2.512559] [pid=1][Init][INFO][fscrypt_control.c:484]Fscrypt have not enabled
+[    2.514494] [pid=1][Init][INFO][fscrypt_control.c:484]Fscrypt have not enabled
+[    2.515176] [pid=1][Init][INFO][init.c:153]boot job post-fs-data finish diff 53784 us.
+[    2.515407] [pid=1][Init][INFO][init.c:148]boot job boot start.
+[    2.517184] [pid=1][Init][ERROR][init_common_cmds.c:330]Failed to change owner for /sys/block/zram0/idle, err 2.
+[    2.517466] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /sys/block/zram0/idle " to 0664, err=2
+[    2.519408] [pid=1][Init][ERROR][init_common_cmds.c:330]Failed to change owner for /dev/block/by-name/misc, err 2.
+[    2.520528] [pid=1][Init][INFO][fscrypt_control.c:484]Fscrypt have not enabled
+[    2.521829] [pid=1][Init][INFO][fscrypt_control.c:484]Fscrypt have not enabled
+[    2.522231] [pid=1][Init][ERROR][init_common_cmds.c:471]Failed to mount for /config, err 16.
+[    2.522526] [pid=1][Init][ERROR][init_common_cmds.c:349]Create directory '/config/usb_gadget/g1' failed, err=2.
+[    2.523561] [pid=1][Init][ERROR][init_common_cmds.c:349]Create directory '/config/usb_gadget/g1/strings/0x409' failed, err=2.
+[    2.524005] [pid=1][Init][ERROR][init_common_cmds.c:269]Failed to get real path /sys/block/mmcblk0/device/cid
+[    2.524722] [pid=1][Init][ERROR][init_common_cmds.c:349]Create directory '/config/usb_gadget/g1/functions/ffs.hdc' failed, err=2.
+[    2.525293] [pid=1][Init][ERROR][init_common_cmds.c:349]Create directory '/config/usb_gadget/g1/configs/b.1' failed, err=2.
+[    2.525689] [pid=1][Init][ERROR][init_common_cmds.c:349]Create directory '/config/usb_gadget/g1/configs/b.1/strings/0x409' failed, err=2.
+[    2.526587] [pid=1][Init][ERROR][init_cmds.c:245]DoSymlink: link /config/usb_gadget/g1/configs/b.1 to /config/usb_gadget/g1/os_desc/b.1 failed: 2
+[    2.528341] [pid=1][Init][ERROR][init_common_cmds.c:471]Failed to mount for /dev/usb-ffs/hdc, err 19.
+[    2.529684] [pid=1][Init][ERROR][init_common_cmds.c:392]Failed to change mode " /dev/ttyAMA2 " to 0777, err=2
+[    2.530892] [pid=1][Init][INFO][init.c:153]boot job boot finish diff 15474 us.
+[    2.531641] [pid=1][Init][WARNING][init_signal_handler.c:44]Child process Unknown(pid 160) exit with code : 127
+[    2.531878] [pid=1][Init][WARNING][init_signal_handler.c:52]Service warning Unknown, SIGCHLD received, pid:160 uid:0 status:32512.
+[    2.532190] [pid=1][Init][INFO][init.c:148]boot job boot-service:service-2-000 start.
+[    2.532482] [pid=1][Init][INFO][init_common_service.c:630]ServiceStart starting:accesstoken_service
+[    2.532715] [pid=1][Init][ERROR][init_common_service.c:640]ServiceStart pathArgs invalid, please check accesstoken_service,/system/bin/sa_main
+[    2.532913] [pid=1][Init][ERROR][init_service_manager.c:1210]Service accesstoken_service start failed!
+[    2.533624] [pid=1][Init][INFO][init_common_service.c:625]ServiceStart already started:faultloggerd
+[    2.533819] [pid=1][Init][INFO][init_common_service.c:625]ServiceStart already started:deviceauth_service
+[    2.533990] [pid=1][Init][INFO][init_common_service.c:630]ServiceStart starting:softbus_server
+[    2.534230] [pid=1][Init][ERROR][init_common_service.c:640]ServiceStart pathArgs invalid, please check softbus_server,/system/bin/sa_main
+[    2.534454] [pid=1][Init][ERROR][init_service_manager.c:1210]Service softbus_server start failed!
+[    2.534765] [pid=1][Init][INFO][init.c:153]boot job boot-service:service-2-000 finish diff 2587 us.
+[    2.535106] [pid=1][Init][INFO][init.c:148]boot job boot-service:service-2-001 start.
+[    2.535314] [pid=1][Init][INFO][init_common_service.c:630]ServiceStart starting:device_manager
+[    2.535513] [pid=1][Init][ERROR][init_common_service.c:640]ServiceStart pathArgs invalid, please check device_manager,/system/bin/sa_main
+[    2.535705] [pid=1][Init][ERROR][init_service_manager.c:1210]Service device_manager start failed!
+[    2.535967] [pid=1][Init][INFO][init.c:153]boot job boot-service:service-2-001 finish diff 861 us.
+[    2.560481] SAMGR: main called, enter System Ability Manager 
+[    2.607937] [QOS_CTRL] 166 have no permission to change qos
+[    2.608178] [QOS_CTRL] QOS apply not permit
+[    2.608278] [QOS_CTRL] CMD_ID_QOS_MANIPULATE failed
+[    2.610431] SAMGR: InitProfile spend 38ms
+[    2.612516] [QOS_CTRL] 167 have no permission to change qos
+[    2.612656] [QOS_CTRL] QOS apply not permit
+[    2.612783] [QOS_CTRL] CMD_ID_QOS_MANIPULATE failed
+[    2.613629] SAMGR: System Ability Manager enter init
+[    2.615055] [QOS_CTRL] 169 have no permission to change qos
+[    2.615205] [QOS_CTRL] QOS apply not permit
+[    2.615287] [QOS_CTRL] CMD_ID_QOS_MANIPULATE failed
+[    2.619636] [QOS_CTRL] 170 have no permission to change qos
+[    2.619841] [QOS_CTRL] QOS apply not permit
+[    2.620036] [QOS_CTRL] CMD_ID_QOS_MANIPULATE failed
+[    2.623151] [pid=1][PARAM][INFO][param_service.c:179]Handle set param msgId 2 pid 150 key: bootevent.samgr.ready
+[    2.625864] SAMGR: set samgr ready ret : succeed
+[    2.781531] SAMGR: insert SA:4701_2
+[    2.785227] [pid=1][PARAM][INFO][param_service.c:179]Handle set param msgId 3 pid 150 key: persist.samgr.cache.sa
+[   11.649200] [pid=1][Init][WARNING][init_signal_handler.c:44]Child process watchdog_service(pid 142) exit with code : 1
+[   11.650020] [pid=1][Init][WARNING][init_signal_handler.c:52]Service warning watchdog_service, SIGCHLD received, pid:142 uid:1100 status:256.
+[   11.650477] [pid=1][Init][INFO][init_common_service.c:786]ServiceReap info watchdog_service pid 142.
+[   11.651421] [pid=1][Init][INFO][init_common_service.c:630]ServiceStart starting:watchdog_service
+[   11.652333] [pid=1][Init][INFO][init_common_service.c:664]ServiceStart started info watchdog_service(pid 175 uid 1100)
+[   11.652498] [pid=1][Init][INFO][init_common_service.c:667]starttime:1793359028-655923552, prefork:1793359028-656131328, startedtime:1793359028-656829440
+[   11.655854] [pid=175][Init][INFO][init_service.c:118]ServiceExec watchdog_service
+[   11.674875] random: watchdog_servic: uninitialized urandom read (8 bytes read)
+[   15.529352] EEVDF_AVG_CHECK progress scans=534 queues=2168 entities=245 group_entities=16 reweight_queued=195 bad_avg=0 bad_load=0 bad_min_deadline=0 verdict=pass
+[   21.697277] [pid=1][Init][WARNING][init_signal_handler.c:44]Child process watchdog_service(pid 175) exit with code : 1
+[   21.697336] [pid=1][Init][WARNING][init_signal_handler.c:52]Service warning watchdog_service, SIGCHLD received, pid:175 uid:1100 status:256.
+[   21.697643] [pid=1][Init][INFO][init_common_service.c:786]ServiceReap info watchdog_service pid 175.
+[   21.698350] [pid=1][Init][INFO][init_common_service.c:630]ServiceStart starting:watchdog_service
+[   21.699316] [pid=1][Init][INFO][init_common_service.c:664]ServiceStart started info watchdog_service(pid 176 uid 1100)
+[   21.699588] [pid=1][Init][INFO][init_common_service.c:667]starttime:1793359038-702853072, prefork:1793359038-703160576, startedtime:1793359038-703806432
+[   21.702285] [pid=176][Init][INFO][init_service.c:118]ServiceExec watchdog_service
+[   21.720248] random: watchdog_servic: uninitialized urandom read (8 bytes read)
+[   30.541351] EEVDF_AVG_CHECK progress scans=1070 queues=4312 entities=270 group_entities=16 reweight_queued=195 bad_avg=0 bad_load=0 bad_min_deadline=0 verdict=pass
+[   31.746461] [pid=1][Init][WARNING][init_signal_handler.c:44]Child process watchdog_service(pid 176) exit with code : 1
+[   31.746574] [pid=1][Init][WARNING][init_signal_handler.c:52]Service warning watchdog_service, SIGCHLD received, pid:176 uid:1100 status:256.
+[   31.747148] [pid=1][Init][INFO][init_common_service.c:786]ServiceReap info watchdog_service pid 176.
+[   31.747903] [pid=1][Init][INFO][init_common_service.c:630]ServiceStart starting:watchdog_service
+[   31.748878] [pid=1][Init][INFO][init_common_service.c:664]ServiceStart started info watchdog_service(pid 177 uid 1100)
+[   31.749454] [pid=1][Init][INFO][init_common_service.c:667]starttime:1793359048-752404912, prefork:1793359048-752718336, startedtime:1793359048-753347584
+[   31.752115] [pid=177][Init][INFO][init_service.c:118]ServiceExec watchdog_service
+[   31.771277] random: watchdog_servic: uninitialized urandom read (8 bytes read)
+[   41.797461] [pid=1][Init][WARNING][init_signal_handler.c:44]Child process watchdog_service(pid 177) exit with code : 1
+[   41.797520] [pid=1][Init][WARNING][init_signal_handler.c:52]Service warning watchdog_service, SIGCHLD received, pid:177 uid:1100 status:256.
+[   41.797827] [pid=1][Init][INFO][init_common_service.c:786]ServiceReap info watchdog_service pid 177.
+[   41.798459] [pid=1][Init][INFO][init_common_service.c:842]ServiceReap start failed! will reStart -1572217904 second later
+[   45.521216] EEVDF_AVG_CHECK progress scans=1605 queues=6452 entities=277 group_entities=16 reweight_queued=195 bad_avg=0 bad_load=0 bad_min_deadline=0 verdict=pass
+[   60.529466] EEVDF_AVG_CHECK done scans=2140 queues=8592 entities=277 group_entities=16 reweight_queued=195 bad_avg=0 bad_load=0 bad_min_deadline=0 verdict=pass
+qemu-system-aarch64: terminating on signal 15 from pid 112222 (/usr/bin/python3)

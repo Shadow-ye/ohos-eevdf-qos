@@ -21,9 +21,10 @@
     "applied_and_byte_compared": true
   },
   "document_review": {
-    "pages": 9,
+    "pages": 10,
     "renderer": "packaged render_docx.py with system LibreOffice and Poppler compatibility override",
-    "all_page_images_inspected": true
+    "all_page_images_inspected": true,
+    "supplementary_tuning_section": true
   },
   "presentation_review": {
     "slides": 13,
@@ -37,13 +38,20 @@
     "native_chart": [
       9
     ],
-    "native_powerpoint_open_verified": false
+    "native_powerpoint_open_verified": false,
+    "validator_counts": {
+      "slides": 13,
+      "layout_findings": 0,
+      "layout_warnings": 0,
+      "native_chart_status": true
+    }
   },
   "artifacts": {
-    "docs/competition/materials/答辩演示.pptx": "e7739d768b96b078690c9cfd1e023896f25f3ec724cff7643cc15ce4c986c133",
-    "docs/competition/materials/开发设计文档.docx": "797c8e3610a55539a408bd43c6e8f15550776cd4d44110068b04883c09210d42",
+    "docs/competition/materials/答辩演示.pptx": "fbe09511bdd41aedb98c488d91deede37fa9f2aa4bfbc588c2230bf84ddd545d",
+    "docs/competition/materials/开发设计文档.docx": "8d3af05cd140b0842c77372e3944f5f8448c6a92483b9e1ea7f43f69e058af08",
     "docs/competition/evidence/submission-receipt.png": "c717f88bce9dcbfcfbcce0821d8f8b0190e3bd50e27649818248ff13b6f347bb",
-    "docs/competition/evidence/submission-receipt.txt": "dd1677abae60a09c47895dc3f2095511f84eb871cc7408bcaf4c9f47fbfba882"
+    "docs/competition/evidence/submission-receipt.txt": "dd1677abae60a09c47895dc3f2095511f84eb871cc7408bcaf4c9f47fbfba882",
+    "docs/competition/evidence/latency-2026-10-30/latency-profile-summary.png": "eb5caf8f425ef6a1e6770c59657ead7b4404da67ce0d483472e705c348881090"
   },
   "full_rebuild_performed": false,
   "official_template_fields_verified": true,
@@ -69,5 +77,24 @@
     "confirmation": "提交成功",
     "saved_record_verified": true,
     "evaluation_record": "暂无数据"
+  },
+  "latency_supplement": {
+    "runs": 17,
+    "summary": "docs/competition/evidence/latency-2026-10-30/summary.json",
+    "report": "docs/competition/调优实验.md",
+    "source_images": 2,
+    "incremental_image_builds": 2,
+    "full_rebuild_performed": false,
+    "four_hog_qos_p99_reduction_percent": 39.1773640025,
+    "pingpong_round_increase_percent": 86.9129668216,
+    "qos_invariant_runs_passed": 3,
+    "rejected_2ms_qos_screening_preserved": true,
+    "baseline_snapshot_changed": false,
+    "qos_verdicts": [
+      "pass",
+      "pass",
+      "pass"
+    ],
+    "summary_sha256": "910e38172a93d10b16abaa4538e1e01c3d9d9a429d74757521d895fc26c5320d"
   }
 }

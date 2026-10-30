@@ -1,0 +1,664 @@
+{
+  "date": "2026-10-30",
+  "comparison_order": [
+    "confirm1-baseline",
+    "confirm1-latency",
+    "confirm2-baseline",
+    "confirm2-latency",
+    "confirm3-baseline",
+    "confirm3-latency"
+  ],
+  "aggregation": "median of per-boot statistics, not pooled-sample quantiles",
+  "runs_per_profile": 3,
+  "paired_runs": {
+    "baseline": [
+      {
+        "run": "confirm1-baseline",
+        "latency_ms": {
+          "lat_h0": {
+            "mean": 0.195605,
+            "p90": 0.266304,
+            "p99": 0.52968,
+            "max": 1.163104
+          },
+          "lat_h1": {
+            "mean": 0.670704,
+            "p90": 2.202272,
+            "p99": 4.239072,
+            "max": 8.0496
+          },
+          "lat_h4": {
+            "mean": 2.240278,
+            "p90": 7.398016,
+            "p99": 8.04512,
+            "max": 11.964576
+          },
+          "lat_h1_qos": {
+            "mean": 0.852127,
+            "p90": 1.441632,
+            "p99": 14.65944,
+            "max": 15.579328
+          },
+          "lat_h4_qos": {
+            "mean": 4.427622,
+            "p90": 13.542512,
+            "p99": 15.636176,
+            "max": 17.360448
+          }
+        },
+        "fairness_error_permille": {
+          "fair_n0_n5": 0,
+          "fair_n0_n10": 14
+        },
+        "pingpong_median_round_us": 12.478
+      },
+      {
+        "run": "confirm2-baseline",
+        "latency_ms": {
+          "lat_h0": {
+            "mean": 0.245019,
+            "p90": 0.406208,
+            "p99": 0.836656,
+            "max": 1.53096
+          },
+          "lat_h1": {
+            "mean": 0.665616,
+            "p90": 2.044944,
+            "p99": 4.275104,
+            "max": 6.721264
+          },
+          "lat_h4": {
+            "mean": 2.288806,
+            "p90": 4.951408,
+            "p99": 8.225376,
+            "max": 8.792736
+          },
+          "lat_h1_qos": {
+            "mean": 0.813132,
+            "p90": 0.510112,
+            "p99": 16.99496,
+            "max": 18.37864
+          },
+          "lat_h4_qos": {
+            "mean": 3.485117,
+            "p90": 13.479536,
+            "p99": 15.576464,
+            "max": 15.648912
+          }
+        },
+        "fairness_error_permille": {
+          "fair_n0_n5": 9,
+          "fair_n0_n10": 1
+        },
+        "pingpong_median_round_us": 12.127
+      },
+      {
+        "run": "confirm3-baseline",
+        "latency_ms": {
+          "lat_h0": {
+            "mean": 0.179851,
+            "p90": 0.259264,
+            "p99": 0.535664,
+            "max": 1.453744
+          },
+          "lat_h1": {
+            "mean": 0.652638,
+            "p90": 2.000176,
+            "p99": 4.045088,
+            "max": 5.956272
+          },
+          "lat_h4": {
+            "mean": 2.215311,
+            "p90": 4.727952,
+            "p99": 8.060992,
+            "max": 8.137856
+          },
+          "lat_h1_qos": {
+            "mean": 0.740274,
+            "p90": 1.392736,
+            "p99": 13.423296,
+            "max": 13.529904
+          },
+          "lat_h4_qos": {
+            "mean": 4.026262,
+            "p90": 13.528592,
+            "p99": 15.528288,
+            "max": 15.554368
+          }
+        },
+        "fairness_error_permille": {
+          "fair_n0_n5": 1,
+          "fair_n0_n10": 5
+        },
+        "pingpong_median_round_us": 12.689
+      }
+    ],
+    "latency": [
+      {
+        "run": "confirm1-latency",
+        "latency_ms": {
+          "lat_h0": {
+            "mean": 0.239507,
+            "p90": 0.366,
+            "p99": 1.00832,
+            "max": 1.107664
+          },
+          "lat_h1": {
+            "mean": 0.662841,
+            "p90": 3.82552,
+            "p99": 5.924928,
+            "max": 5.998352
+          },
+          "lat_h4": {
+            "mean": 2.280811,
+            "p90": 4.225888,
+            "p99": 7.279552,
+            "max": 8.564656
+          },
+          "lat_h1_qos": {
+            "mean": 0.662537,
+            "p90": 0.706064,
+            "p99": 8.073152,
+            "max": 8.25576
+          },
+          "lat_h4_qos": {
+            "mean": 2.364273,
+            "p90": 4.579584,
+            "p99": 7.566576,
+            "max": 7.665728
+          }
+        },
+        "fairness_error_permille": {
+          "fair_n0_n5": 0,
+          "fair_n0_n10": 0
+        },
+        "pingpong_median_round_us": 23.323
+      },
+      {
+        "run": "confirm2-latency",
+        "latency_ms": {
+          "lat_h0": {
+            "mean": 0.188693,
+            "p90": 0.278752,
+            "p99": 0.527376,
+            "max": 0.887968
+          },
+          "lat_h1": {
+            "mean": 0.678527,
+            "p90": 2.052784,
+            "p99": 4.192512,
+            "max": 6.76736
+          },
+          "lat_h4": {
+            "mean": 2.250697,
+            "p90": 4.754624,
+            "p99": 10.22224,
+            "max": 12.570592
+          },
+          "lat_h1_qos": {
+            "mean": 0.669769,
+            "p90": 0.533056,
+            "p99": 7.82752,
+            "max": 8.00056
+          },
+          "lat_h4_qos": {
+            "mean": 2.252722,
+            "p90": 4.386416,
+            "p99": 9.979552,
+            "max": 11.685616
+          }
+        },
+        "fairness_error_permille": {
+          "fair_n0_n5": 3,
+          "fair_n0_n10": 7
+        },
+        "pingpong_median_round_us": 23.213
+      },
+      {
+        "run": "confirm3-latency",
+        "latency_ms": {
+          "lat_h0": {
+            "mean": 0.187392,
+            "p90": 0.27296,
+            "p99": 0.353152,
+            "max": 1.628544
+          },
+          "lat_h1": {
+            "mean": 0.698046,
+            "p90": 3.908416,
+            "p99": 4.111872,
+            "max": 5.99928
+          },
+          "lat_h4": {
+            "mean": 2.192864,
+            "p90": 5.126288,
+            "p99": 9.56264,
+            "max": 9.766528
+          },
+          "lat_h1_qos": {
+            "mean": 0.664793,
+            "p90": 1.14232,
+            "p99": 6.643488,
+            "max": 6.737232
+          },
+          "lat_h4_qos": {
+            "mean": 2.248172,
+            "p90": 4.372656,
+            "p99": 9.474016,
+            "max": 11.395264
+          }
+        },
+        "fairness_error_permille": {
+          "fair_n0_n5": 2,
+          "fair_n0_n10": 10
+        },
+        "pingpong_median_round_us": 24.211
+      }
+    ]
+  },
+  "aggregate": {
+    "baseline": {
+      "latency_ms": {
+        "lat_h0": {
+          "mean": 0.195605,
+          "p90": 0.266304,
+          "p99": 0.535664,
+          "max": 1.453744
+        },
+        "lat_h1": {
+          "mean": 0.665616,
+          "p90": 2.044944,
+          "p99": 4.239072,
+          "max": 6.721264
+        },
+        "lat_h4": {
+          "mean": 2.240278,
+          "p90": 4.951408,
+          "p99": 8.060992,
+          "max": 8.792736
+        },
+        "lat_h1_qos": {
+          "mean": 0.813132,
+          "p90": 1.392736,
+          "p99": 14.65944,
+          "max": 15.579328
+        },
+        "lat_h4_qos": {
+          "mean": 4.026262,
+          "p90": 13.528592,
+          "p99": 15.576464,
+          "max": 15.648912
+        }
+      },
+      "fairness_error_permille": {
+        "fair_n0_n5": [
+          0,
+          9,
+          1
+        ],
+        "fair_n0_n10": [
+          14,
+          1,
+          5
+        ]
+      },
+      "pingpong_median_round_us": 12.478
+    },
+    "latency": {
+      "latency_ms": {
+        "lat_h0": {
+          "mean": 0.188693,
+          "p90": 0.278752,
+          "p99": 0.527376,
+          "max": 1.107664
+        },
+        "lat_h1": {
+          "mean": 0.678527,
+          "p90": 3.82552,
+          "p99": 4.192512,
+          "max": 5.99928
+        },
+        "lat_h4": {
+          "mean": 2.250697,
+          "p90": 4.754624,
+          "p99": 9.56264,
+          "max": 9.766528
+        },
+        "lat_h1_qos": {
+          "mean": 0.664793,
+          "p90": 0.706064,
+          "p99": 7.82752,
+          "max": 8.00056
+        },
+        "lat_h4_qos": {
+          "mean": 2.252722,
+          "p90": 4.386416,
+          "p99": 9.474016,
+          "max": 11.395264
+        }
+      },
+      "fairness_error_permille": {
+        "fair_n0_n5": [
+          0,
+          3,
+          2
+        ],
+        "fair_n0_n10": [
+          0,
+          7,
+          10
+        ]
+      },
+      "pingpong_median_round_us": 23.323
+    }
+  },
+  "screening_single_boot": [
+    {
+      "run": "screen-cap0",
+      "latency_ms": {
+        "lat_h0": {
+          "mean": 0.190031,
+          "p90": 0.263168,
+          "p99": 0.424848,
+          "max": 0.557104
+        },
+        "lat_h1": {
+          "mean": 0.643747,
+          "p90": 2.074336,
+          "p99": 4.590352,
+          "max": 6.476144
+        },
+        "lat_h4": {
+          "mean": 2.215165,
+          "p90": 4.07104,
+          "p99": 8.061328,
+          "max": 8.512128
+        },
+        "lat_h1_qos": {
+          "mean": 0.757379,
+          "p90": 1.489712,
+          "p99": 13.387792,
+          "max": 14.02616
+        },
+        "lat_h4_qos": {
+          "mean": 4.328813,
+          "p90": 13.526304,
+          "p99": 15.476016,
+          "max": 15.496128
+        }
+      },
+      "fairness_error_permille": {
+        "fair_n0_n5": 1,
+        "fair_n0_n10": 11
+      },
+      "pingpong_median_round_us": 12.859
+    },
+    {
+      "run": "screen-cap4000",
+      "latency_ms": {
+        "lat_h0": {
+          "mean": 0.206969,
+          "p90": 0.287888,
+          "p99": 0.528016,
+          "max": 1.192336
+        },
+        "lat_h1": {
+          "mean": 0.674368,
+          "p90": 2.133808,
+          "p99": 6.01416,
+          "max": 6.04232
+        },
+        "lat_h4": {
+          "mean": 2.212046,
+          "p90": 7.397584,
+          "p99": 8.195952,
+          "max": 12.1116
+        },
+        "lat_h1_qos": {
+          "mean": 0.660742,
+          "p90": 1.665696,
+          "p99": 6.738224,
+          "max": 8.585328
+        },
+        "lat_h4_qos": {
+          "mean": 2.417378,
+          "p90": 7.469472,
+          "p99": 8.058512,
+          "max": 10.056288
+        }
+      },
+      "fairness_error_permille": {
+        "fair_n0_n5": 4,
+        "fair_n0_n10": 7
+      },
+      "pingpong_median_round_us": 46.571
+    },
+    {
+      "run": "screen-cap2000",
+      "latency_ms": {
+        "lat_h0": {
+          "mean": 0.203212,
+          "p90": 0.281696,
+          "p99": 0.477312,
+          "max": 3.191312
+        },
+        "lat_h1": {
+          "mean": 0.660957,
+          "p90": 3.785504,
+          "p99": 5.853296,
+          "max": 5.876096
+        },
+        "lat_h4": {
+          "mean": 2.200503,
+          "p90": 7.981488,
+          "p99": 8.269648,
+          "max": 8.86048
+        },
+        "lat_h1_qos": {
+          "mean": 0.666608,
+          "p90": 3.882352,
+          "p99": 6.011376,
+          "max": 6.887056
+        },
+        "lat_h4_qos": {
+          "mean": 2.207385,
+          "p90": 8.029472,
+          "p99": 8.179472,
+          "max": 9.04592
+        }
+      },
+      "fairness_error_permille": {
+        "fair_n0_n5": 1,
+        "fair_n0_n10": 3
+      },
+      "pingpong_median_round_us": 136.036
+    },
+    {
+      "run": "screen-hrtick-cap4000",
+      "latency_ms": {
+        "lat_h0": {
+          "mean": 0.211534,
+          "p90": 0.295376,
+          "p99": 0.403728,
+          "max": 0.475584
+        },
+        "lat_h1": {
+          "mean": 0.680988,
+          "p90": 2.087024,
+          "p99": 4.23976,
+          "max": 6.040368
+        },
+        "lat_h4": {
+          "mean": 2.277612,
+          "p90": 5.249136,
+          "p99": 9.51496,
+          "max": 9.852336
+        },
+        "lat_h1_qos": {
+          "mean": 0.712593,
+          "p90": 1.166,
+          "p99": 6.752144,
+          "max": 6.822384
+        },
+        "lat_h4_qos": {
+          "mean": 2.324892,
+          "p90": 4.312112,
+          "p99": 6.207632,
+          "max": 8.031664
+        }
+      },
+      "fairness_error_permille": {
+        "fair_n0_n5": 0,
+        "fair_n0_n10": 7
+      },
+      "pingpong_median_round_us": 23.832
+    },
+    {
+      "run": "screen-hrtick-cap2000",
+      "latency_ms": {
+        "lat_h0": {
+          "mean": 0.189165,
+          "p90": 0.273776,
+          "p99": 0.463376,
+          "max": 0.606816
+        },
+        "lat_h1": {
+          "mean": 0.688897,
+          "p90": 2.120416,
+          "p99": 4.496512,
+          "max": 5.996608
+        },
+        "lat_h4": {
+          "mean": 2.257438,
+          "p90": 5.402064,
+          "p99": 9.743264,
+          "max": 9.952912
+        },
+        "lat_h1_qos": {
+          "mean": 0.694127,
+          "p90": 3.9612,
+          "p99": 6.11016,
+          "max": 6.216144
+        },
+        "lat_h4_qos": {
+          "mean": 2.266885,
+          "p90": 3.838224,
+          "p99": 5.599296,
+          "max": 7.620256
+        }
+      },
+      "fairness_error_permille": {
+        "fair_n0_n5": 3,
+        "fair_n0_n10": 8
+      },
+      "pingpong_median_round_us": 23.958
+    },
+    {
+      "run": "screen-hrtick-cap0",
+      "latency_ms": {
+        "lat_h0": {
+          "mean": 0.197469,
+          "p90": 0.283504,
+          "p99": 0.65232,
+          "max": 1.824656
+        },
+        "lat_h1": {
+          "mean": 0.69964,
+          "p90": 2.043024,
+          "p99": 4.891088,
+          "max": 6.057136
+        },
+        "lat_h4": {
+          "mean": 2.284538,
+          "p90": 4.68336,
+          "p99": 8.968368,
+          "max": 9.61168
+        },
+        "lat_h1_qos": {
+          "mean": 0.68049,
+          "p90": 3.39232,
+          "p99": 5.203376,
+          "max": 5.612384
+        },
+        "lat_h4_qos": {
+          "mean": 3.014139,
+          "p90": 11.522288,
+          "p99": 14.0464,
+          "max": 14.439328
+        }
+      },
+      "fairness_error_permille": {
+        "fair_n0_n5": 3,
+        "fair_n0_n10": 0
+      },
+      "pingpong_median_round_us": 23.066
+    }
+  ],
+  "qos_runs": [
+    {
+      "run": "screen-hrtick-cap4000-qos",
+      "verdict": "pass",
+      "pick_ratio_on": 2.06,
+      "pick_ratio_off": 0.95,
+      "cpu_time_ratio_on": 0.96,
+      "fork_max_child_lag_ms": 1.061244,
+      "reweight_queued": 195,
+      "reweight_max_dv_ns": 8,
+      "avg_scans": 2140,
+      "avg_queues": 8594,
+      "avg_group_entities": 16
+    },
+    {
+      "run": "confirm1-latency-qos",
+      "verdict": "pass",
+      "pick_ratio_on": 2.07,
+      "pick_ratio_off": 1.0,
+      "cpu_time_ratio_on": 0.98,
+      "fork_max_child_lag_ms": 1.088404,
+      "reweight_queued": 202,
+      "reweight_max_dv_ns": 8,
+      "avg_scans": 2140,
+      "avg_queues": 8594,
+      "avg_group_entities": 16
+    },
+    {
+      "run": "confirm2-latency-qos",
+      "verdict": "pass",
+      "pick_ratio_on": 2.07,
+      "pick_ratio_off": 1.03,
+      "cpu_time_ratio_on": 0.98,
+      "fork_max_child_lag_ms": 1.15489,
+      "reweight_queued": 195,
+      "reweight_max_dv_ns": 8,
+      "avg_scans": 2140,
+      "avg_queues": 8592,
+      "avg_group_entities": 16
+    }
+  ],
+  "rejected_2ms_qos": {
+    "run": "screen-hrtick-cap2000-qos",
+    "verdict": "inconclusive",
+    "pick_ratio_on": 1.35,
+    "pick_ratio_off": 1.01,
+    "cpu_time_ratio_on": 0.97,
+    "fork_max_child_lag_ms": 1.141258,
+    "reweight_queued": 195,
+    "reweight_max_dv_ns": 8,
+    "avg_scans": 2139,
+    "avg_queues": 8592,
+    "avg_group_entities": 17
+  },
+  "normal_boot_verified": true,
+  "input_hashes_shared": {
+    "Image-eevdf": "7cf62bcabd90fb0fc79d98a89a82b74296328094cc1e2feec7afe5cc08b201ee",
+    "ramdisk.img": "398e60e93555afbe11a8fe7efcb6f6289e948ca1369e42de5cfa4b29748f19eb",
+    "userdata.img": "8828df758036755f88ff59a3448ea8dd59883db22a6d20cd5bfe9670f0400f67",
+    "vendor.img": "00f0135c117a70dc5d00093a332e9fc7d95619f3434b617f90738ed72d85f950",
+    "system.img": "9e088b13f5dfc73cc186c2492fbccc1099f7cea28786e66ec360525bf5fcfe6e",
+    "updater.img": "6272e91c705cc136859b8659f9da4636901524a58c4411fb630d24fe28afaad1"
+  },
+  "tradeoffs": {
+    "lat_h4_qos_p99_reduction_percent": 39.17736400251045,
+    "pingpong_round_increase_percent": 86.91296682160603
+  }
+}

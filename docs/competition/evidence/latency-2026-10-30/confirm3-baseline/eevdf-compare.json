@@ -1,0 +1,184 @@
+{
+  "started_utc": "2026-10-30T11:13:05.205741+00:00",
+  "elapsed_seconds": 65.02,
+  "command": [
+    "qemu-system-aarch64",
+    "-M",
+    "virt",
+    "-smp",
+    "4",
+    "-m",
+    "1024",
+    "-nographic",
+    "-cpu",
+    "cortex-a57",
+    "-snapshot",
+    "-nic",
+    "none",
+    "-monitor",
+    "none",
+    "-drive",
+    "if=none,file=/home/dark/2024204088/.competition-build/latency/images/userdata.img,format=raw,id=userdata,index=3",
+    "-device",
+    "virtio-blk-device,drive=userdata",
+    "-drive",
+    "if=none,file=/home/dark/2024204088/.competition-build/latency/images/vendor.img,format=raw,id=vendor,index=2",
+    "-device",
+    "virtio-blk-device,drive=vendor",
+    "-drive",
+    "if=none,file=/home/dark/2024204088/.competition-build/latency/images/system.img,format=raw,id=system,index=1",
+    "-device",
+    "virtio-blk-device,drive=system",
+    "-drive",
+    "if=none,file=/home/dark/2024204088/.competition-build/latency/images/updater.img,format=raw,id=updater,index=0",
+    "-device",
+    "virtio-blk-device,drive=updater",
+    "-kernel",
+    "/home/dark/2024204088/.competition-build/latency/images/Image-eevdf",
+    "-initrd",
+    "/home/dark/2024204088/.competition-build/latency/images/ramdisk.img",
+    "-append",
+    "console=ttyAMA0 init=/bin/init hardware=qemu.arm.linux root=/dev/ram0 rw ohos.required_mount.system=/dev/block/vdb@/usr@ext4@ro,barrier=1@wait,required ohos.required_mount.vendor=/dev/block/vdc@/vendor@ext4@ro,barrier=1@wait,required sched_cmp_bench=1 isolcpus=3 sched_qos_slice_cap_us=0"
+  ],
+  "qemu_version": "QEMU emulator version 6.2.0 (Debian 1:6.2+dfsg-2ubuntu6.31)\nCopyright (c) 2003-2021 Fabrice Bellard and the QEMU Project developers\n",
+  "input_sha256": {
+    "Image-eevdf": "7cf62bcabd90fb0fc79d98a89a82b74296328094cc1e2feec7afe5cc08b201ee",
+    "ramdisk.img": "398e60e93555afbe11a8fe7efcb6f6289e948ca1369e42de5cfa4b29748f19eb",
+    "userdata.img": "8828df758036755f88ff59a3448ea8dd59883db22a6d20cd5bfe9670f0400f67",
+    "vendor.img": "00f0135c117a70dc5d00093a332e9fc7d95619f3434b617f90738ed72d85f950",
+    "system.img": "9e088b13f5dfc73cc186c2492fbccc1099f7cea28786e66ec360525bf5fcfe6e",
+    "updater.img": "6272e91c705cc136859b8659f9da4636901524a58c4411fb630d24fe28afaad1"
+  },
+  "input_unchanged": true,
+  "returncode": 0,
+  "stopped_by_timeout": true,
+  "benchmark_complete": true,
+  "samgr_ready": true,
+  "kernel_fault_lines": [],
+  "records": [
+    {
+      "line": "[    0.579980] SCHED_CMP kernel=eevdf start cpu=3",
+      "fields": {
+        "kernel": "eevdf",
+        "cpu": "3"
+      }
+    },
+    {
+      "line": "[    3.609403] SCHED_CMP kernel=eevdf case=lat_h0 hogs=0 samples=300 mean_ns=179851 p50_ns=156384 p90_ns=259264 p99_ns=535664 max_ns=1453744 hog_preempt_per_s=0",
+      "fields": {
+        "kernel": "eevdf",
+        "case": "lat_h0",
+        "hogs": "0",
+        "samples": "300",
+        "mean_ns": "179851",
+        "p50_ns": "156384",
+        "p90_ns": "259264",
+        "p99_ns": "535664",
+        "max_ns": "1453744",
+        "hog_preempt_per_s": "0"
+      }
+    },
+    {
+      "line": "[    6.644644] SCHED_CMP kernel=eevdf case=lat_h1 hogs=1 samples=300 mean_ns=652638 p50_ns=112688 p90_ns=2000176 p99_ns=4045088 max_ns=5956272 hog_preempt_per_s=100",
+      "fields": {
+        "kernel": "eevdf",
+        "case": "lat_h1",
+        "hogs": "1",
+        "samples": "300",
+        "mean_ns": "652638",
+        "p50_ns": "112688",
+        "p90_ns": "2000176",
+        "p99_ns": "4045088",
+        "max_ns": "5956272",
+        "hog_preempt_per_s": "100"
+      }
+    },
+    {
+      "line": "[    9.708078] SCHED_CMP kernel=eevdf case=lat_h4 hogs=4 samples=300 mean_ns=2215311 p50_ns=146512 p90_ns=4727952 p99_ns=8060992 max_ns=8137856 hog_preempt_per_s=233",
+      "fields": {
+        "kernel": "eevdf",
+        "case": "lat_h4",
+        "hogs": "4",
+        "samples": "300",
+        "mean_ns": "2215311",
+        "p50_ns": "146512",
+        "p90_ns": "4727952",
+        "p99_ns": "8060992",
+        "max_ns": "8137856",
+        "hog_preempt_per_s": "233"
+      }
+    },
+    {
+      "line": "[   12.830968] SCHED_CMP kernel=eevdf case=lat_h1_qos hogs=1 samples=300 mean_ns=740274 p50_ns=105376 p90_ns=1392736 p99_ns=13423296 max_ns=13529904 hog_preempt_per_s=97",
+      "fields": {
+        "kernel": "eevdf",
+        "case": "lat_h1_qos",
+        "hogs": "1",
+        "samples": "300",
+        "mean_ns": "740274",
+        "p50_ns": "105376",
+        "p90_ns": "1392736",
+        "p99_ns": "13423296",
+        "max_ns": "13529904",
+        "hog_preempt_per_s": "97"
+      }
+    },
+    {
+      "line": "[   16.983988] SCHED_CMP kernel=eevdf case=lat_h4_qos hogs=4 samples=300 mean_ns=4026262 p50_ns=127840 p90_ns=13528592 p99_ns=15528288 max_ns=15554368 hog_preempt_per_s=106",
+      "fields": {
+        "kernel": "eevdf",
+        "case": "lat_h4_qos",
+        "hogs": "4",
+        "samples": "300",
+        "mean_ns": "4026262",
+        "p50_ns": "127840",
+        "p90_ns": "13528592",
+        "p99_ns": "15528288",
+        "max_ns": "15554368",
+        "hog_preempt_per_s": "106"
+      }
+    },
+    {
+      "line": "[   19.020461] SCHED_CMP kernel=eevdf case=fair_n0_n5 exec_a_ms=1497 exec_b_ms=489 ratio_x1000=3061 theory_x1000=3056 err_permille=1",
+      "fields": {
+        "kernel": "eevdf",
+        "case": "fair_n0_n5",
+        "exec_a_ms": "1497",
+        "exec_b_ms": "489",
+        "ratio_x1000": "3061",
+        "theory_x1000": "3056",
+        "err_permille": "1"
+      }
+    },
+    {
+      "line": "[   21.068468] SCHED_CMP kernel=eevdf case=fair_n0_n10 exec_a_ms=1805 exec_b_ms=195 ratio_x1000=9258 theory_x1000=9309 err_permille=5",
+      "fields": {
+        "kernel": "eevdf",
+        "case": "fair_n0_n10",
+        "exec_a_ms": "1805",
+        "exec_b_ms": "195",
+        "ratio_x1000": "9258",
+        "theory_x1000": "9309",
+        "err_permille": "5"
+      }
+    },
+    {
+      "line": "[   22.519828] SCHED_CMP kernel=eevdf case=pingpong rounds=20000 min_round_ns=12150 median_round_ns=12689 max_round_ns=43557",
+      "fields": {
+        "kernel": "eevdf",
+        "case": "pingpong",
+        "rounds": "20000",
+        "min_round_ns": "12150",
+        "median_round_ns": "12689",
+        "max_round_ns": "43557"
+      }
+    },
+    {
+      "line": "[   22.520610] SCHED_CMP kernel=eevdf done",
+      "fields": {
+        "kernel": "eevdf"
+      }
+    }
+  ],
+  "log_sha256": "506de984348c6d39d7ef91b25baa0028cd79bbffb4027700d98297dc55a77ff4"
+}

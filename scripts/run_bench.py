@@ -26,11 +26,16 @@ def main():
     p.add_argument('--mode', choices=['qos', 'compare', 'boot'], default='compare')
     p.add_argument('--seconds', type=int, default=100)
     p.add_argument('--output', type=pathlib.Path, required=True)
+    p.add_argument('--boot-arg', action='append', default=[], metavar='KEY=VALUE',
+                   help='append one kernel command-line token; repeat for controlled experiments')
     a = p.parse_args()
     if a.mode == 'qos' and a.kernel == 'cfs':
         p.error('QoS invariant hooks require the EEVDF image')
     if a.seconds <= 0:
         p.error('--seconds must be positive')
+    if any(not token or any(c.isspace() or ord(c) < 32 for c in token)
+           for token in a.boot_arg):
+        p.error('--boot-arg must be a single nonempty command-line token')
     a.images = a.images.resolve()
     a.output.mkdir(parents=True, exist_ok=True)
     log = a.output / f'{a.kernel}-{a.mode}.log'
@@ -50,6 +55,8 @@ def main():
             'ohos.required_mount.system=/dev/block/vdb@/usr@ext4@ro,barrier=1@wait,required '
             'ohos.required_mount.vendor=/dev/block/vdc@/vendor@ext4@ro,barrier=1@wait,required')
     boot += {'qos': ' eevdf_qos_bench=1', 'compare': ' sched_cmp_bench=1 isolcpus=3', 'boot': ''}[a.mode]
+    if a.boot_arg:
+        boot += ' ' + ' '.join(a.boot_arg)
     args += ['-kernel', str(kernel), '-initrd', str(a.images / 'ramdisk.img'), '-append', boot]
     hashes = {f.name: digest(f) for f in files}
     started = datetime.now(timezone.utc).isoformat()

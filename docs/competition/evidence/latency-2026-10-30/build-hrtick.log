@@ -1,0 +1,75 @@
+make: 进入目录“/home/dark/2024204088/.competition-build/latency/linux-5.10”
+make[1]: 进入目录“/home/dark/2024204088/.competition-build/latency/obj”
+  GEN     Makefile
+  CALL    /home/dark/2024204088/.competition-build/latency/linux-5.10/scripts/atomic/check-atomics.sh
+  CALL    /home/dark/2024204088/.competition-build/latency/linux-5.10/scripts/checksyscalls.sh
+  CHK     include/generated/compile.h
+  CC      kernel/sched/core.o
+  CC      kernel/sched/loadavg.o
+  CC      kernel/sched/clock.o
+  CC      kernel/sched/cputime.o
+  CC      kernel/sched/idle.o
+  CC      kernel/sched/fair.o
+  CC      kernel/sched/rt.o
+  CC      kernel/sched/deadline.o
+  CC      kernel/sched/qos_slice_bench.o
+  CC      kernel/sched/sched_cmp_bench.o
+  CC      kernel/sched/wait.o
+  CC      kernel/sched/wait_bit.o
+  CC      kernel/sched/swait.o
+  CC      kernel/sched/completion.o
+  CC      kernel/sched/cpupri.o
+  CC      kernel/sched/cpudeadline.o
+  CC      kernel/sched/topology.o
+  CC      kernel/sched/stop_task.o
+  CC      kernel/sched/pelt.o
+  CC      kernel/sched/autogroup.o
+  CC      kernel/sched/cpuacct.o
+  CC      kernel/sched/cpufreq.o
+  CC      kernel/sched/cpufreq_schedutil.o
+  CC      kernel/sched/membarrier.o
+  CC      kernel/sched/isolation.o
+  AR      kernel/sched/built-in.a
+  AR      kernel/built-in.a
+  CC      drivers/auth_ctl/auth_ctrl.o
+  CC      drivers/auth_ctl/qos_ctrl.o
+/home/dark/2024204088/.competition-build/latency/linux-5.10/drivers/auth_ctl/auth_ctrl.c:186:12: warning: unused function 'generic_auth_trim' [-Wunused-function]
+static int generic_auth_trim(unsigned int orig_flag, unsigned int constrain)
+           ^
+/home/dark/2024204088/.competition-build/latency/linux-5.10/drivers/auth_ctl/qos_ctrl.c:489:13: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma GCC diagonstic ignored "-Wpointer-to-int-cast"
+            ^
+/home/dark/2024204088/.competition-build/latency/linux-5.10/drivers/auth_ctl/qos_ctrl.c:494:31: warning: cast to smaller integer type 'compat_uptr_t' (aka 'unsigned int') from 'void *' [-Wvoid-pointer-to-int-cast]
+                                (void __user *)compat_ptr((compat_uptr_t)uarg),
+                                                          ^~~~~~~~~~~~~~~~~~~
+/home/dark/2024204088/.competition-build/latency/linux-5.10/drivers/auth_ctl/qos_ctrl.c:519:13: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma GCC diagonstic ignored "-Wpointer-to-int-cast"
+            ^
+/home/dark/2024204088/.competition-build/latency/linux-5.10/drivers/auth_ctl/qos_ctrl.c:523:48: warning: cast to smaller integer type 'compat_uptr_t' (aka 'unsigned int') from 'void *' [-Wvoid-pointer-to-int-cast]
+                ret = copy_to_user((void __user *)compat_ptr((compat_uptr_t)uarg),
+                                                             ^~~~~~~~~~~~~~~~~~~
+1 warning generated.
+4 warnings generated.
+  AR      drivers/auth_ctl/built-in.a
+  AR      drivers/built-in.a
+  GEN     .version
+  CHK     include/generated/compile.h
+  UPD     include/generated/compile.h
+  CC      init/version.o
+  AR      init/built-in.a
+  LD      vmlinux.o
+  MODPOST vmlinux.symvers
+  MODINFO modules.builtin.modinfo
+  GEN     modules.builtin
+  LD      .tmp_vmlinux.kallsyms1
+  KSYMS   .tmp_vmlinux.kallsyms1.S
+  AS      .tmp_vmlinux.kallsyms1.S
+  LD      .tmp_vmlinux.kallsyms2
+  KSYMS   .tmp_vmlinux.kallsyms2.S
+  AS      .tmp_vmlinux.kallsyms2.S
+  LD      vmlinux
+  SORTTAB vmlinux
+  SYSMAP  System.map
+  OBJCOPY arch/arm64/boot/Image
+make[1]: 离开目录“/home/dark/2024204088/.competition-build/latency/obj”
+make: 离开目录“/home/dark/2024204088/.competition-build/latency/linux-5.10”

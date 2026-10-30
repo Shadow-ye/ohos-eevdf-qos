@@ -1,0 +1,274 @@
+{
+  "started_utc": "2026-10-30T11:05:05.121727+00:00",
+  "elapsed_seconds": 100.03,
+  "command": [
+    "qemu-system-aarch64",
+    "-M",
+    "virt",
+    "-smp",
+    "4",
+    "-m",
+    "1024",
+    "-nographic",
+    "-cpu",
+    "cortex-a57",
+    "-snapshot",
+    "-nic",
+    "none",
+    "-monitor",
+    "none",
+    "-drive",
+    "if=none,file=/home/dark/2024204088/.competition-build/latency/images-hrtick/userdata.img,format=raw,id=userdata,index=3",
+    "-device",
+    "virtio-blk-device,drive=userdata",
+    "-drive",
+    "if=none,file=/home/dark/2024204088/.competition-build/latency/images-hrtick/vendor.img,format=raw,id=vendor,index=2",
+    "-device",
+    "virtio-blk-device,drive=vendor",
+    "-drive",
+    "if=none,file=/home/dark/2024204088/.competition-build/latency/images-hrtick/system.img,format=raw,id=system,index=1",
+    "-device",
+    "virtio-blk-device,drive=system",
+    "-drive",
+    "if=none,file=/home/dark/2024204088/.competition-build/latency/images-hrtick/updater.img,format=raw,id=updater,index=0",
+    "-device",
+    "virtio-blk-device,drive=updater",
+    "-kernel",
+    "/home/dark/2024204088/.competition-build/latency/images-hrtick/Image-eevdf",
+    "-initrd",
+    "/home/dark/2024204088/.competition-build/latency/images-hrtick/ramdisk.img",
+    "-append",
+    "console=ttyAMA0 init=/bin/init hardware=qemu.arm.linux root=/dev/ram0 rw ohos.required_mount.system=/dev/block/vdb@/usr@ext4@ro,barrier=1@wait,required ohos.required_mount.vendor=/dev/block/vdc@/vendor@ext4@ro,barrier=1@wait,required eevdf_qos_bench=1 sched_qos_slice_cap_us=2000"
+  ],
+  "qemu_version": "QEMU emulator version 6.2.0 (Debian 1:6.2+dfsg-2ubuntu6.31)\nCopyright (c) 2003-2021 Fabrice Bellard and the QEMU Project developers\n",
+  "input_sha256": {
+    "Image-eevdf": "8dedba834519e56d39150dac1a30e1a21024ff3761cf10f91dac493342b838a0",
+    "ramdisk.img": "398e60e93555afbe11a8fe7efcb6f6289e948ca1369e42de5cfa4b29748f19eb",
+    "userdata.img": "8828df758036755f88ff59a3448ea8dd59883db22a6d20cd5bfe9670f0400f67",
+    "vendor.img": "00f0135c117a70dc5d00093a332e9fc7d95619f3434b617f90738ed72d85f950",
+    "system.img": "9e088b13f5dfc73cc186c2492fbccc1099f7cea28786e66ec360525bf5fcfe6e",
+    "updater.img": "6272e91c705cc136859b8659f9da4636901524a58c4411fb630d24fe28afaad1"
+  },
+  "input_unchanged": true,
+  "returncode": 0,
+  "stopped_by_timeout": true,
+  "benchmark_complete": false,
+  "samgr_ready": true,
+  "kernel_fault_lines": [],
+  "records": [
+    {
+      "line": "[    0.518805] EEVDF_QOS_BENCH start window_ms=400 cpu=0",
+      "fields": {
+        "window_ms": "400",
+        "cpu": "0"
+      }
+    },
+    {
+      "line": "[    0.937336] EEVDF_QOS_BENCH sample qos=5 in_qos=5 se_slice_ns=2250000",
+      "fields": {
+        "qos": "5",
+        "in_qos": "5",
+        "se_slice_ns": "2250000"
+      }
+    },
+    {
+      "line": "[    0.937859] EEVDF_QOS_BENCH sample qos=0 in_qos=0 se_slice_ns=2250000",
+      "fields": {
+        "qos": "0",
+        "in_qos": "0",
+        "se_slice_ns": "2250000"
+      }
+    },
+    {
+      "line": "[    0.938053] EEVDF_QOS_BENCH phase=slice_off task=hi qos=5 switches=88 exec_ns=201214784 max_gap_ns=5887632 avg_gap_ns=4703162",
+      "fields": {
+        "phase": "slice_off",
+        "task": "hi",
+        "qos": "5",
+        "switches": "88",
+        "exec_ns": "201214784",
+        "max_gap_ns": "5887632",
+        "avg_gap_ns": "4703162"
+      }
+    },
+    {
+      "line": "[    0.938289] EEVDF_QOS_BENCH phase=slice_off task=lo qos=0 switches=89 exec_ns=202929312 max_gap_ns=7035712 avg_gap_ns=4702420",
+      "fields": {
+        "phase": "slice_off",
+        "task": "lo",
+        "qos": "0",
+        "switches": "89",
+        "exec_ns": "202929312",
+        "max_gap_ns": "7035712",
+        "avg_gap_ns": "4702420"
+      }
+    },
+    {
+      "line": "[    0.938614] EEVDF_QOS_BENCH phase=slice_off picks hi=94 lo=93",
+      "fields": {
+        "phase": "slice_off",
+        "hi": "94",
+        "lo": "93"
+      }
+    },
+    {
+      "line": "[    0.938938] EEVDF_QOS_BENCH phase=slice_off slice=0 pick_ratio_x100=101 exec_ratio_x100=99",
+      "fields": {
+        "phase": "slice_off",
+        "slice": "0",
+        "pick_ratio_x100": "101",
+        "exec_ratio_x100": "99"
+      }
+    },
+    {
+      "line": "[    1.355389] EEVDF_QOS_BENCH sample qos=5 in_qos=5 se_slice_ns=1000000",
+      "fields": {
+        "qos": "5",
+        "in_qos": "5",
+        "se_slice_ns": "1000000"
+      }
+    },
+    {
+      "line": "[    1.356072] EEVDF_QOS_BENCH sample qos=0 in_qos=0 se_slice_ns=2000000",
+      "fields": {
+        "qos": "0",
+        "in_qos": "0",
+        "se_slice_ns": "2000000"
+      }
+    },
+    {
+      "line": "[    1.356322] EEVDF_QOS_BENCH phase=slice_on task=hi qos=5 switches=37 exec_ns=198949744 max_gap_ns=16082656 avg_gap_ns=11293920",
+      "fields": {
+        "phase": "slice_on",
+        "task": "hi",
+        "qos": "5",
+        "switches": "37",
+        "exec_ns": "198949744",
+        "max_gap_ns": "16082656",
+        "avg_gap_ns": "11293920"
+      }
+    },
+    {
+      "line": "[    1.356792] EEVDF_QOS_BENCH phase=slice_on task=lo qos=0 switches=35 exec_ns=203244016 max_gap_ns=16246512 avg_gap_ns=12117238",
+      "fields": {
+        "phase": "slice_on",
+        "task": "lo",
+        "qos": "0",
+        "switches": "35",
+        "exec_ns": "203244016",
+        "max_gap_ns": "16246512",
+        "avg_gap_ns": "12117238"
+      }
+    },
+    {
+      "line": "[    1.357175] EEVDF_QOS_BENCH phase=slice_on picks hi=87 lo=64",
+      "fields": {
+        "phase": "slice_on",
+        "hi": "87",
+        "lo": "64"
+      }
+    },
+    {
+      "line": "[    1.357382] EEVDF_QOS_BENCH phase=slice_on slice=1 pick_ratio_x100=135 exec_ratio_x100=97",
+      "fields": {
+        "phase": "slice_on",
+        "slice": "1",
+        "pick_ratio_x100": "135",
+        "exec_ratio_x100": "97"
+      }
+    },
+    {
+      "line": "[    1.357733] EEVDF_QOS_BENCH verdict=inconclusive err=0",
+      "fields": {
+        "verdict": "inconclusive",
+        "err": "0"
+      }
+    },
+    {
+      "line": "[    1.412026] EEVDF_FORK_CHECK trials=16 ran=16 parent_vlag_is_deadline=16 min_parent_vlag_ns=737420865 max_child_lag_ns=1141258 limit_ns=20000000 verdict=pass",
+      "fields": {
+        "trials": "16",
+        "ran": "16",
+        "parent_vlag_is_deadline": "16",
+        "min_parent_vlag_ns": "737420865",
+        "max_child_lag_ns": "1141258",
+        "limit_ns": "20000000",
+        "verdict": "pass"
+      }
+    },
+    {
+      "line": "[    1.899951] EEVDF_REWEIGHT_CHECK rounds=200 grouped=1 reweight_queued=195 over_bound=0 max_dv_ns=8 scans=200 group_entities=200 bad_avg=0 bad_load=0 bad_min_deadline=0 err=0 verdict=pass",
+      "fields": {
+        "rounds": "200",
+        "grouped": "1",
+        "reweight_queued": "195",
+        "over_bound": "0",
+        "max_dv_ns": "8",
+        "scans": "200",
+        "group_entities": "200",
+        "bad_avg": "0",
+        "bad_load": "0",
+        "bad_min_deadline": "0",
+        "err": "0",
+        "verdict": "pass"
+      }
+    },
+    {
+      "line": "[   15.535919] EEVDF_AVG_CHECK progress scans=534 queues=2172 entities=228 group_entities=17 reweight_queued=195 bad_avg=0 bad_load=0 bad_min_deadline=0 verdict=pass",
+      "fields": {
+        "scans": "534",
+        "queues": "2172",
+        "entities": "228",
+        "group_entities": "17",
+        "reweight_queued": "195",
+        "bad_avg": "0",
+        "bad_load": "0",
+        "bad_min_deadline": "0",
+        "verdict": "pass"
+      }
+    },
+    {
+      "line": "[   30.519880] EEVDF_AVG_CHECK progress scans=1069 queues=4312 entities=256 group_entities=17 reweight_queued=195 bad_avg=0 bad_load=0 bad_min_deadline=0 verdict=pass",
+      "fields": {
+        "scans": "1069",
+        "queues": "4312",
+        "entities": "256",
+        "group_entities": "17",
+        "reweight_queued": "195",
+        "bad_avg": "0",
+        "bad_load": "0",
+        "bad_min_deadline": "0",
+        "verdict": "pass"
+      }
+    },
+    {
+      "line": "[   45.539847] EEVDF_AVG_CHECK progress scans=1605 queues=6456 entities=262 group_entities=17 reweight_queued=195 bad_avg=0 bad_load=0 bad_min_deadline=0 verdict=pass",
+      "fields": {
+        "scans": "1605",
+        "queues": "6456",
+        "entities": "262",
+        "group_entities": "17",
+        "reweight_queued": "195",
+        "bad_avg": "0",
+        "bad_load": "0",
+        "bad_min_deadline": "0",
+        "verdict": "pass"
+      }
+    },
+    {
+      "line": "[   60.523681] EEVDF_AVG_CHECK done scans=2139 queues=8592 entities=264 group_entities=17 reweight_queued=195 bad_avg=0 bad_load=0 bad_min_deadline=0 verdict=pass",
+      "fields": {
+        "scans": "2139",
+        "queues": "8592",
+        "entities": "264",
+        "group_entities": "17",
+        "reweight_queued": "195",
+        "bad_avg": "0",
+        "bad_load": "0",
+        "bad_min_deadline": "0",
+        "verdict": "pass"
+      }
+    }
+  ],
+  "log_sha256": "ddfd015e0d8178493c386377ea6e7324033cb503d345f5c97251146dcfcf6b4e"
+}

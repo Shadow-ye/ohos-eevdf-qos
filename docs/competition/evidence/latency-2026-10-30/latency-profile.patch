@@ -1,0 +1,49 @@
+--- a/kernel/sched/fair.c
++++ b/kernel/sched/fair.c
+@@ -586,6 +586,19 @@
+  */
+ #define QOS_NR_LEVELS 7
+ 
++/* Experimental opt-in cap: leave the submitted policy unchanged at zero. */
++static unsigned int sched_qos_slice_cap_us;
++static int __init sched_qos_slice_cap_setup(char *str)
++{
++	unsigned int cap;
++
++	if (kstrtouint(str, 0, &cap) || (cap && (cap < 1000 || cap > 14000)))
++		return 0;
++	sched_qos_slice_cap_us = cap;
++	return 1;
++}
++__setup("sched_qos_slice_cap_us=", sched_qos_slice_cap_setup);
++
+ static inline u64 qos_to_slice(int in_qos)
+ {
+ 	/*
+@@ -607,8 +620,13 @@
+ 		 4000000ULL,	/* [6] QOS_KEY_BACKGROUND:     4ms */
+ 	};
+ 
+-	if (in_qos >= 0 && in_qos < QOS_NR_LEVELS)
+-		return qos_slice_map[in_qos];
++	if (in_qos >= 0 && in_qos < QOS_NR_LEVELS) {
++		u64 slice = qos_slice_map[in_qos];
++
++		if (sched_qos_slice_cap_us)
++			slice = min_t(u64, slice, (u64)sched_qos_slice_cap_us * NSEC_PER_USEC);
++		return slice;
++	}
+ 	return sysctl_sched_min_granularity;
+ }
+ 
+--- a/kernel/sched/features.h
++++ b/kernel/sched/features.h
+@@ -45,7 +45,7 @@
+  */
+ SCHED_FEAT(WAKEUP_PREEMPTION, true)
+ 
+-SCHED_FEAT(HRTICK, false)
++SCHED_FEAT(HRTICK, true)
+ SCHED_FEAT(DOUBLE_TICK, false)
+ 
+ /*

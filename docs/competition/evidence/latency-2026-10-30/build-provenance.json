@@ -1,0 +1,32 @@
+{
+  "date": "2026-10-30",
+  "base_repository_commit": "1de09614398f7a4947cd9711f338a6b775eef065",
+  "scope": "Two incremental kernel Image builds against an isolated copy of the prepared OpenHarmony source and existing object directory; not a clean full operating-system build.",
+  "baseline": {
+    "source_files": {
+      "kernel/sched/fair.c": "8d08a64b3278c73cb65dd4979b17ad6d48c28589f854724262eb4302128622ab",
+      "kernel/sched/sched_cmp_bench.c": "5383100586630d3c5334ca236862bdab714195208453b602268e14d3c2145c5d",
+      "kernel/sched/qos_slice_bench.c": "6ecc39168d3c19ce204057702d3b85dbc9ca0fc0b4d95610faa920ecebc29e15",
+      "kernel/sched/features.h": "b650e63a9af0c6cbe5fa4b85cbd14db707d67a29ad5e0c2e5e25db197ebfddde"
+    },
+    "config_sha256": "4414eedbd5f0cea32c65441f5c5ddf2976044dca68f17495fbf63c9fa8f3f829",
+    "image_sha256": "7cf62bcabd90fb0fc79d98a89a82b74296328094cc1e2feec7afe5cc08b201ee"
+  },
+  "hrtick": {
+    "source_files": {
+      "kernel/sched/fair.c": "8d08a64b3278c73cb65dd4979b17ad6d48c28589f854724262eb4302128622ab",
+      "kernel/sched/sched_cmp_bench.c": "5383100586630d3c5334ca236862bdab714195208453b602268e14d3c2145c5d",
+      "kernel/sched/qos_slice_bench.c": "6ecc39168d3c19ce204057702d3b85dbc9ca0fc0b4d95610faa920ecebc29e15",
+      "kernel/sched/features.h": "afd95387d70fb3c38c7db8cf51771d75f19cdf0403822240b6620e49bfb943ad"
+    },
+    "config_sha256": "4414eedbd5f0cea32c65441f5c5ddf2976044dca68f17495fbf63c9fa8f3f829",
+    "image_sha256": "8dedba834519e56d39150dac1a30e1a21024ff3761cf10f91dac493342b838a0"
+  },
+  "source_changes": [
+    "kernel/sched/features.h",
+    "kernel/sched/fair.c"
+  ],
+  "compiler": "OHOS (dev) clang version 15.0.4 (llvm-project ef33c3575763937746833063de4d2e1fd184bbf7)\nTarget: x86_64-unknown-linux-gnu\nThread model: posix\nInstalledDir: /home/dark/2024204088/OHOS501/prebuilts/clang/ohos/linux-x86_64/llvm/bin\n",
+  "build_command": "make -C PREPARED_LINUX O=ABSOLUTE_OBJECT_DIR ARCH=arm64 CC=OHOS_CLANG CROSS_COMPILE=LINARO_AARCH64_PREFIX -j4 Image",
+  "patch_sha256": "c46a00542668ccaeba52c6ce1ac395a710a71d0ecdf41926339226b822c33d77"
+}

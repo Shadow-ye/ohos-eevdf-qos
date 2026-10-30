@@ -6,13 +6,13 @@
 
 本项目将 Linux 6.6 的 EEVDF 公平调度机制移植至 OpenHarmony 5.0.1 的 Linux 5.10.208，并将已有任务 QoS 等级映射为调度请求 slice。交付内容包括内核源码快照、可应用补丁、开关对照测试、不变量检查和 CFS 对比实验。
 
-**当前成果是可运行、可复核的系统研究原型。** QEMU 上已验证 QoS 改变调度粒度且保持近似公平份额；在周期唤醒与忙等竞争场景中，当前 EEVDF 方案的尾延迟高于 CFS。项目如实保留这一限制，不宣称已改善实机交互性能。
+**当前成果是可运行、可复核的系统研究原型。** 初版 EEVDF 的尾延迟高于 CFS；一组独立可选的 4 ms QoS 请求上限加 HRTICK 调优，在四忙等任务及 QoS 场景中将唤醒 p99 降低 39.2%，但线程交接增加 86.9%、无 QoS 部分场景变慢，仍高于 CFS。数据来自 QEMU TCG，不能推导实机收益。详见[调优实验](docs/competition/调优实验.md)，原始策略仍是默认快照。
 
 ## 评审入口
 
 - [开发设计文档](docs/competition/开发设计文档.md)，[可编辑 Word 版](docs/competition/materials/开发设计文档.docx)。
 - [答辩 PPT](docs/competition/materials/答辩演示.pptx) 与 [演示讲稿](docs/competition/演示讲稿.md)。
-- [复现指南](docs/competition/复现指南.md) 和 [实验结果](docs/competition/实验结果.md)。
+- [复现指南](docs/competition/复现指南.md)、[初版实验结果](docs/competition/实验结果.md) 和 [可选调优实验](docs/competition/调优实验.md)。
 - [本次原始串口日志与元数据](docs/competition/evidence/)。
 - [提交状态及官方模板链接](docs/competition/提交说明.md)。
 
