@@ -41,11 +41,13 @@
   },
   "artifacts": {
     "docs/competition/materials/答辩演示.pptx": "e7739d768b96b078690c9cfd1e023896f25f3ec724cff7643cc15ce4c986c133",
-    "docs/competition/materials/开发设计文档.docx": "797c8e3610a55539a408bd43c6e8f15550776cd4d44110068b04883c09210d42"
+    "docs/competition/materials/开发设计文档.docx": "797c8e3610a55539a408bd43c6e8f15550776cd4d44110068b04883c09210d42",
+    "docs/competition/evidence/submission-receipt.png": "c717f88bce9dcbfcfbcce0821d8f8b0190e3bd50e27649818248ff13b6f347bb",
+    "docs/competition/evidence/submission-receipt.txt": "dd1677abae60a09c47895dc3f2095511f84eb871cc7408bcaf4c9f47fbfba882"
   },
   "full_rebuild_performed": false,
   "official_template_fields_verified": true,
-  "competition_final_submission_verified": false,
+  "competition_final_submission_verified": true,
   "official_templates": {
     "design_docx_sha256": "b47c221c1baf60f62c51ca4ef01bbe6e3c4b2cf75add3448382f925a2a98a8e6",
     "defense_pptx_sha256": "1b0e9ce464e4885b2ba3a0b1d4725cccd46a00c85bf54dc968c8c1a815f12f97"
@@ -54,8 +56,18 @@
     "repository": "https://github.com/Shadow-ye/ohos-eevdf-qos",
     "materials_commit": "2818583cdda1da1f282cf0ac95f99cfa3aa2101c",
     "push_verified": true,
-    "repository_private": true,
-    "anonymous_access_verified": false,
-    "pending": "User decision on publishing existing repository history or using a separate public submission repository."
+    "repository_private": false,
+    "anonymous_access_verified": true,
+    "submission_repository": "https://gitcode.com/Ye_Mingyun/ohos-eevdf-qos",
+    "imported_commit": "9e571f5b0e4dd37e9fe2edfa9fbfbe0b40f7dc2a"
+  },
+  "competition_submission": {
+    "page": "https://competition.gitcode.com/competition/2074791206352715777/publish",
+    "repository": "https://gitcode.com/Ye_Mingyun/ohos-eevdf-qos",
+    "submission_time_displayed": "2026-10-30 13:50:18",
+    "timezone_displayed": null,
+    "confirmation": "提交成功",
+    "saved_record_verified": true,
+    "evaluation_record": "暂无数据"
   }
 }

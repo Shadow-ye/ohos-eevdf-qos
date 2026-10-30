@@ -2,6 +2,8 @@
 
 2026 开源鸿蒙大学生创新大赛 · 系统与技术创新赛道参赛项目。
 
+参赛仓库：[GitCode](https://gitcode.com/Ye_Mingyun/ohos-eevdf-qos)；源码镜像：[GitHub](https://github.com/Shadow-ye/ohos-eevdf-qos)。已于平台显示时间 2026-10-30 13:50:18 完成作品提交，[提交回执](docs/competition/evidence/submission-receipt.png)已保存，尚无测评记录。
+
 本项目将 Linux 6.6 的 EEVDF 公平调度机制移植至 OpenHarmony 5.0.1 的 Linux 5.10.208，并将已有任务 QoS 等级映射为调度请求 slice。交付内容包括内核源码快照、可应用补丁、开关对照测试、不变量检查和 CFS 对比实验。
 
 **当前成果是可运行、可复核的系统研究原型。** QEMU 上已验证 QoS 改变调度粒度且保持近似公平份额；在周期唤醒与忙等竞争场景中，当前 EEVDF 方案的尾延迟高于 CFS。项目如实保留这一限制，不宣称已改善实机交互性能。

@@ -1,0 +1,10 @@
+查看结果
+Close
+作品链接
+https://gitcode.com/Ye_Mingyun/ohos-eevdf-qos
+作品说明
+提交 OpenHarmony 5.0.1 Linux 5.10.208 的 EEVDF 移植与 QoS slice 映射原型。仓库包含作品简介、按官方模板完成的9页开发设计文档和13页答辩PPT、14文件源码快照、内核补丁、复现脚本及八次QEMU启动原始证据。完成QoS开关、fork、reweight和平均虚拟时间检查，以及CFS/EEVDF各三次对照实验。如实披露竞争场景尾延迟退化，实机、完整用户态QoS链路、SMP迁移与长稳尚未验收。材料入口见README。
+提交时间
+2026-10-30 13:50:18
+测评记录
+暂无数据
