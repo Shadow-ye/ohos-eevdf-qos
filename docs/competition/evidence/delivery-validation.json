@@ -49,5 +49,13 @@
   "official_templates": {
     "design_docx_sha256": "b47c221c1baf60f62c51ca4ef01bbe6e3c4b2cf75add3448382f925a2a98a8e6",
     "defense_pptx_sha256": "1b0e9ce464e4885b2ba3a0b1d4725cccd46a00c85bf54dc968c8c1a815f12f97"
+  },
+  "publication": {
+    "repository": "https://github.com/Shadow-ye/ohos-eevdf-qos",
+    "materials_commit": "2818583cdda1da1f282cf0ac95f99cfa3aa2101c",
+    "push_verified": true,
+    "repository_private": true,
+    "anonymous_access_verified": false,
+    "pending": "User decision on publishing existing repository history or using a separate public submission repository."
   }
 }
